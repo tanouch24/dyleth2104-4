@@ -269,3 +269,127 @@ footer.main-footer {
 @media (max-width: 600px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* ═══ STORE BUTTONS DISABLED (lancement 1er juin 2026) ═══ */
+.store-btn-disabled {
+  opacity: 0.45;
+  filter: grayscale(80%);
+  cursor: not-allowed;
+  pointer-events: auto;
+  border-color: rgba(107,114,128,0.4) !important;
+  background: rgba(107,114,128,0.08) !important;
+}
+.store-btn-disabled:hover {
+  transform: none !important;
+  background: rgba(107,114,128,0.12) !important;
+  border-color: rgba(107,114,128,0.5) !important;
+}
+.store-btn-disabled svg { filter: saturate(0); }
+.store-btn-disabled .store-sub-text,
+.store-btn-disabled .store-name-text { color: #6B7280 !important; }
+
+.store-launch-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--white-30);
+  text-align: center;
+}
+
+/* Hero store buttons */
+.hero-store-btns {
+  display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+}
+.hero-store-btn {
+  min-width: 180px;
+}
+
+/* Nav CTA soon */
+.nav-cta-soon {
+  background: rgba(107,114,128,0.25) !important;
+  color: #9CA3AF !important;
+  cursor: default;
+  pointer-events: none;
+  box-shadow: none !important;
+  font-size: 12px;
+}
+
+/* Price btn disabled */
+.price-btn-disabled {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  background: rgba(107,114,128,0.2);
+  color: #6B7280;
+  cursor: not-allowed;
+  text-align: center;
+  border: 1px solid rgba(107,114,128,0.3);
+  margin-top: 8px;
+}
+
+/* ═══ RESPONSIVE NAV FIX (mobile/tablet) ═══ */
+@media (max-width: 1024px) {
+  /* Overlay pour fermer le menu en cliquant dehors */
+  .nav-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    z-index: 98;
+    background: transparent;
+  }
+  .nav-overlay.active { display: block; }
+
+  /* Le menu mobile doit être au-dessus de l'overlay */
+  .nav-menu.open { z-index: 99; }
+
+  /* Sous-menus mobiles : affichage accordéon fluide */
+  .nav-menu.open .nav-dropdown {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 6px 0;
+    margin: 4px 0 8px 12px;
+  }
+  .nav-menu.open .nav-item.open > button {
+    color: var(--white);
+    background: var(--white-10);
+  }
+  .nav-menu.open .nav-item.open .caret {
+    transform: rotate(180deg);
+  }
+
+  /* Fix touch target size */
+  .nav-menu.open .nav-item > button {
+    padding: 12px 16px;
+    min-height: 44px;
+  }
+  .nav-menu.open .nav-dropdown a {
+    padding: 11px 20px;
+    min-height: 44px;
+    display: flex; align-items: center;
+  }
+
+  /* Sections dans le menu mobile */
+  .nav-menu.open .nav-right {
+    display: flex;
+    width: 100%;
+    padding: 8px 0 0;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+  .nav-menu.open .nav-right .nav-cta {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  /* Hero store btns en mobile */
+  .hero-store-btns { flex-direction: column; align-items: center; }
+  .hero-store-btn { width: 220px; }
+}
+
+@media (max-width: 480px) {
+  .store-row { flex-direction: column; align-items: center; }
+  .store-btn { width: 220px; justify-content: center; }
+}
