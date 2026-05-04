@@ -523,6 +523,7 @@
   border-color: rgba(10,132,255,0.35);
 }
 .store-btn.enterprise:hover { background: rgba(10,132,255,0.2); 
+.nav-item-lang{display:none!important}(max-width:1024px){.nav-item-lang{display:block!important}.nav-right-desktop{display:none!important}}(min-width:1025px){.nav-item-lang{display:none!important}.nav-right-desktop{display:flex!important}.nav-burger{display:none!important}.nav-menu{display:flex!important}}
 </style>
 
 
@@ -619,9 +620,6 @@
         <a onclick="doTranslate('hi')">HI Hindi</a>
         <a onclick="doTranslate('ru')">RU Russkiy</a>
         <a onclick="doTranslate('vi')">VI Viet</a>
-        <a onclick="doTranslate('tr')">TR Turkce</a>
-        <a onclick="doTranslate('ja')">JA Japanese</a>
-        <a onclick="doTranslate('ko')">KO Korean</a>
         <a onclick="doTranslate('id')">ID Bahasa</a>
       </div>
     </li>
@@ -640,9 +638,6 @@
         <a onclick="doTranslate('hi')">HI Hindi</a>
         <a onclick="doTranslate('ru')">RU Russkiy</a>
         <a onclick="doTranslate('vi')">VI Viet</a>
-        <a onclick="doTranslate('tr')">TR Turkce</a>
-        <a onclick="doTranslate('ja')">JA Japanese</a>
-        <a onclick="doTranslate('ko')">KO Korean</a>
         <a onclick="doTranslate('id')">ID Bahasa</a>
       </div>
     </div>
@@ -1141,22 +1136,5 @@
 @media (min-width:1025px){
   .nav-item-lang{display:none!important}
   .nav-right-desktop{display:flex!important}
-}
-</style>
-<style id="fix-desktop-nav-center">
-@media (min-width:1025px){
-  nav.main-nav{justify-content:center!important}
-  .nav-logo{position:absolute!important;left:40px!important;margin-right:0!important}
-  .nav-menu{flex:0 0 auto!important;justify-content:center!important}
-  .nav-right-desktop{position:absolute!important;right:40px!important;margin-left:0!important}
-}
-</style>
-<style id="fix-lang-next-burger-mobile">
-@media (max-width:1024px){
-  .nav-item-lang{display:none!important}
-  .nav-right-desktop{display:flex!important;position:absolute!important;right:72px!important;top:50%!important;transform:translateY(-50%)!important;margin:0!important;z-index:10002!important}
-  .nav-right-desktop .nav-cta,.nav-right-desktop .nav-cta-soon{display:none!important}
-  .nav-right-desktop .lang-wrap{display:inline-flex!important}
-  .nav-right-desktop .lang-dropdown{position:absolute!important;top:52px!important;right:0!important;left:auto!important;bottom:auto!important;border-radius:12px!important;padding:8px!important;min-width:170px!important;z-index:10003!important}
 }
 </style>
