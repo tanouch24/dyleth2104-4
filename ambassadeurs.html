@@ -6,8 +6,6 @@
 <link rel="canonical" href="https://dyleth.com/rejoindre/ambassadeurs/">
 <meta property="og:title" content="Programme Ambassadeurs DYLETH — Postuler">
 <meta property="og:description" content="190+ pays, 0 critère requis, 100% remote. Rejoignez le mouvement DYLETH.">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="apple-touch-icon" href="../favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 <style>
@@ -122,10 +120,6 @@
 .checkbox-group span{font-size:13px;color:var(--white-60);line-height:1.5}
 .checkbox-group a{color:var(--blue)
 </style>
-
-
-
-
 
 
 
@@ -439,8 +433,8 @@
         </button>
         <p class="form-note">✓ Aucun critère technique &nbsp;·&nbsp; ✓ 190+ pays &nbsp;·&nbsp; ✓ 100% remote &nbsp;·&nbsp; ✓ Réponse garantie sous 5 jours</p>
       </div>
-      <div class="alert success" id="alert-success" style="display:none">🎉 Candidature envoyée ! Tu recevras une réponse sous 5 jours. Bienvenue dans le mouvement DYLETH !</div>
-      <div class="alert error" id="alert-error" style="display:none">❌ <span id="error-msg">Une erreur s'est produite. Réessaie ou écris-nous à contact@dyleth.com</span></div>
+      <div class="alert success" id="alert-success">🎉 Candidature envoyée ! Tu recevras une réponse sous 5 jours. Bienvenue dans le mouvement DYLETH !</div>
+      <div class="alert error" id="alert-error">❌ <span id="error-msg">Une erreur s'est produite. Réessaie ou écris-nous à contact@dyleth.com</span></div>
     </form>
   </div>
 
@@ -487,101 +481,6 @@
 
 
 
-<script>
-// ── NAV BURGER ──
-(function() {
-  var burger  = document.getElementById('nav-burger-btn');
-  var menu    = document.querySelector('.nav-menu');
-  var overlay = document.getElementById('nav-overlay');
-  if (!burger || !menu) return;
-
-  function closeMenu() {
-    menu.classList.remove('open');
-    if (overlay) overlay.classList.remove('active');
-    burger.textContent = '☰';
-    burger.setAttribute('aria-expanded','false');
-    document.body.style.overflow = '';
-  }
-
-  burger.addEventListener('click', function(e) {
-    e.stopPropagation();
-    var open = menu.classList.toggle('open');
-    if (overlay) overlay.classList.toggle('active', open);
-    burger.textContent = open ? '✕' : '☰';
-    burger.setAttribute('aria-expanded', String(open));
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-
-  if (overlay) overlay.addEventListener('click', closeMenu);
-
-  // Accordion
-  document.querySelectorAll('.nav-sub-btn').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      if (window.innerWidth > 1024) return;
-      e.stopPropagation();
-      var li = btn.closest('.nav-item');
-      var wasOpen = li.classList.contains('open');
-      document.querySelectorAll('.nav-menu .nav-item.open').forEach(function(el) {
-        if (el !== li) el.classList.remove('open');
-      });
-      li.classList.toggle('open', !wasOpen);
-    });
-  });
-
-  // Close on link click
-  menu.querySelectorAll('a[href]').forEach(function(a) {
-    a.addEventListener('click', function() {
-      if (window.innerWidth <= 1024) closeMenu();
-    });
-  });
-
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 1024) closeMenu();
-  });
-})();
-
-// ── LANG ──
-function toggleLang(id) {
-  var dd = document.getElementById(id);
-  if (!dd) return;
-  dd.classList.toggle('open');
-  // Close other
-  document.querySelectorAll('.lang-dropdown').forEach(function(el) {
-    if (el.id !== id) el.classList.remove('open');
-  });
-}
-document.addEventListener('click', function(e) {
-  if (!e.target.closest('.lang-wrap') && !e.target.closest('.nav-item-lang')) {
-    document.querySelectorAll('.lang-dropdown').forEach(function(el) { el.classList.remove('open'); });
-  }
-});
-
-function doTranslate(lang) {
-  document.querySelectorAll('.lang-dropdown').forEach(function(el) { el.classList.remove('open'); });
-  if (lang === 'fr') {
-    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
-    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname;
-    location.reload();
-    return;
-  }
-  document.cookie = 'googtrans=/fr/' + lang + '; path=/';
-  document.cookie = 'googtrans=/fr/' + lang + '; path=/; domain=.' + location.hostname;
-  location.reload();
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -593,100 +492,87 @@ function doTranslate(lang) {
 <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"fr",autoDisplay:false},"google_translate_element");}</script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body></html>
-
-
 <script>
-// ── NAV BURGER ──
-(function() {
-  var burger  = document.getElementById('nav-burger-btn');
-  var menu    = document.querySelector('.nav-menu');
-  var overlay = document.getElementById('nav-overlay');
-  if (!burger || !menu) return;
+var SUPABASE_URL = "https://bjbvfxnqdyrstuulzkcs.supabase.co";
+var SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqYnZmeG5xZHlyc3R1dWx6a2NzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc4NTA1MTIsImV4cCI6MjA5MzQyNjUxMn0.EJBt5hvCo_Hmk9-Ge9Rkv72XpEKBRcZUAzC75Z8OH7o";
 
-  function closeMenu() {
-    menu.classList.remove('open');
-    if (overlay) overlay.classList.remove('active');
-    burger.textContent = '☰';
-    burger.setAttribute('aria-expanded','false');
-    document.body.style.overflow = '';
+document.getElementById("ambassador-form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  var prenom     = document.getElementById("f-prenom").value.trim();
+  var nom        = document.getElementById("f-nom").value.trim();
+  var email      = document.getElementById("f-email").value.trim();
+  var pays       = document.getElementById("f-pays").value;
+  var situation  = document.getElementById("f-situation").value;
+  var reseaux    = document.getElementById("f-reseaux").value.trim();
+  var motivation = document.getElementById("f-motivation").value.trim();
+  var rgpd       = document.getElementById("f-rgpd").checked;
+
+  if (!prenom || !nom || !email || !pays || !situation || !motivation) {
+    showError("Merci de remplir tous les champs obligatoires (*).");
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showError("Adresse email invalide.");
+    return;
+  }
+  if (!rgpd) {
+    showError("Merci d'accepter la politique de confidentialite pour continuer.");
+    return;
   }
 
-  burger.addEventListener('click', function(e) {
-    e.stopPropagation();
-    var open = menu.classList.toggle('open');
-    if (overlay) overlay.classList.toggle('active', open);
-    burger.textContent = open ? '✕' : '☰';
-    burger.setAttribute('aria-expanded', String(open));
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
+  var btn = document.getElementById("submit-btn");
+  document.getElementById("btn-text").style.display = "none";
+  document.getElementById("btn-loading").style.display = "inline";
+  btn.disabled = true;
+  document.getElementById("alert-success").style.display = "none";
+  document.getElementById("alert-error").style.display = "none";
 
-  if (overlay) overlay.addEventListener('click', closeMenu);
-
-  // Accordion
-  document.querySelectorAll('.nav-sub-btn').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      if (window.innerWidth > 1024) return;
-      e.stopPropagation();
-      var li = btn.closest('.nav-item');
-      var wasOpen = li.classList.contains('open');
-      document.querySelectorAll('.nav-menu .nav-item.open').forEach(function(el) {
-        if (el !== li) el.classList.remove('open');
-      });
-      li.classList.toggle('open', !wasOpen);
+  try {
+    var res = await fetch(SUPABASE_URL + "/rest/v1/ambassadeurs_candidatures", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": SUPABASE_KEY,
+        "Authorization": "Bearer " + SUPABASE_KEY,
+        "Prefer": "return=minimal"
+      },
+      body: JSON.stringify({
+        prenom: prenom,
+        nom: nom,
+        email: email,
+        pays: pays,
+        situation: situation,
+        reseaux_sociaux: reseaux || null,
+        motivation: motivation,
+        rgpd_consent: true,
+        statut: "nouvelle"
+      })
     });
-  });
 
-  // Close on link click
-  menu.querySelectorAll('a[href]').forEach(function(a) {
-    a.addEventListener('click', function() {
-      if (window.innerWidth <= 1024) closeMenu();
-    });
-  });
-
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 1024) closeMenu();
-  });
-})();
-
-// ── LANG ──
-function toggleLang(id) {
-  var dd = document.getElementById(id);
-  if (!dd) return;
-  dd.classList.toggle('open');
-  // Close other
-  document.querySelectorAll('.lang-dropdown').forEach(function(el) {
-    if (el.id !== id) el.classList.remove('open');
-  });
-}
-document.addEventListener('click', function(e) {
-  if (!e.target.closest('.lang-wrap') && !e.target.closest('.nav-item-lang')) {
-    document.querySelectorAll('.lang-dropdown').forEach(function(el) { el.classList.remove('open'); });
+    if (res.ok || res.status === 201) {
+      document.getElementById("alert-success").style.display = "flex";
+      document.getElementById("ambassador-form").reset();
+      document.getElementById("ambassador-form").scrollIntoView({behavior:"smooth", block:"center"});
+    } else {
+      var err = await res.json();
+      showError(err.message || "Erreur serveur. Ecris-nous a contact@dyleth.com");
+    }
+  } catch (err) {
+    showError("Probleme de connexion. Verifie ta connexion internet et reessaie.");
+  } finally {
+    document.getElementById("btn-text").style.display = "inline";
+    document.getElementById("btn-loading").style.display = "none";
+    btn.disabled = false;
   }
 });
 
-function doTranslate(lang) {
-  document.querySelectorAll('.lang-dropdown').forEach(function(el) { el.classList.remove('open'); });
-  if (lang === 'fr') {
-    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
-    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname;
-    location.reload();
-    return;
-  }
-  document.cookie = 'googtrans=/fr/' + lang + '; path=/';
-  document.cookie = 'googtrans=/fr/' + lang + '; path=/; domain=.' + location.hostname;
-  location.reload();
+function showError(msg) {
+  document.getElementById("error-msg").textContent = msg;
+  document.getElementById("alert-error").style.display = "flex";
+  document.getElementById("alert-error").scrollIntoView({behavior:"smooth", block:"center"});
 }
 </script>
-
-
-
-
-
-
-
-
-
-
 
 
 
