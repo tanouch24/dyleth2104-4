@@ -124,6 +124,12 @@ nav.main-nav {
 }
 .nav-dropdown.secteurs a { break-inside: avoid; }
 
+/* Sélecteur de langue : borne la hauteur pour la liste étendue (22 langues) */
+.lang-dropdown {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
 .nav-right {
   display: flex; align-items: center; gap: 14px;
 }
