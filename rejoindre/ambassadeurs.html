@@ -395,23 +395,27 @@
     <h2>Prêt à faire partie<br>de l'histoire <em>DYLETH ?</em></h2>
     <p class="form-intro">3 à 5 lignes sur toi. Pas de CV obligatoire. Réponse garantie sous 5 jours, où que tu sois dans le monde.</p>
 
-    <form id="ambassador-form" novalidate>
+    <form id="ambassador-form" name="ambassadeurs" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="ambassadeurs">
+      <p class="hp-field" aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0">
+        <label>Ne remplissez pas ce champ si vous êtes humain : <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+      </p>
       <div class="form-grid">
         <div class="form-group">
           <label>Prénom <span class="req">*</span></label>
-          <input type="text" id="f-prenom" placeholder="Ton prénom" required>
+          <input type="text" id="f-prenom" name="prenom" placeholder="Ton prénom" required>
         </div>
         <div class="form-group">
           <label>Nom <span class="req">*</span></label>
-          <input type="text" id="f-nom" placeholder="Ton nom" required>
+          <input type="text" id="f-nom" name="nom" placeholder="Ton nom" required>
         </div>
         <div class="form-group">
           <label>Email <span class="req">*</span></label>
-          <input type="email" id="f-email" placeholder="ton@email.com" required>
+          <input type="email" id="f-email" name="email" placeholder="ton@email.com" required>
         </div>
         <div class="form-group">
           <label>Pays <span class="req">*</span></label>
-          <select id="f-pays" required>
+          <select id="f-pays" name="pays" required>
             <option value="">— Sélectionne ton pays —</option>
             <option>France</option><option>Belgique</option><option>Suisse</option><option>Canada</option>
             <option>Maroc</option><option>Algérie</option><option>Tunisie</option><option>Sénégal</option>
@@ -423,7 +427,7 @@
         </div>
         <div class="form-group">
           <label>Situation actuelle <span class="req">*</span></label>
-          <select id="f-situation" required>
+          <select id="f-situation" name="situation" required>
             <option value="">— Ta situation —</option>
             <option>Étudiant(e) — Lycée</option>
             <option>Étudiant(e) — BTS/BUT</option>
@@ -441,15 +445,15 @@
         </div>
         <div class="form-group">
           <label>Réseaux sociaux <span style="color:var(--white-30);font-weight:400">(optionnel)</span></label>
-          <input type="text" id="f-reseaux" placeholder="@ton_compte Instagram, TikTok, LinkedIn...">
+          <input type="text" id="f-reseaux" name="reseaux" placeholder="@ton_compte Instagram, TikTok, LinkedIn...">
         </div>
         <div class="form-group form-full">
           <label>Pourquoi veux-tu rejoindre DYLETH ? <span class="req">*</span></label>
-          <textarea id="f-motivation" placeholder="3 à 5 lignes sur toi et ta motivation. Qu'est-ce qui t'a donné envie ? Comment comptes-tu parler de DYLETH autour de toi ?" required></textarea>
+          <textarea id="f-motivation" name="motivation" placeholder="3 à 5 lignes sur toi et ta motivation. Qu'est-ce qui t'a donné envie ? Comment comptes-tu parler de DYLETH autour de toi ?" required></textarea>
         </div>
         <div class="form-group form-full">
           <label class="checkbox-group">
-            <input type="checkbox" id="f-rgpd" required>
+            <input type="checkbox" id="f-rgpd" name="rgpd" value="accepte" required>
             <span>J'accepte que mes données soient utilisées pour traiter ma candidature, conformément à la <a href="../legal/confidentialite.html" target="_blank">politique de confidentialité</a> de DYLETH. <span class="req">*</span></span>
           </label>
         </div>
@@ -507,7 +511,76 @@
   </div>
 </footer>
 
+<script>
+// ── FORMULAIRE AMBASSADEURS — amélioration progressive (Netlify Forms) ──
+// Sans JavaScript : le formulaire fait un POST HTML natif capté par Netlify Forms.
+(function () {
+  var form = document.getElementById('ambassador-form');
+  if (!form) return;
+  var btn        = document.getElementById('submit-btn');
+  var btnText    = document.getElementById('btn-text');
+  var btnLoading = document.getElementById('btn-loading');
+  var okBox      = document.getElementById('alert-success');
+  var errBox     = document.getElementById('alert-error');
+  var initialBtnText = btnText ? btnText.textContent : '';
+  var sending    = false;
 
+  // Etats du bouton : 'idle' (initial) | 'sending' | 'done'
+  function btnState(state) {
+    if (state === 'sending') {
+      if (btn)        btn.disabled = true;
+      if (btnText)    btnText.style.display    = 'none';
+      if (btnLoading) btnLoading.style.display = '';
+    } else if (state === 'done') {
+      if (btn)        btn.disabled = true;            // reste desactive : evite un double envoi
+      if (btnLoading) btnLoading.style.display = 'none';
+      if (btnText) { btnText.textContent = 'Candidature envoy\u00e9e \u2713'; btnText.style.display = ''; }
+    } else { // 'idle'
+      if (btn)        btn.disabled = false;
+      if (btnLoading) btnLoading.style.display = 'none';
+      if (btnText) { btnText.textContent = initialBtnText; btnText.style.display = ''; }
+    }
+  }
+
+  form.addEventListener('submit', function (e) {
+    if (sending) { e.preventDefault(); return; }
+
+    // Validation existante : les attributs "required" des champs.
+    if (typeof form.checkValidity === 'function' && !form.checkValidity()) {
+      if (typeof form.reportValidity === 'function') form.reportValidity();
+      return; // le navigateur signale les champs manquants, pas d'envoi
+    }
+
+    // Pas de fetch/FormData : on laisse la soumission HTML native (fallback Netlify).
+    if (!window.fetch || !window.FormData || !window.URLSearchParams) return;
+
+    e.preventDefault();
+    sending = true;
+    btnState('sending');
+    if (errBox) errBox.style.display = 'none';
+
+    var body = new URLSearchParams(new FormData(form)).toString();
+
+    fetch(window.location.pathname, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
+    }).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status); // reponse en erreur -> traitement d'erreur
+      form.reset();
+      if (okBox) {
+        okBox.style.display = 'flex';
+        okBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      btnState('done');   // bouton desactive + texte de fin ; sending reste true
+    }).catch(function () {
+      if (errBox) errBox.style.display = 'flex';
+      btnState('idle');   // reactive le bouton et restaure son texte initial exact
+      sending = false;    // autorise une nouvelle tentative
+    });
+  });
+})();
+</script>
 
 <script>
 // ── NAV BURGER ──
@@ -614,8 +687,6 @@ function doTranslate(lang) {
 <div id="google_translate_element" style="display:none"></div>
 <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"fr",autoDisplay:false},"google_translate_element");}</script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body></html>
-
 
 <script>
 // ── NAV BURGER ──
