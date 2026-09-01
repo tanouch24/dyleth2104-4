@@ -522,12 +522,24 @@
   var btnLoading = document.getElementById('btn-loading');
   var okBox      = document.getElementById('alert-success');
   var errBox     = document.getElementById('alert-error');
+  var initialBtnText = btnText ? btnText.textContent : '';
   var sending    = false;
 
-  function setLoading(on) {
-    if (btn)        btn.disabled = on;
-    if (btnText)    btnText.style.display    = on ? 'none' : '';
-    if (btnLoading) btnLoading.style.display = on ? '' : 'none';
+  // Etats du bouton : 'idle' (initial) | 'sending' | 'done'
+  function btnState(state) {
+    if (state === 'sending') {
+      if (btn)        btn.disabled = true;
+      if (btnText)    btnText.style.display    = 'none';
+      if (btnLoading) btnLoading.style.display = '';
+    } else if (state === 'done') {
+      if (btn)        btn.disabled = true;            // reste desactive : evite un double envoi
+      if (btnLoading) btnLoading.style.display = 'none';
+      if (btnText) { btnText.textContent = 'Candidature envoy\u00e9e \u2713'; btnText.style.display = ''; }
+    } else { // 'idle'
+      if (btn)        btn.disabled = false;
+      if (btnLoading) btnLoading.style.display = 'none';
+      if (btnText) { btnText.textContent = initialBtnText; btnText.style.display = ''; }
+    }
   }
 
   form.addEventListener('submit', function (e) {
@@ -544,7 +556,7 @@
 
     e.preventDefault();
     sending = true;
-    setLoading(true);
+    btnState('sending');
     if (errBox) errBox.style.display = 'none';
 
     var body = new URLSearchParams(new FormData(form)).toString();
@@ -554,18 +566,17 @@
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: body
     }).then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
+      if (!res.ok) throw new Error('HTTP ' + res.status); // reponse en erreur -> traitement d'erreur
       form.reset();
       if (okBox) {
         okBox.style.display = 'flex';
         okBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-      setLoading(true);   // bouton laissé désactivé : évite un renvoi accidentel
-      sending = false;
+      btnState('done');   // bouton desactive + texte de fin ; sending reste true
     }).catch(function () {
       if (errBox) errBox.style.display = 'flex';
-      setLoading(false);  // réactive le bouton pour permettre une nouvelle tentative
-      sending = false;
+      btnState('idle');   // reactive le bouton et restaure son texte initial exact
+      sending = false;    // autorise une nouvelle tentative
     });
   });
 })();
