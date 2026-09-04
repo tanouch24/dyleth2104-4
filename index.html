@@ -21,24 +21,7 @@
    STYLES SPÉCIFIQUES À L'ACCUEIL
 ════════════════════════════════════════ */
 
-/* Ticker */
-.ticker {
-  position: relative; z-index: 1; margin-top: 64px;
-  background: rgba(10,132,255,0.06);
-  border-bottom: 1px solid rgba(10,132,255,0.15);
-  padding: 10px 0; overflow: hidden;
-}
-.ticker-inner {
-  display: flex; gap: 80px; white-space: nowrap;
-  animation: tickerMove 40s linear infinite;
-}
-.ticker-item {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
-  text-transform: uppercase; color: rgba(96,179,255,0.9);
-}
-.ticker-icon { font-size: 10px; opacity: .7; }
-@keyframes tickerMove { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+/* (ticker animé retiré — LOT dylethnew) */
 
 /* HERO */
 .hero {
@@ -298,52 +281,7 @@
 .step-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
 .step-desc { font-size: 13px; color: var(--white-60); line-height: 1.6; }
 
-/* BOUCLIER */
-.section-shield {
-  position: relative; z-index: 1;
-  padding: 120px 24px; text-align: center;
-}
-.shield-visual { position: relative; width: 220px; height: 220px; margin: 0 auto 60px; }
-.shield-outer {
-  width: 220px; height: 220px;
-  border: 1px solid rgba(10,132,255,0.2); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  animation: shieldPulseOuter 3s ease-in-out infinite;
-}
-.shield-mid {
-  width: 160px; height: 160px;
-  border: 1px solid rgba(10,132,255,0.35); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  animation: shieldPulseMid 3s .5s ease-in-out infinite;
-}
-.shield-inner {
-  width: 100px; height: 100px;
-  background: radial-gradient(circle, rgba(10,132,255,0.25) 0%, rgba(10,132,255,0.05) 100%);
-  border: 2px solid var(--blue); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 42px;
-  box-shadow: 0 0 30px var(--blue-glow), inset 0 0 20px rgba(10,132,255,0.1);
-}
-@keyframes shieldPulseOuter { 0%,100%{transform:scale(1);opacity:.5} 50%{transform:scale(1.04);opacity:1} }
-@keyframes shieldPulseMid  { 0%,100%{transform:scale(1);opacity:.6} 50%{transform:scale(1.05);opacity:1} }
-.shield-features {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px; max-width: 860px; margin: 0 auto 64px;
-}
-.shield-feat {
-  background: var(--white-10); border: 1px solid var(--border);
-  border-radius: 20px; padding: 28px 24px; text-align: left; transition: all .3s;
-}
-.shield-feat:hover { border-color: rgba(10,132,255,0.4); background: rgba(10,132,255,0.07); transform: translateY(-3px); }
-.feat-icon { font-size: 26px; margin-bottom: 14px; display: block; }
-.feat-title { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
-.feat-desc { font-size: 13px; color: var(--white-60); line-height: 1.6; }
-.shield-quote {
-  font-size: clamp(22px, 3.5vw, 36px); font-weight: 800;
-  letter-spacing: -1px; line-height: 1.2;
-  max-width: 700px; margin: 0 auto;
-}
-.shield-quote em { font-style: normal; color: var(--blue); }
+/* (bouclier lumineux / pulsant supprimé — LOT 2 : voir section .d2-pos-section) */
 
 /* SECTEURS */
 .section-sectors {
@@ -531,13 +469,512 @@
 
 
 
-<style id="nv">nav.main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;gap:8px;padding:0 40px;height:64px;background:rgba(4,6,14,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08)}.nav-logo{font-size:18px;font-weight:800;letter-spacing:3px;color:#F2F2F7;text-decoration:none;flex-shrink:0;margin-right:8px}.nav-logo span{color:#0A84FF}.nav-menu{display:flex;align-items:center;list-style:none;margin:0;padding:0;flex:1}.nav-item{position:relative}.nav-item>button,.nav-item>a,.nav-sub-btn{display:inline-flex;align-items:center;gap:4px;padding:7px 11px;border-radius:8px;font-size:13px;font-weight:500;color:rgba(242,242,247,0.7);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;transition:all .2s;white-space:nowrap}.nav-item>button:hover,.nav-item>a:hover,.nav-sub-btn:hover{color:#fff;background:rgba(255,255,255,0.07)}.caret{font-size:9px;transition:transform .2s}.nav-item:hover .caret{transform:rotate(180deg)}.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:200px;background:rgba(8,12,24,0.97);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:8px;box-shadow:0 20px 50px rgba(0,0,0,0.5);z-index:2000}.nav-item:hover .nav-dropdown{display:block}.nav-dropdown a{display:block;padding:9px 12px;border-radius:8px;font-size:13px;color:rgba(242,242,247,0.7);text-decoration:none;transition:all .15s}.nav-dropdown a:hover{color:#fff;background:rgba(10,132,255,0.1)}.nav-dropdown.secteurs{min-width:380px;columns:2}.nav-right-desktop{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:auto}.lang-wrap{position:relative;display:inline-flex;align-items:center}.lang-btn{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:rgba(242,242,247,0.85);font-size:12px;font-weight:600;padding:6px 11px;cursor:pointer;font-family:inherit;outline:none;transition:all .2s;white-space:nowrap}.lang-btn:hover{border-color:#0A84FF;color:#fff}.lang-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:rgba(6,10,20,0.98);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:8px;min-width:160px;box-shadow:0 20px 60px rgba(0,0,0,0.6);z-index:3000}.lang-dropdown.open{display:block}.lang-dropdown a{display:block;padding:9px 12px;border-radius:8px;font-size:13px;color:rgba(242,242,247,0.75);text-decoration:none;cursor:pointer;transition:all .15s}.lang-dropdown a:hover{color:#fff;background:rgba(10,132,255,0.15)}.nav-cta{background:#0A84FF;color:#fff;font-size:13px;font-weight:600;padding:8px 18px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:all .2s}.nav-cta:hover{background:#1A8FFF}.nav-cta-soon{background:rgba(107,114,128,0.25)!important;color:#9CA3AF!important;cursor:default;pointer-events:none}.nav-burger{display:none;background:none;border:1px solid rgba(255,255,255,0.2);border-radius:8px;color:#fff;font-size:22px;width:42px;height:42px;cursor:pointer;align-items:center;justify-content:center;flex-shrink:0}.nav-overlay{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,0.5)}.nav-overlay.active{display:block}.goog-te-banner-frame,.skiptranslate{display:none!important}body{top:0!important}#google_translate_element{display:none!important}@media(max-width:1100px){nav.main-nav{padding:0 16px;justify-content:space-between}.nav-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;z-index:999;background:#04060E;flex-direction:column;list-style:none;margin:0;padding:0 0 80px;overflow-y:auto;border-top:1px solid rgba(255,255,255,0.1)}.nav-menu.open{display:flex}.nav-right-desktop{display:none!important}.nav-burger{display:flex!important}.nav-menu>.nav-item{width:100%;border-bottom:1px solid rgba(255,255,255,0.06)}.nav-menu>.nav-item:last-child{border-bottom:none}.nav-menu .nav-item>button,.nav-menu .nav-item>.nav-sub-btn,.nav-menu .nav-item>a{width:100%;justify-content:space-between;padding:16px 20px;min-height:52px;font-size:15px;font-weight:600;color:rgba(242,242,247,0.85);border-radius:0}.nav-menu .nav-item.open>.nav-sub-btn{color:#fff}.nav-menu .nav-item.open .caret{transform:rotate(180deg)}.nav-menu .nav-dropdown{display:none!important;position:static!important;min-width:0!important;columns:1!important;background:rgba(255,255,255,0.03)!important;border:none!important;border-radius:0!important;box-shadow:none!important;padding:0 0 8px!important;margin:0!important;opacity:1!important;transform:none!important}.nav-menu .nav-item.open .nav-dropdown{display:block!important}.nav-menu .nav-dropdown a{padding:12px 36px!important;font-size:14px!important;color:rgba(255,255,255,0.6)!important;border-radius:0!important}.nav-item-lang{border-top:1px solid rgba(255,255,255,0.1)!important;border-bottom:none!important}.nav-item-lang>.lang-btn{width:100%;justify-content:center;padding:16px 20px;border-radius:0;font-size:14px;border:none;background:rgba(255,255,255,0.04);display:flex}.nav-item-lang .lang-dropdown{display:none;position:fixed!important;bottom:0!important;left:0!important;right:0!important;top:auto!important;border-radius:20px 20px 0 0!important;padding:20px 16px 60px!important;max-height:70vh;overflow-y:auto;z-index:10001!important}.nav-item-lang .lang-dropdown.open{display:block!important}.nav-item-lang .lang-dropdown a{padding:14px 20px!important;font-size:15px!important}.nav-item-cta{padding:16px 20px!important;border-top:1px solid rgba(255,255,255,0.1)!important;border-bottom:none!important}.nav-item-cta>.nav-cta,.nav-item-cta>.nav-cta-soon{display:block!important;width:100%!important;text-align:center!important;padding:14px!important;border-radius:12px!important;pointer-events:auto!important}}</style>
+<style id="nv">
+nav.main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;gap:8px;padding:0 40px;height:64px;background:rgba(5,6,10,0.82);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border-bottom:1px solid rgba(245,245,247,0.09)}
+.nav-logo{font-size:17px;font-weight:800;letter-spacing:.1em;color:#f5f5f7;text-decoration:none;flex-shrink:0;margin-right:10px}
+.nav-logo span{color:#2997ff}
+.nav-menu{display:flex;align-items:center;list-style:none;margin:0;padding:0;flex:1}
+.nav-item{position:relative}
+.nav-item>button,.nav-item>a,.nav-sub-btn{display:inline-flex;align-items:center;gap:4px;padding:8px 12px;border-radius:999px;font-size:13px;font-weight:500;color:rgba(245,245,247,0.62);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;transition:color .18s,background .18s;white-space:nowrap}
+.nav-item>button:hover,.nav-item>a:hover,.nav-sub-btn:hover,.nav-item:hover>.nav-sub-btn{color:#f5f5f7;background:rgba(255,255,255,0.075)}
+.nav-item>button:focus-visible,.nav-item>a:focus-visible,.nav-sub-btn:focus-visible,.lang-btn:focus-visible,.nav-cta:focus-visible,.nav-burger:focus-visible,.nav-dropdown a:focus-visible,.lang-dropdown a:focus-visible{outline:2px solid #2997ff;outline-offset:2px}
+.caret{font-size:9px;transition:transform .2s}
+.nav-item:hover .caret{transform:rotate(180deg)}
+.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:210px;background:rgba(10,13,20,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(245,245,247,0.11);border-radius:14px;padding:8px;box-shadow:0 24px 60px rgba(0,0,0,0.5);z-index:2000}
+.nav-item:hover .nav-dropdown{display:block}
+.nav-dropdown a{display:block;padding:9px 12px;border-radius:8px;font-size:13px;color:rgba(245,245,247,0.62);text-decoration:none;transition:color .15s,background .15s}
+.nav-dropdown a:hover{color:#f5f5f7;background:rgba(41,151,255,0.14)}
+.nav-dropdown.secteurs{min-width:380px;columns:2}
+.nav-right-desktop{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:auto}
+.lang-wrap{position:relative;display:inline-flex;align-items:center}
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,0.055);border:1px solid rgba(245,245,247,0.16);border-radius:999px;color:rgba(245,245,247,0.85);font-size:12px;font-weight:600;padding:7px 12px;cursor:pointer;font-family:inherit;outline:none;transition:border-color .18s;white-space:nowrap}
+.lang-btn:hover{border-color:#2997ff;color:#fff}
+.lang-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:rgba(10,13,20,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(245,245,247,0.12);border-radius:14px;padding:8px;min-width:170px;box-shadow:0 24px 60px rgba(0,0,0,0.6);z-index:3000;max-height:70vh;overflow-y:auto}
+.lang-dropdown.open{display:block}
+.lang-dropdown a{display:block;padding:9px 12px;border-radius:8px;font-size:13px;color:rgba(245,245,247,0.72);text-decoration:none;cursor:pointer;transition:color .15s,background .15s}
+.lang-dropdown a:hover{color:#fff;background:rgba(41,151,255,0.16)}
+.nav-cta{background:linear-gradient(180deg,#2997ff,#0071e3);color:#fff;font-size:13px;font-weight:700;padding:9px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;box-shadow:0 12px 30px rgba(41,151,255,0.24);transition:filter .18s,transform .18s}
+.nav-cta:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.nav-cta-soon{background:rgba(120,120,130,0.22)!important;color:#9aa0a8!important;cursor:default;pointer-events:none;box-shadow:none!important}
+.nav-burger{display:none;background:none;border:1px solid rgba(245,245,247,0.2);border-radius:10px;color:#f5f5f7;font-size:22px;width:42px;height:42px;cursor:pointer;align-items:center;justify-content:center;flex-shrink:0}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,0.5)}
+.nav-overlay.active{display:block}
+.goog-te-banner-frame,.skiptranslate{display:none!important}
+body{top:0!important}
+#google_translate_element{display:none!important}
+@media(max-width:1100px){
+nav.main-nav{padding:0 16px;justify-content:space-between}
+.nav-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;z-index:999;background:#05060a;flex-direction:column;list-style:none;margin:0;padding:0 0 80px;overflow-y:auto;border-top:1px solid rgba(245,245,247,0.1)}
+.nav-menu.open{display:flex}
+.nav-right-desktop{display:none!important}
+.nav-burger{display:flex!important}
+.nav-menu>.nav-item{width:100%;border-bottom:1px solid rgba(245,245,247,0.07)}
+.nav-menu>.nav-item:last-child{border-bottom:none}
+.nav-menu .nav-item>button,.nav-menu .nav-item>.nav-sub-btn,.nav-menu .nav-item>a{width:100%;justify-content:space-between;padding:16px 20px;min-height:52px;font-size:15px;font-weight:600;color:rgba(245,245,247,0.86);border-radius:0}
+.nav-menu .nav-item.open>.nav-sub-btn{color:#fff}
+.nav-menu .nav-item.open .caret{transform:rotate(180deg)}
+.nav-menu .nav-dropdown{display:none!important;position:static!important;min-width:0!important;columns:1!important;background:rgba(255,255,255,0.03)!important;border:none!important;border-radius:0!important;box-shadow:none!important;padding:0 0 8px!important;margin:0!important;opacity:1!important;transform:none!important}
+.nav-menu .nav-item.open .nav-dropdown{display:block!important}
+.nav-menu .nav-dropdown a{padding:12px 36px!important;font-size:14px!important;color:rgba(245,245,247,0.6)!important;border-radius:0!important}
+.nav-item-lang{border-top:1px solid rgba(245,245,247,0.1)!important;border-bottom:none!important}
+.nav-item-lang>.lang-btn{width:100%;justify-content:center;padding:16px 20px;border-radius:0;font-size:14px;border:none;background:rgba(255,255,255,0.04);display:flex}
+.nav-item-lang .lang-dropdown{display:none;position:fixed!important;bottom:0!important;left:0!important;right:0!important;top:auto!important;border-radius:18px 18px 0 0!important;padding:20px 16px 60px!important;max-height:70vh;overflow-y:auto;z-index:10001!important}
+.nav-item-lang .lang-dropdown.open{display:block!important}
+.nav-item-lang .lang-dropdown a{padding:14px 20px!important;font-size:15px!important}
+.nav-item-cta{padding:16px 20px!important;border-top:1px solid rgba(245,245,247,0.1)!important;border-bottom:none!important}
+.nav-item-cta>.nav-cta,.nav-item-cta>.nav-cta-soon{display:block!important;width:100%!important;text-align:center!important;padding:14px!important;border-radius:12px!important;pointer-events:auto!important}
+}
+</style>
+<style id="d2">
+:root{
+  --d2-ink:#f5f5f7; --d2-muted:rgba(245,245,247,.66); --d2-faint:rgba(245,245,247,.42);
+  --d2-line:rgba(245,245,247,.11); --d2-blue:#2997ff; --d2-green:#30d158;
+  --d2-radius:16px; --d2-max:1180px;
+}
+body{ font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif; }
+
+/* ---------- HERO (compact, 50/50) ---------- */
+.d2-hero{
+  position:relative; z-index:1;
+  width:min(var(--d2-max), calc(100% - 56px)); margin:0 auto;
+  padding:64px 0 56px;
+  display:grid; grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);
+  align-items:center; gap:clamp(36px,4vw,60px);
+  border-bottom:1px solid var(--d2-line);
+}
+.d2-hero-copy{min-width:0}
+.d2-eyebrow{display:inline-flex; align-items:center; gap:10px; color:var(--d2-blue);
+  font-size:11.5px; font-weight:600; letter-spacing:.05em; text-transform:uppercase}
+.d2-eyebrow::before{content:""; width:18px; height:1px; background:currentColor; opacity:.8}
+.d2-hero h1{margin:18px 0 0; font-size:clamp(36px,3.4vw,52px); line-height:1.06;
+  font-weight:780; letter-spacing:-.015em; color:#fff; text-wrap:balance}
+.d2-lead{max-width:48ch; margin:18px 0 0; color:var(--d2-muted);
+  font-size:clamp(16px,1.15vw,18px); line-height:1.55}
+.d2-store-row{display:flex; flex-wrap:wrap; align-items:flex-start; gap:16px; margin-top:26px}
+.d2-badge{display:inline-flex; align-items:center; text-decoration:none; transition:opacity .18s ease, transform .18s ease}
+.d2-badge img{display:block; height:50px; width:auto}
+.d2-badge.is-soon img{height:42px}
+.d2-badge:hover{opacity:.9; transform:translateY(-1px)}
+.d2-badge.is-soon{opacity:.5; filter:grayscale(1); cursor:default; pointer-events:none}
+.d2-badge:focus-visible{outline:2px solid var(--d2-blue); outline-offset:4px; border-radius:8px}
+.d2-badge-wrap{display:inline-flex; flex-direction:column; align-items:flex-start; gap:5px}
+.d2-badge-tag{font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--d2-faint)}
+
+/* ---------- HERO : interface produit réaliste ---------- */
+.d2-demo{min-width:0; border:1px solid var(--d2-line); border-radius:var(--d2-radius);
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015)),#0b0f16; overflow:hidden}
+.d2-demo-bar{display:flex; align-items:center; justify-content:space-between; padding:12px 16px;
+  border-bottom:1px solid var(--d2-line); font-size:12px; font-weight:800; letter-spacing:.12em; color:#fff}
+.d2-demo-bar strong{font-weight:inherit; color:var(--d2-blue)}
+.d2-demo-bar .dot{display:inline-flex; align-items:center; gap:7px; color:var(--d2-green);
+  font-weight:600; letter-spacing:0; font-size:11px}
+.d2-demo-bar .dot::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--d2-green)}
+.d2-demo-main{padding:20px 18px 18px}
+.d2-demo-type{display:inline-flex; align-items:center; gap:8px; color:var(--d2-blue);
+  font-size:11px; font-weight:760; letter-spacing:.14em; text-transform:uppercase}
+.d2-demo-type img{width:15px; height:15px}
+.d2-demo-num{margin:12px 0 0; color:#fff; font-size:clamp(20px,1.7vw,26px); font-weight:740; letter-spacing:.01em}
+.d2-demo-flag{display:inline-flex; margin:12px 0 10px; padding:5px 12px; border-radius:999px;
+  font-size:12px; font-weight:700; color:#ff8f87; border:1px solid rgba(255,105,97,.42); background:rgba(255,105,97,.09)}
+.d2-demo-note{margin:0; color:var(--d2-muted); font-size:13.5px; line-height:1.55}
+.d2-demo-actions{display:flex; gap:8px; margin-top:16px}
+.d2-demo-actions span{font-size:12px; font-weight:700; padding:9px 16px; border-radius:8px}
+.d2-demo-actions span:first-child{background:var(--d2-blue); color:#fff}
+.d2-demo-actions span:last-child{border:1px solid var(--d2-line); color:#fff}
+.d2-demo-more div{display:flex; align-items:center; gap:10px; padding:12px 18px;
+  font-size:13px; color:var(--d2-muted); border-top:1px solid var(--d2-line)}
+.d2-demo-more img{width:16px; height:16px; opacity:.8; flex-shrink:0}
+.d2-demo-more b{margin-left:auto; font-size:11px; font-weight:700; color:#ffd479}
+
+/* ---------- SECTIONS ---------- */
+.d2-section{width:min(var(--d2-max), calc(100% - 56px)); margin:0 auto; padding:84px 0}
+.d2-section + .d2-section{padding-top:0}
+.d2-section-head{max-width:680px}
+.d2-section-head .d2-eyebrow{margin-bottom:14px}
+.d2-section-head h2{margin:0; color:#fff; font-size:clamp(30px,3.4vw,48px); line-height:1.06;
+  font-weight:760; letter-spacing:-.015em; text-wrap:balance}
+.d2-section-head p{margin:14px 0 0; color:var(--d2-muted); font-size:17px; line-height:1.6}
+
+/* Tableau technique des protections */
+.d2-protect{margin-top:34px; border-top:1px solid var(--d2-line)}
+.d2-protect-row{display:grid; grid-template-columns:46px 190px 1fr 24px; align-items:center; gap:16px;
+  padding:17px 2px; border-bottom:1px solid var(--d2-line); transition:background .15s ease}
+.d2-protect-row:hover{background:rgba(255,255,255,.02)}
+.d2-protect-row .n{font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:12px; letter-spacing:.04em; color:var(--d2-faint)}
+.d2-protect-row .nm{color:#fff; font-size:15px; font-weight:680}
+.d2-protect-row .ds{color:var(--d2-muted); font-size:14px}
+.d2-protect-row img{width:17px; height:17px; opacity:.45; justify-self:end}
+.d2-protect-link{margin:22px 0 0}
+.d2-link{display:inline-flex; color:var(--d2-blue); font-weight:700; font-size:14px; text-decoration:none}
+.d2-link:hover{text-decoration:underline}
+
+/* DYLETH en action — hiérarchie */
+.d2-action-grid{margin-top:36px; display:grid; grid-template-columns:1.5fr 1fr; grid-template-rows:auto auto; gap:16px}
+.d2-action-card{display:flex; flex-direction:column; border:1px solid var(--d2-line); border-radius:var(--d2-radius);
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018)),rgba(8,11,18,.9)}
+.d2-action-main{grid-row:1 / span 2; padding:30px}
+.d2-action-mini{padding:22px}
+.d2-action-type{display:inline-flex; align-items:center; gap:8px; color:var(--d2-blue);
+  font-size:11px; font-weight:760; letter-spacing:.14em; text-transform:uppercase}
+.d2-action-type img{width:15px; height:15px}
+.d2-action-sample{margin:0}
+.d2-action-main .d2-action-sample{margin-top:16px; color:#fff; font-size:clamp(18px,1.5vw,22px); line-height:1.4}
+.d2-action-mini .d2-action-sample{margin-top:12px; color:#fff; font-size:14px; line-height:1.45}
+.d2-action-flag{align-self:flex-start; margin:14px 0 12px; padding:5px 12px; border-radius:999px;
+  font-size:12px; font-weight:700; border:1px solid}
+.d2-action-flag.risk{color:#ff8f87; border-color:rgba(255,105,97,.42); background:rgba(255,105,97,.09)}
+.d2-action-flag.warn{color:#ffd479; border-color:rgba(255,196,105,.42); background:rgba(255,196,105,.09)}
+.d2-action-note{margin:0; color:var(--d2-muted); font-size:13.5px; line-height:1.6}
+.d2-action-mini .d2-action-note{font-size:12.5px}
+.d2-action-actions{display:flex; gap:8px; margin-top:16px}
+.d2-action-actions span{font-size:12px; font-weight:700; padding:8px 14px; border-radius:8px}
+.d2-action-actions span:first-child{background:var(--d2-blue); color:#fff}
+.d2-action-actions span:last-child{border:1px solid var(--d2-line); color:#fff}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease}
+.reveal.is-in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1; transform:none; transition:none}
+  .d2-badge,.d2-protect-row,.nav-cta,.nav-item>a,.nav-item>button,.nav-sub-btn,.nav-dropdown a,.lang-dropdown a{transition:none !important}
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1100px){
+  .d2-hero{grid-template-columns:1fr; gap:32px; padding:88px 0 48px; width:min(720px, calc(100% - 40px))}
+  .d2-hero-copy{text-align:left}
+  .d2-eyebrow,.d2-store-row{justify-content:flex-start}
+  .d2-lead{margin-left:0; margin-right:0}
+  .d2-demo{order:2; width:100%; margin:0}
+  .d2-section{width:min(720px, calc(100% - 40px)); padding:56px 0}
+  .d2-action-grid{grid-template-columns:1fr; grid-template-rows:none}
+  .d2-action-main{grid-row:auto}
+}
+@media (max-width:640px){
+  .d2-hero{width:calc(100% - 32px); padding:80px 0 40px; gap:28px}
+  .d2-hero h1{font-size:clamp(30px,7.6vw,38px); line-height:1.1}
+  .d2-lead{font-size:15.5px}
+  .d2-store-row{width:100%; justify-content:flex-start; gap:14px}
+  .d2-badge img{height:48px}
+  .d2-badge.is-soon img{height:40px}
+  .d2-section{width:calc(100% - 32px); padding:44px 0}
+  .d2-section-head h2{font-size:clamp(26px,7.5vw,34px)}
+  .d2-action-main,.d2-action-mini{padding:20px}
+  .d2-protect-row{grid-template-columns:32px 1fr; grid-template-areas:"n nm" "n ds"; column-gap:14px; row-gap:2px; padding:15px 2px}
+  .d2-protect-row .n{grid-area:n; align-self:start; padding-top:2px}
+  .d2-protect-row .nm{grid-area:nm}
+  .d2-protect-row .ds{grid-area:ds}
+  .d2-protect-row img{display:none}
+}
+</style>
+<style id="d2b">
+/* ══════════ LOT 2 — Comment ça marche / Positionnement / Confidentialité ══════════ */
+
+/* Comment ça marche : séquence technique numérotée */
+.d2-flow{margin-top:34px; border-top:1px solid var(--d2-line)}
+.d2-flow-row{display:grid; grid-template-columns:60px minmax(0,1fr); gap:22px;
+  padding:24px 2px; border-bottom:1px solid var(--d2-line)}
+.d2-flow-row .n{font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace;
+  font-size:13px; font-weight:600; letter-spacing:.06em; color:var(--d2-blue)}
+.d2-flow-row h3{margin:0 0 6px; color:#fff; font-size:16px; font-weight:680; letter-spacing:-.005em}
+.d2-flow-row p{margin:0; color:var(--d2-muted); font-size:14px; line-height:1.62; max-width:64ch}
+.d2-claim{margin:26px 0 0; padding:20px 22px; border:1px solid rgba(41,151,255,.28); border-radius:14px;
+  background:rgba(41,151,255,.06); color:#fff; font-size:16px; font-weight:640; line-height:1.45}
+.d2-claim span{color:var(--d2-blue)}
+
+/* Positionnement : éditorial 2 colonnes, pas de cartes */
+.d2-pos-section .d2-section-head{max-width:780px}
+.d2-pos-section .d2-section-head h2{font-size:clamp(26px,3vw,40px)}
+.d2-pos{margin-top:34px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(28px,4vw,56px); align-items:start}
+.d2-pos-lead{margin:0; color:var(--d2-muted); font-size:17px; line-height:1.7; max-width:46ch}
+.d2-pos-lead strong{color:#fff; font-weight:600}
+.d2-pos dl{margin:0; border-top:1px solid var(--d2-line)}
+.d2-pos dl > div{padding:18px 2px; border-bottom:1px solid var(--d2-line)}
+.d2-pos dt{color:#fff; font-size:14.5px; font-weight:680}
+.d2-pos dd{margin:5px 0 0; color:var(--d2-muted); font-size:13.5px; line-height:1.6}
+
+/* Confidentialité : bloc institutionnel, toujours dark */
+.d2-priv{margin-top:34px; border:1px solid var(--d2-line); border-radius:var(--d2-radius);
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012)),rgba(8,11,18,.6); overflow:hidden}
+.d2-priv-head{display:flex; align-items:center; gap:10px; padding:16px 24px; border-bottom:1px solid var(--d2-line);
+  font-size:11px; font-weight:760; letter-spacing:.14em; text-transform:uppercase; color:var(--d2-faint)}
+.d2-priv-head::before{content:""; width:8px; height:8px; border-radius:2px; background:var(--d2-blue)}
+.d2-priv-row{display:grid; grid-template-columns:230px minmax(0,1fr); gap:24px;
+  padding:20px 24px; border-bottom:1px solid var(--d2-line)}
+.d2-priv-row:last-child{border-bottom:0}
+.d2-priv-row .t{color:#fff; font-size:14.5px; font-weight:680}
+.d2-priv-row .d{margin:0; color:var(--d2-muted); font-size:13.5px; line-height:1.62}
+.d2-priv-row .d a{color:var(--d2-blue); text-decoration:none}
+.d2-priv-row .d a:hover{text-decoration:underline}
+
+@media (max-width:1100px){
+  .d2-pos{grid-template-columns:1fr; gap:26px}
+  .d2-pos-lead{max-width:none}
+}
+@media (max-width:640px){
+  .d2-flow-row{grid-template-columns:42px minmax(0,1fr); gap:14px; padding:20px 2px}
+  .d2-flow-row p{font-size:13.5px}
+  .d2-claim{font-size:15px; padding:18px}
+  .d2-priv-head{padding:14px 18px}
+  .d2-priv-row{grid-template-columns:1fr; gap:5px; padding:16px 18px}
+  .d2-pos dl > div{padding:16px 2px}
+}
+</style>
+<style id="d2c">
+/* LOT — desktop uniquement : hero renforcé + séparateurs doux (mobile inchangé) */
+@media (min-width:1101px){
+  /* ── HERO desktop : plus large, plus fort, aucune ligne, espace maîtrisé ── */
+  .d2-hero{
+    border-bottom:0;
+    width:min(1240px, calc(100% - 48px));
+    padding:70px 0 0;
+    grid-template-columns:minmax(0,520px) minmax(0,1fr);
+    gap:clamp(48px,4vw,64px);
+    align-items:center;
+  }
+  .d2-hero-copy{max-width:none}
+  .d2-hero h1{font-size:clamp(48px,4vw,58px); line-height:1.05; max-width:none}
+  .d2-lead{max-width:none; font-size:18px; line-height:1.6; color:rgba(245,245,247,.84)}
+  .d2-store-row{margin-top:28px}
+  /* interface produit ~10-15 % plus présente (contenu inchangé) */
+  .d2-demo-bar{padding:14px 18px}
+  .d2-demo-main{padding:24px 22px 20px}
+  .d2-demo-num{font-size:28px}
+  .d2-demo-more div{padding:14px 18px; font-size:13.5px}
+  /* espace hero -> "Sept protections" : ~60 px, uniquement à cette jonction */
+  .d2-hero + .d2-section{padding-top:60px}
+
+  /* NAV desktop : lisibilité (+1px sur les liens, logo/langue inchangés) */
+  .nav-item>a,.nav-item>button,.nav-sub-btn{font-size:14px}
+
+  /* séparateurs desktop plus doux — pas de trait pleine largeur */
+  .d2-protect,.d2-flow,.d2-pos dl{border-top:0}
+  .d2-protect-row,.d2-flow-row,.d2-pos dl>div{border-bottom-color:rgba(245,245,247,.055)}
+  .d2-protect-row:last-child,.d2-flow-row:last-child{border-bottom:0}
+  .section-shock{border-top-color:transparent; border-bottom-color:transparent}
+  .d2-priv{border-color:rgba(245,245,247,.08)}
+  .d2-priv-row,.d2-priv-head{border-bottom-color:rgba(245,245,247,.06)}
+}
+</style>
+<style id="d3">
+/* ══════════ LE CONSTAT — data / threat intelligence (langage d2) ══════════ */
+.d3-grid{margin-top:34px; display:grid; grid-template-columns:minmax(0,0.82fr) minmax(0,1.18fr);
+  gap:clamp(30px,5vw,72px); align-items:start}
+.d3-hero-num{font-size:clamp(56px,7.6vw,108px); line-height:.92; font-weight:780; letter-spacing:-.02em; color:#fff}
+.d3-hero-label{margin:14px 0 0; color:#fff; font-size:clamp(16px,1.35vw,19px); line-height:1.35; font-weight:600; max-width:22ch}
+.d3-hero-ctx{margin:18px 0 0; color:var(--d2-muted); font-size:15px; line-height:1.65; max-width:40ch}
+.d3-hero-ctx strong{color:#fff; font-weight:600}
+.d3-src{font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:10.5px; letter-spacing:.04em; color:var(--d2-faint); text-transform:uppercase}
+.d3-hero-src{margin:16px 0 0}
+.d3-rows{display:grid}
+.d3-row{display:grid; grid-template-columns:minmax(128px,auto) 1fr; gap:22px; align-items:baseline;
+  padding:20px 2px; border-top:1px solid rgba(245,245,247,.09)}
+.d3-row:first-child{border-top:0}
+.d3-row .v{font-size:clamp(26px,2.3vw,34px); font-weight:740; letter-spacing:-.01em; color:var(--d2-blue); line-height:1}
+.d3-row .m{min-width:0}
+.d3-row .m b{display:block; color:#fff; font-size:14.5px; font-weight:600; line-height:1.4}
+.d3-row .m .d3-src{display:block; margin-top:5px}
+.d3-note{margin:28px 0 0; color:var(--d2-faint); font-size:12.5px; line-height:1.6; max-width:72ch}
+
+@media (max-width:1100px){
+  .d3-grid{grid-template-columns:1fr; gap:28px}
+  .d3-hero-label,.d3-hero-ctx{max-width:none}
+}
+@media (max-width:640px){
+  .d3-hero-num{font-size:clamp(46px,15vw,60px)}
+  .d3-row{grid-template-columns:1fr; gap:6px; padding:16px 2px}
+  .d3-row .v{font-size:25px}
+}
+</style>
+<style id="d4">
+/* ══════════ SECTEURS (index) + CHARTE (manifeste) — langage d2 ══════════ */
+
+/* --- SECTEURS : index structuré, pas de cartes --- */
+.d4-sectors h2 em{font-style:normal; color:var(--d2-blue)}
+.d4-index{margin-top:32px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(8,auto);
+  grid-auto-flow:column; column-gap:clamp(36px,5vw,72px)}
+.d4-sec{display:grid; grid-template-columns:32px minmax(0,1fr) 16px; align-items:center; gap:16px;
+  padding:16px 2px; border-top:1px solid rgba(245,245,247,.09);
+  color:inherit; text-decoration:none; transition:background .15s ease, border-color .15s ease}
+.d4-sec:hover{background:rgba(255,255,255,.02); border-color:rgba(41,151,255,.4)}
+.d4-sec .n{font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:11px; letter-spacing:.04em; color:var(--d2-faint)}
+.d4-sec .b{min-width:0}
+.d4-sec .b strong{display:block; color:#fff; font-size:15px; font-weight:620; line-height:1.35}
+.d4-sec .b span{display:block; margin-top:3px; color:var(--d2-muted); font-size:12.5px; line-height:1.45}
+.d4-sec .ar{color:var(--d2-faint); font-size:15px; line-height:1; transition:color .15s ease}
+.d4-sec:hover .ar{color:var(--d2-blue)}
+
+/* --- CHARTE : manifeste numéroté, sans cartes fermées --- */
+.d4-charter .d2-section-head{max-width:640px}
+.d4-manifest{margin-top:34px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(3,auto);
+  grid-auto-flow:column; column-gap:clamp(44px,6vw,84px)}
+.d4-eng{padding:26px 2px; border-top:1px solid rgba(245,245,247,.1)}
+.d4-eng .n{font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:12px; letter-spacing:.06em; color:var(--d2-blue)}
+.d4-eng h3{margin:12px 0 8px; color:#fff; font-size:19px; font-weight:660; letter-spacing:-.005em; line-height:1.25}
+.d4-eng p{margin:0; color:var(--d2-muted); font-size:14px; line-height:1.65}
+.d4-eng p a{color:var(--d2-blue); text-decoration:none}
+.d4-eng p a:hover{text-decoration:underline}
+
+@media (max-width:1100px){
+  .d4-index{grid-template-columns:1fr; grid-template-rows:none; grid-auto-flow:row}
+  .d4-manifest{grid-template-columns:1fr; grid-template-rows:none; grid-auto-flow:row; column-gap:0}
+}
+@media (max-width:640px){
+  .d4-sec{grid-template-columns:26px minmax(0,1fr) 14px; gap:12px; padding:14px 2px}
+  .d4-eng{padding:22px 2px}
+  .d4-eng h3{font-size:17px}
+}
+</style>
+<style id="d5">
+/* ══════════ TARIFS + CTA + FOOTER — langage d2 ══════════ */
+
+/* --- TARIFS : éditorial 2 colonnes, aucune pricing card SaaS --- */
+.d5-pricing{margin-top:34px; display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(36px,5vw,72px); align-items:start}
+.d5-plan{border-top:1px solid rgba(245,245,247,.12); padding-top:26px}
+.d5-plan .k{margin:0; font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace;
+  font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--d2-faint)}
+.d5-price{display:flex; align-items:baseline; gap:12px; margin:14px 0 0}
+.d5-price .amt{font-size:clamp(44px,5vw,64px); font-weight:780; letter-spacing:-.02em; line-height:1; color:#fff}
+.d5-price .amt.blue{color:var(--d2-blue)}
+.d5-price .per{color:var(--d2-muted); font-size:13px}
+.d5-plan .cond{margin:10px 0 0; color:#fff; font-size:14px; font-weight:600; line-height:1.5}
+.d5-feat{margin:20px 0 0; padding:0; list-style:none}
+.d5-feat li{position:relative; padding:9px 0 9px 20px; border-top:1px solid rgba(245,245,247,.08);
+  color:#fff; font-size:13.5px; line-height:1.5}
+.d5-feat li:first-child{border-top:0}
+.d5-feat li::before{content:""; position:absolute; left:0; top:16px; width:9px; height:1px; background:var(--d2-blue)}
+.d5-plan .why{margin:12px 0 0; color:var(--d2-muted); font-size:13.5px; line-height:1.65}
+.d5-cta-line{display:inline-flex; align-items:center; gap:8px; margin-top:20px; padding:11px 18px;
+  border:1px solid var(--d2-blue); border-radius:8px; color:#fff; font-size:13px; font-weight:640;
+  text-decoration:none; transition:background .15s ease}
+.d5-cta-line:hover{background:rgba(41,151,255,.1)}
+.d5-cta-line.ghost{border-color:rgba(245,245,247,.22)}
+.d5-cta-line.ghost:hover{background:rgba(255,255,255,.03)}
+
+/* --- CTA FINAL : sobre — puissance par le titre, l'espace, les badges officiels --- */
+.d5-final{text-align:center; padding-top:clamp(72px,9vh,120px)}
+.d5-final h2{margin:0 auto; max-width:22ch; color:#fff; font-size:clamp(30px,3.6vw,52px);
+  line-height:1.08; font-weight:760; letter-spacing:-.015em; text-wrap:balance}
+.d5-final p{margin:18px auto 0; max-width:54ch; color:var(--d2-muted); font-size:15px; line-height:1.6}
+.d5-final .d2-store-row{justify-content:center; margin-top:30px}
+.d5-final .d5-note{margin-top:14px; font-size:12px; color:var(--d2-faint)}
+
+/* --- FOOTER --- */
+.d5-footer{border-top:1px solid rgba(245,245,247,.09); margin-top:clamp(72px,9vh,120px); background:#04060e}
+.d5-footer-in{width:min(var(--d2-max), calc(100% - 56px)); margin:0 auto; padding:56px 0 32px}
+.d5-foot-grid{display:grid; grid-template-columns:1.7fr 1fr 1fr 1fr 1fr; gap:clamp(22px,3vw,44px)}
+.d5-brand{max-width:310px}
+.d5-brand .wm{font-size:16px; font-weight:800; letter-spacing:.14em; color:#fff; text-decoration:none}
+.d5-brand .wm span{color:var(--d2-blue)}
+.d5-brand p{margin:12px 0 0; color:var(--d2-muted); font-size:13px; line-height:1.6}
+.d5-brand .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px}
+.d5-brand .tags span{font-size:10.5px; letter-spacing:.04em; color:var(--d2-faint);
+  border:1px solid rgba(245,245,247,.12); border-radius:6px; padding:4px 9px}
+.d5-foot-col h4{margin:0 0 14px; font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#fff}
+.d5-foot-col ul{margin:0; padding:0; list-style:none}
+.d5-foot-col li{margin:0 0 9px}
+.d5-foot-col a{color:var(--d2-muted); font-size:13px; text-decoration:none; transition:color .15s ease}
+.d5-foot-col a:hover{color:#fff}
+.d5-foot-bottom{width:min(var(--d2-max), calc(100% - 56px)); margin:0 auto; padding:20px 0 0;
+  border-top:1px solid rgba(245,245,247,.08); display:flex; justify-content:space-between;
+  flex-wrap:wrap; gap:10px; color:var(--d2-faint); font-size:12px; padding-bottom:34px}
+
+@media (max-width:1100px){
+  .d5-pricing{grid-template-columns:1fr; gap:0}
+  .d5-plan + .d5-plan{margin-top:28px}
+  .d5-foot-grid{grid-template-columns:1fr 1fr}
+  .d5-brand{grid-column:1 / -1; max-width:none}
+}
+@media (max-width:640px){
+  .d5-final h2{font-size:clamp(26px,7.4vw,34px)}
+  .d5-final .d2-store-row{flex-direction:column; align-items:center}
+  .d5-foot-grid{grid-template-columns:1fr}
+  .d5-foot-bottom{flex-direction:column; gap:6px}
+}
+</style>
+<style id="p01">
+/* ══════════ P0/P1 — signature 3 couleurs · dashboard · brevet ══════════ */
+.d2-patent{margin:12px 0 0; font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace;
+  font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--d2-faint)}
+
+/* Signature DYLETH — bande de décision (seule zone où la couleur forte est justifiée) */
+.sig-band{margin-top:34px; border:1px solid var(--d2-line); border-radius:16px; overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012)),#0b0f16}
+.sig-state{display:grid; grid-template-columns:250px minmax(0,1fr) auto; gap:24px; align-items:center;
+  padding:22px 24px; border-top:1px solid var(--d2-line)}
+.sig-state:first-child{border-top:0}
+.sig-state .dot{display:flex; align-items:baseline; gap:11px; min-width:0}
+.sig-state .dot i{width:11px; height:11px; border-radius:50%; flex-shrink:0; transform:translateY(1px)}
+.sig-state .dot b{font-size:13px; font-weight:700; letter-spacing:.02em; line-height:1.3}
+.sig-state .lead{color:#fff; font-size:15px; font-weight:600}
+.sig-state .lead span{display:block; margin-top:4px; color:var(--d2-muted); font-size:13px; font-weight:400; line-height:1.5}
+.sig-state .score{font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:12px; color:var(--d2-faint); white-space:nowrap}
+.sig-state.green .dot i{background:#30d158} .sig-state.green .dot b{color:#4ade80}
+.sig-state.orange .dot i{background:#ff9f0a} .sig-state.orange .dot b{color:#ffb454}
+.sig-state.red .dot i{background:#ff453a} .sig-state.red .dot b{color:#ff6b61}
+.sig-voice{margin:18px 0 0; color:var(--d2-muted); font-size:14px; line-height:1.65; max-width:72ch}
+.sig-voice strong{color:#fff; font-weight:600}
+
+/* Dashboard — illustration produit */
+.dash{margin-top:34px; border:1px solid var(--d2-line); border-radius:16px; overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012)),#0b0f16}
+.dash-bar{display:flex; align-items:center; justify-content:space-between; padding:14px 20px;
+  border-bottom:1px solid var(--d2-line); font-size:12px; font-weight:800; letter-spacing:.12em; color:#fff}
+.dash-bar strong{font-weight:inherit; color:var(--d2-blue)}
+.dash-bar .live{display:inline-flex; align-items:center; gap:7px; font-size:11px; font-weight:600; letter-spacing:0; color:#4ade80}
+.dash-bar .live::before{content:""; width:7px; height:7px; border-radius:50%; background:#30d158}
+.dash-body{display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:1px; background:var(--d2-line)}
+.dash-tiles{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--d2-line)}
+.dash-tile{padding:20px; background:#0b0f16}
+.dash-tile .v{font-size:clamp(22px,2vw,30px); font-weight:740; color:#fff; line-height:1}
+.dash-tile .l{margin-top:6px; color:var(--d2-muted); font-size:12px; line-height:1.4}
+.dash-side{padding:18px 20px; background:#0b0f16}
+.dash-side h4{margin:0 0 8px; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--d2-faint)}
+.dash-side h4 + h4{margin-top:16px}
+.dash-call + h4{margin-top:18px}
+.dash-call{display:flex; align-items:center; gap:10px; padding:8px 0; border-top:1px solid rgba(245,245,247,.08); font-size:13px; color:#fff}
+.dash-call:first-of-type{border-top:0}
+.dash-call i{width:9px; height:9px; border-radius:50%; flex-shrink:0}
+.dash-call i.green{background:#30d158} .dash-call i.orange{background:#ff9f0a} .dash-call i.red{background:#ff453a}
+.dash-call .s{margin-left:auto; font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:11px; color:var(--d2-faint)}
+.dash-mods{display:grid; grid-template-columns:1fr 1fr; gap:8px 16px}
+.dash-mods span{display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--d2-muted)}
+.dash-mods span::before{content:""; width:16px; height:9px; border-radius:999px; background:rgba(48,209,88,.25); box-shadow:inset -7px 0 0 #30d158; flex-shrink:0}
+.dash-status{display:flex; flex-wrap:wrap; gap:8px; padding:14px 20px; border-top:1px solid var(--d2-line)}
+.dash-status span{font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:11px; color:var(--d2-faint);
+  border:1px solid var(--d2-line); border-radius:6px; padding:4px 9px}
+.dash-config{margin:16px 0 0; color:var(--d2-muted); font-size:14px; line-height:1.6; max-width:72ch}
+.dash-note{margin:10px 0 0; font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:11px; letter-spacing:.03em; color:var(--d2-faint)}
+
+/* Positionnement — claim mondial */
+.d2-pos-claim{margin:28px 0 0; padding:22px 24px; border:1px solid rgba(41,151,255,.24); border-radius:14px; background:rgba(41,151,255,.05)}
+.d2-pos-claim b{display:block; color:#fff; font-size:16px; font-weight:680; letter-spacing:.01em}
+.d2-pos-claim span{display:block; margin-top:6px; color:var(--d2-muted); font-size:13.5px; line-height:1.6}
+
+/* Privacy — encadré brevet */
+.d2-patent-box{margin:16px 0 0; padding:22px 24px; border:1px solid var(--d2-line); border-radius:14px; background:rgba(255,255,255,.02)}
+.d2-patent-box b{display:block; color:#fff; font-size:15px; font-weight:680}
+.d2-patent-box p{margin:8px 0 0; color:var(--d2-muted); font-size:13.5px; line-height:1.65}
+
+/* Tarifs — gratuité collectivités */
+.d5-plan .free-note{margin:14px 0 0; display:inline-flex; align-items:center; font-size:12.5px; color:#4ade80;
+  border:1px solid rgba(48,209,88,.35); border-radius:8px; padding:7px 12px}
+
+@media (max-width:1100px){
+  .dash-body{grid-template-columns:1fr}
+  .sig-state{grid-template-columns:1fr; gap:8px; padding:20px}
+  .sig-state .score{justify-self:start}
+}
+@media (max-width:640px){
+  .dash-tiles{grid-template-columns:1fr 1fr}
+  .dash-mods{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
 <div class="noise"></div>
-<div class="gradient-orb orb-1"></div>
-<div class="gradient-orb orb-2"></div>
 
 <!-- ═══ NAV ═══ -->
 <nav class="main-nav">
@@ -548,6 +985,7 @@
     <li class="nav-item">
       <button class="nav-sub-btn">La Menace <span class="caret">▼</span></button>
       <div class="nav-dropdown">
+        <a href="menace/index.html">Vue d'ensemble</a>
         <a href="menace/etat-des-lieux.html">État des lieux</a>
         <a href="menace/chiffres-cles.html">Chiffres clés</a>
         <a href="menace/intelligence-artificielle.html">IA &amp; Cybermenaces</a>
@@ -575,6 +1013,8 @@
         <a href="solution/rgpd.html">Conformité RGPD</a>
         <a href="solution/comparatif.html">Comparatif</a>
         <a href="solution/faq.html">FAQ</a>
+        <a href="telecharger/index.html">Télécharger</a>
+        <a href="entreprises/index.html">Entreprises</a>
       </div>
     </li>
     <li class="nav-item">
@@ -604,6 +1044,8 @@
         <a href="ressources/blog.html">Blog &amp; Actualités</a>
         <a href="ressources/livre-blanc.html">Livre Blanc</a>
         <a href="ressources/newsletter.html">Newsletter</a>
+        <a href="roadmap/index.html">Roadmap</a>
+        <a href="innovations/index.html">Innovations</a>
       </div>
     </li>
     <li class="nav-item nav-item-lang">
@@ -662,474 +1104,385 @@
         <a onclick="doTranslate('ha')">HA Hausa</a>
       </div>
     </div>
-    <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="nav-cta">Télécharger sur Google Play</a>
   </div>
 </nav>
 
-<!-- ═══ TICKER ═══ -->
-<div class="ticker">
-  <div class="ticker-inner">
-    <span class="ticker-item"><span class="ticker-icon">⚡</span>26 millions d'appels frauduleux par jour en France</span>
-    <span class="ticker-item"><span class="ticker-icon">⚡</span>348 000 atteintes numériques en 2024</span>
-    <span class="ticker-item"><span class="ticker-icon">⚡</span>+320% de smishing en 2024</span>
-    <span class="ticker-item"><span class="ticker-icon">⚡</span>43 millions de Français victimes de fuite de données</span>
-    <span class="ticker-item"><span class="ticker-icon">⚡</span>91% des cyberattaques commencent par un email</span>
-    <span class="ticker-item"><span class="ticker-icon">⚡</span>118 milliards € de pertes annuelles en France</span>
-    <span class="ticker-item"><span class="ticker-icon">⚡</span>26 millions d'appels frauduleux par jour en France</span>
-    <span class="ticker-item"><span class="ticker-icon">⚡</span>348 000 atteintes numériques en 2024</span>
-    <span class="ticker-item"><span class="ticker-icon">⚡</span>+320% de smishing en 2024</span>
-    <span class="ticker-item"><span class="ticker-icon">⚡</span>43 millions de Français victimes de fuite de données</span>
-  </div>
-</div>
 
 <!-- ═══ HERO ═══ -->
-<section class="hero">
-  <div class="hero-badge" style="animation:riseUp .7s .1s ease both">
-    <div class="badge-dot"></div>
-    Société Française · Privacy by Design · INPI
-  </div>
-
-  <h1 class="hero-title" style="font-size:clamp(36px,6vw,72px);letter-spacing:-1.5px;margin-bottom:24px;animation:riseUp .7s .2s ease both">
-    Détecteur d'appels frauduleux<br><em>Filtre SMS · Protection emails · Sécurité WiFi</em>
-  </h1>
-
-  <p class="hero-tagline" style="font-size:clamp(20px,3.5vw,32px);font-weight:700;color:var(--white);letter-spacing:-0.5px;margin-bottom:12px;animation:riseUp .7s .3s ease both">
-    Une arnaque suffit pour tout perdre.
-  </p>
-
-  <p class="hero-tagline" style="font-size:clamp(15px,2vw,19px);font-weight:300;margin-bottom:48px;animation:riseUp .7s .35s ease both">
-    DYLETH vous protège <strong>avant qu'il ne soit trop tard.</strong>
-  </p>
-
-  <div class="modules-visual">
-    <div class="mod-chip"><span class="mod-icon">☎️</span> Appels</div>
-    <div class="mod-chip"><span class="mod-icon">🗨️</span> SMS</div>
-    <div class="mod-chip"><span class="mod-icon">✉️</span> Emails</div>
-    <div class="mod-chip"><span class="mod-icon">🔐</span> URLs</div>
-    <div class="mod-chip"><span class="mod-icon">📲</span> WiFi Mobile</div>
-    <div class="mod-chip"><span class="mod-icon">🏡</span> WiFi Maison</div>
-    <div class="mod-chip pro"><span class="mod-icon">📡</span> WiFi Pro <span class="chip-pro-badge">PRO</span></div>
-  </div>
-
-  <div class="cta-wrap">
-    <div class="hero-store-btns">
-      <div class="store-btn store-btn-disabled hero-store-btn" aria-label="En cours de validation par Apple" title="En cours de validation par Apple">
-        <svg viewBox="0 0 24 24" fill="#FFFFFF" width="28" height="28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/>
-        </svg>
-        <div class="store-text-wrap">
-          <span class="store-sub-text">En validation sur l'</span>
-          <span class="store-name-text">App Store</span>
-        </div>
-      </div>
-      <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="store-btn hero-store-btn" aria-label="Disponible sur Google Play">
-        <svg viewBox="0 0 24 24" width="28" height="28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <defs>
-            <linearGradient id="gph1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00A0FF"/><stop offset="100%" stop-color="#00E3FF"/></linearGradient>
-            <linearGradient id="gph2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00E676"/><stop offset="100%" stop-color="#00C853"/></linearGradient>
-            <linearGradient id="gph3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FF3A44"/><stop offset="100%" stop-color="#C31162"/></linearGradient>
-            <linearGradient id="gph4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFE000"/><stop offset="100%" stop-color="#FFC500"/></linearGradient>
-          </defs>
-          <path d="M3.609 1.814L13.792 12 3.61 22.186c-.317-.211-.518-.555-.518-.949V2.763c0-.394.201-.738.517-.949z" fill="url(#gph1)"/>
-          <path d="M17.074 8.378l-2.932 2.932L3.609 1.814c.156-.104.34-.164.536-.164.196 0 .39.053.575.158l12.354 6.57z" fill="url(#gph2)"/>
-          <path d="M17.074 15.622L4.72 22.192c-.185.105-.379.158-.575.158a1.04 1.04 0 0 1-.536-.164l10.533-10.186 2.932 3.622z" fill="url(#gph3)"/>
-          <path d="M20.165 12.685l-3.09 1.643-3.15-3.018 3.15-3.018 3.09 1.644c.668.356.668 1.392 0 1.749z" fill="url(#gph4)"/>
-        </svg>
-        <div class="store-text-wrap">
-          <span class="store-sub-text">Disponible sur</span>
-          <span class="store-name-text">Google Play</span>
-        </div>
+<section class="d2-hero">
+  <div class="d2-hero-copy reveal">
+    <p class="d2-eyebrow">Société française &middot; Privacy by Design</p>
+    <p class="d2-patent">Brevet INPI &amp; USPTO</p>
+    <h1>Détectez le risque avant d'agir.</h1>
+    <p class="d2-lead">DYLETH analyse les signaux liés aux appels, SMS, e-mails, liens et réseaux Wi-Fi pour vous aider à identifier une situation suspecte avant de poursuivre.</p>
+    <div class="d2-store-row">
+      <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="d2-badge" aria-label="Disponible sur Google Play">
+        <img src="assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250">
+      </a>
+      <a href="https://apps.apple.com/fr/app/dyleth/id6774315923" target="_blank" rel="noopener noreferrer" class="d2-badge" aria-label="Télécharger sur l'App Store">
+        <img src="assets/store/app-store-fr.svg" alt="Télécharger sur l'App Store" width="127" height="40">
       </a>
     </div>
-    <p style="font-size:11px;color:var(--white-30);margin:8px 0 0;text-align:center">Disponible sur Google Play · App Store en cours de validation</p>
-    <div class="cta-micro">
-      <span class="cta-micro-item"><span class="cta-micro-icon">✓</span> Gratuit aujourd'hui — sans engagement</span>
-      <span class="cta-micro-item"><span class="cta-micro-icon">✓</span> Données minimisées — Privacy by Design</span>
-      <span class="cta-micro-item"><span class="cta-micro-icon">✓</span> Développé en France — conforme RGPD</span>
-    </div>
   </div>
 
-  <div class="stats-bar">
-    <div class="stat"><span class="stat-number green">0€</span><span class="stat-label">Sans engagement</span></div>
-    <div class="stat"><span class="stat-number blue">7</span><span class="stat-label">Modules actifs</span></div>
-    <div class="stat"><span class="stat-number" style="color:var(--white)">🔒</span><span class="stat-label">Données minimisées</span></div>
-    <div class="stat"><span class="stat-number gold">24/7</span><span class="stat-label">Protection active</span></div>
+  <div class="d2-demo reveal" aria-label="Aperçu de l'application DYLETH">
+    <div class="d2-demo-bar"><span>DYL<strong>ETH</strong></span><span class="dot">Analyse active</span></div>
+    <div class="d2-demo-main">
+      <span class="d2-demo-type"><img src="assets/icons/call.svg" alt="">Appel entrant</span>
+      <p class="d2-demo-num">+33&nbsp;1&nbsp;62&nbsp;34&nbsp;56&nbsp;78</p>
+      <span class="d2-demo-flag">Risque élevé</span>
+      <p class="d2-demo-note">Numéro associé à des signalements de faux conseiller bancaire.</p>
+      <div class="d2-demo-actions"><span>Bloquer</span><span>Plus d'infos</span></div>
+    </div>
+    <div class="d2-demo-more">
+      <div><img src="assets/icons/sms.svg" alt="">SMS suspect détecté<b>À vérifier</b></div>
+      <div><img src="assets/icons/wifi.svg" alt="">Wi-Fi à vérifier<b>À vérifier</b></div>
+    </div>
   </div>
+</section>
+
+<!-- ═══ SEPT PROTECTIONS ═══ -->
+<section class="d2-section d2-modules">
+  <div class="d2-section-head reveal">
+    <p class="d2-eyebrow">Protection</p>
+    <h2>Sept protections. Une seule application.</h2>
+    <p>Appels, messages, e-mails, liens et réseaux : DYLETH rassemble les principaux points de vigilance dans une même interface.</p>
+  </div>
+  <div class="d2-protect reveal">
+    <div class="d2-protect-row"><span class="n">01</span><span class="nm">Appels</span><span class="ds">Numéros entrants — annonce vocale de l'appelant intégrée, activable ou désactivable depuis le tableau de bord.</span><img src="assets/icons/call.svg" alt=""></div>
+    <div class="d2-protect-row"><span class="n">02</span><span class="nm">SMS</span><span class="ds">Messages et liens</span><img src="assets/icons/sms.svg" alt=""></div>
+    <div class="d2-protect-row"><span class="n">03</span><span class="nm">E-mails</span><span class="ds">Expéditeurs suspects</span><img src="assets/icons/email.svg" alt=""></div>
+    <div class="d2-protect-row"><span class="n">04</span><span class="nm">URLs</span><span class="ds">Liens avant ouverture</span><img src="assets/icons/link.svg" alt=""></div>
+    <div class="d2-protect-row"><span class="n">05</span><span class="nm">Wi-Fi mobile</span><span class="ds">Réseaux publics</span><img src="assets/icons/wifi.svg" alt=""></div>
+    <div class="d2-protect-row"><span class="n">06</span><span class="nm">Wi-Fi maison</span><span class="ds">Réseau domestique</span><img src="assets/icons/home.svg" alt=""></div>
+    <div class="d2-protect-row"><span class="n">07</span><span class="nm">Wi-Fi Pro</span><span class="ds">Multi-appareils</span><img src="assets/icons/router.svg" alt=""></div>
+  </div>
+  <p class="d2-protect-link reveal"><a class="d2-link" href="solution/7-modules.html">Les 7 modules en détail &rarr;</a></p>
+</section>
+
+<!-- ═══ DYLETH EN ACTION ═══ -->
+<section class="d2-section d2-action">
+  <div class="d2-section-head reveal">
+    <p class="d2-eyebrow">DYLETH en action</p>
+    <h2>Une alerte claire, au bon moment.</h2>
+    <p>Quand un signal correspond à des caractéristiques connues de fraude, DYLETH le signale simplement. Vous gardez la décision.</p>
+  </div>
+  <div class="d2-action-grid reveal">
+    <article class="d2-action-card d2-action-main">
+      <span class="d2-action-type"><img src="assets/icons/call.svg" alt="">Appel entrant</span>
+      <p class="d2-action-sample"><strong>+33&nbsp;1&nbsp;62&nbsp;34&nbsp;56&nbsp;78</strong></p>
+      <span class="d2-action-flag risk">Risque élevé</span>
+      <p class="d2-action-note">Numéro associé à des signalements de faux conseiller bancaire. Une banque ne demande jamais de code ni de virement par téléphone.</p>
+      <div class="d2-action-actions"><span>Bloquer</span><span>Plus d'infos</span></div>
+    </article>
+    <article class="d2-action-card d2-action-mini">
+      <span class="d2-action-type"><img src="assets/icons/sms.svg" alt="">SMS reçu</span>
+      <p class="d2-action-sample">&laquo;&nbsp;Votre colis est en attente. Régularisez les frais&nbsp;: &hellip;&nbsp;&raquo;</p>
+      <span class="d2-action-flag warn">Lien signalé</span>
+      <p class="d2-action-note">Le lien présente des caractéristiques de site frauduleux.</p>
+    </article>
+    <article class="d2-action-card d2-action-mini">
+      <span class="d2-action-type"><img src="assets/icons/wifi.svg" alt="">Réseau Wi-Fi</span>
+      <p class="d2-action-sample">Réseau public ouvert, nom proche d'un établissement connu.</p>
+      <span class="d2-action-flag warn">Non sécurisé</span>
+      <p class="d2-action-note">Aucun chiffrement détecté. Connexion déconseillée.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ═══ LA SIGNATURE DYLETH ═══ -->
+<section class="d2-section sig-section">
+  <div class="d2-section-head reveal">
+    <p class="d2-eyebrow">La signature DYLETH</p>
+    <h2>Trois couleurs. Une seconde. Vous savez.</h2>
+    <p>Avant de décrocher, l'écran change de couleur. Un code universel, lisible d'un coup d'œil.</p>
+  </div>
+  <div class="sig-band reveal">
+    <div class="sig-state green">
+      <span class="dot"><i></i><b>Vert — Vous pouvez décrocher</b></span>
+      <span class="lead">Contact identifié ou numéro validé par notre base communautaire.</span>
+      <span class="score">Score 80–100 / 100</span>
+    </div>
+    <div class="sig-state orange">
+      <span class="dot"><i></i><b>Orange — Soyez prudent</b></span>
+      <span class="lead">Numéro inconnu ou non répertorié.<span>Réfléchissez avant de répondre.</span></span>
+      <span class="score">Score 40–79 / 100</span>
+    </div>
+    <div class="sig-state red">
+      <span class="dot"><i></i><b>Rouge — Signal de fraude</b></span>
+      <span class="lead">Numéro signalé frauduleux, spam confirmé ou alerte ARCEP.<span>Ne décrochez pas.</span></span>
+      <span class="score">Score 0–39 / 100</span>
+    </div>
+  </div>
+  <p class="sig-voice reveal">Et une voix annonce l'identité de l'appelant — même sans regarder l'écran. <strong>Désactivable depuis l'application à tout moment.</strong></p>
+</section>
+
+<!-- ═══ DASHBOARD ═══ -->
+<section class="d2-section dash-section">
+  <div class="d2-section-head reveal">
+    <p class="d2-eyebrow">Tableau de bord</p>
+    <h2>Votre protection, en un coup d'œil.</h2>
+    <p>Tout DYLETH depuis un seul écran : ce qui a été analysé, ce qui a été bloqué, ce qui est actif.</p>
+  </div>
+  <div class="dash reveal" aria-label="Illustration du tableau de bord DYLETH">
+    <div class="dash-bar"><span>DYL<strong>ETH</strong> · Tableau de bord</span><span class="live">Temps réel</span></div>
+    <div class="dash-body">
+      <div class="dash-tiles">
+        <div class="dash-tile"><div class="v">1 284</div><div class="l">Appels analysés</div></div>
+        <div class="dash-tile"><div class="v">37</div><div class="l">Menaces bloquées ce mois</div></div>
+        <div class="dash-tile"><div class="v">4</div><div class="l">Signalements envoyés</div></div>
+        <div class="dash-tile"><div class="v">92 %</div><div class="l">Numéros identifiés</div></div>
+      </div>
+      <div class="dash-side">
+        <h4>Derniers appels</h4>
+        <div class="dash-call"><i class="green"></i>+33 1 44 …<span class="s">94 / 100</span></div>
+        <div class="dash-call"><i class="orange"></i>Numéro inconnu<span class="s">58 / 100</span></div>
+        <div class="dash-call"><i class="red"></i>+33 8 99 …<span class="s">12 / 100</span></div>
+        <div class="dash-call"><i class="green"></i>Contact — Banque<span class="s">99 / 100</span></div>
+        <h4>Modules actifs</h4>
+        <div class="dash-mods"><span>Appels</span><span>SMS</span><span>E-mails</span><span>Liens</span><span>Wi-Fi</span><span>Annonce vocale</span></div>
+      </div>
+    </div>
+    <div class="dash-status"><span>Wi-Fi domicile · protégé</span><span>Chiffrement DNS · actif (DoT + DoH)</span><span>Base communautaire · à jour</span></div>
+  </div>
+  <p class="dash-config reveal">Activez ou désactivez chaque module en un clic. L'annonce vocale, les alertes SMS et la protection e-mail sont configurables.</p>
+  <p class="dash-note reveal">Interface illustrative · Les données affichées sont fictives.</p>
 </section>
 
 <!-- ═══ LE CONSTAT ═══ -->
-<section class="section-shock">
-  <p class="section-eyebrow blue">Le constat</p>
-  <h2 class="shock-title">348 000 attaques numériques<br>enregistrées en France en 2024.</h2>
-  <p class="shock-sub">Une hausse de <strong>74% en 5 ans.</strong> Chaque jour, des millions de Français sont ciblés par des fraudes de plus en plus sophistiquées.</p>
-
-  <div class="numbers-grid">
-    <div class="number-card"><div class="number-big">118 Mds €</div><div class="number-label">Coût annuel de la cybercriminalité en France</div><div class="number-source">Source : Statista 2024</div></div>
-    <div class="number-card"><div class="number-big">348 000</div><div class="number-label">Atteintes numériques enregistrées en 2024</div><div class="number-source">Source : SSMSI / Min. Intérieur</div></div>
-    <div class="number-card"><div class="number-big">91%</div><div class="number-label">Des cyberattaques commencent par un email</div><div class="number-source">Source : ANSSI</div></div>
-    <div class="number-card"><div class="number-big">+320%</div><div class="number-label">Explosion du smishing en France en 2024</div><div class="number-source">Source : COMCYBER-MI 2024</div></div>
-    <div class="number-card"><div class="number-big">420 000</div><div class="number-label">Demandes d'assistance sur Cybermalveillance.gouv</div><div class="number-source">Source : Cybermalveillance.gouv.fr</div></div>
-    <div class="number-card"><div class="number-big">43 M</div><div class="number-label">Français touchés par la fuite France Travail</div><div class="number-source">Source : CNIL / France Travail 2024</div></div>
-  </div>
-
-  <p class="sources-note">Tous les chiffres sont sourcés et vérifiables auprès des institutions citées (ANSSI, SSMSI, CNIL, Cybermalveillance.gouv.fr, COMCYBER-MI).</p>
-</section>
-
-<!-- ═══ 7 MODULES ═══ -->
-<section class="section-modules">
-  <p class="section-eyebrow blue">Les 7 modules</p>
-  <h2 class="section-title">7 protections.<br><em class="blue">1 seule application.</em></h2>
-  <p class="section-sub">Chaque vecteur d'attaque couvert. Gratuitement.</p>
-
-  <div class="modules-grid">
-    <div class="module-card">
-      <span class="module-emoji">☎️</span>
-      <div class="module-name">Anti-fraude Appels</div>
-      <div class="module-desc">Identifie les faux conseillers, numéros masqués et arnaques téléphoniques avant que vous décrochiez.</div>
-      <span class="module-free">GRATUIT</span>
+<section class="d2-section d3-constat">
+  <p class="d2-eyebrow reveal">Le constat</p>
+  <div class="d3-grid reveal">
+    <div class="d3-hero">
+      <div class="d3-hero-num">442&nbsp;Mds&nbsp;$</div>
+      <p class="d3-hero-label">de pertes mondiales liées aux arnaques numériques</p>
+      <p class="d3-hero-ctx"><strong>Bloctel a fermé le 11 août 2026</strong> — plus aucune liste officielle de protection.</p>
+      <p class="d3-hero-src d3-src">Source · Bitdefender, 2026</p>
     </div>
-    <div class="module-card">
-      <span class="module-emoji">🗨️</span>
-      <div class="module-name">Anti-fraude SMS</div>
-      <div class="module-desc">Détecte le smishing, les faux colis, les faux codes et liens piégés dans vos messages.</div>
-      <span class="module-free">GRATUIT</span>
-    </div>
-    <div class="module-card">
-      <span class="module-emoji">✉️</span>
-      <div class="module-name">Anti-fraude Emails</div>
-      <div class="module-desc">Peut analyser les métadonnées de vos emails (expéditeur, objet) pour détecter le phishing. Nécessite une connexion Gmail via Google OAuth, entièrement facultative.</div>
-      <span class="module-free">GRATUIT</span>
-    </div>
-    <div class="module-card">
-      <span class="module-emoji">🔐</span>
-      <div class="module-name">Vérification URLs</div>
-      <div class="module-desc">Les liens sont analysés avant ouverture. Une alerte est émise si le lien présente des caractéristiques connues de sites frauduleux.</div>
-      <span class="module-free">GRATUIT</span>
-    </div>
-    <div class="module-card">
-      <span class="module-emoji">📲</span>
-      <div class="module-name">Sécurité WiFi Mobile</div>
-      <div class="module-desc">Protège vos connexions en mobilité contre les points d'accès piégés et attaques man-in-the-middle.</div>
-      <span class="module-free">GRATUIT</span>
-    </div>
-    <div class="module-card">
-      <span class="module-emoji">🏡</span>
-      <div class="module-name">Sécurité WiFi Maison</div>
-      <div class="module-desc">Surveille votre réseau domestique et protège tous les appareils connectés.</div>
-      <span class="module-free">GRATUIT</span>
-    </div>
-    <div class="module-card pro-module">
-      <span class="module-emoji">📡</span>
-      <div class="module-name">WiFi Pro Entreprise</div>
-      <div class="module-desc">Protection renforcée multi-appareils, dashboard menaces, déploiement centralisé, support prioritaire.</div>
-      <span class="module-pro-tag">PRO · 29€ HT/an</span>
+    <div class="d3-rows">
+      <div class="d3-row"><span class="v">453&nbsp;200</span><span class="m"><b>Délits numériques en France · +14&nbsp;% sur un an</b><span class="d3-src">Source · Ministère de l'Intérieur · Interstats 2025</span></span></div>
+      <div class="d3-row"><span class="v">1 appel sur 6</span><span class="m"><b>Est une tentative d'arnaque</b><span class="d3-src">Source · Bitdefender, 2026</span></span></div>
+      <div class="d3-row"><span class="v">+159&nbsp;%</span><span class="m"><b>De fraudes au faux conseiller bancaire</b><span class="d3-src">Source · Cybermalveillance.gouv.fr 2025</span></span></div>
     </div>
   </div>
+  <p class="d3-note reveal">Chiffres sourcés auprès des organismes cités : Bitdefender (2026), Ministère de l'Intérieur / Interstats (2025), Cybermalveillance.gouv.fr (2025).</p>
 </section>
 
 <!-- ═══ COMMENT ÇA MARCHE ═══ -->
-<section class="section-how">
-  <p class="section-eyebrow blue">Comment ça marche</p>
-  <h2 class="section-title">DYLETH <em class="blue">analyse</em> et vous alerte<br>en cas de signal suspect</h2>
-  <p class="section-sub">Une seconde d'inattention peut coûter des milliers d'euros. DYLETH analyse et vous alerte avant que vous soyez piégé.</p>
+<section class="d2-section d2-how">
+  <div class="d2-section-head reveal">
+    <p class="d2-eyebrow">Comment ça marche</p>
+    <h2>De la détection à votre décision.</h2>
+    <p>Trois temps, toujours les mêmes : vous recevez un appel, DYLETH vérifie, vous décidez.</p>
+  </div>
+  <div class="d2-flow reveal">
+    <div class="d2-flow-row"><span class="n">01</span><div><h3>Vous recevez un appel</h3><p>Avant que vous décrochiez, DYLETH analyse le numéro en moins d'une seconde via notre base communautaire et les registres officiels dont l'ARCEP.</p></div></div>
+    <div class="d2-flow-row"><span class="n">02</span><div><h3>DYLETH vérifie</h3><p>L'écran change de couleur. Vert, orange ou rouge — un signal immédiat. La voix peut annoncer l'identité de l'appelant si vous l'avez activée.</p></div></div>
+    <div class="d2-flow-row"><span class="n">03</span><div><h3>Vous décidez</h3><p>Décrocher, ignorer ou signaler. DYLETH vous informe, vous choisissez. Chaque signalement enrichit la protection de toute la communauté.</p></div></div>
+  </div>
+  <p class="d2-claim reveal">DYLETH informe. <span>Vous gardez la décision.</span></p>
+</section>
 
-  <div class="how-steps">
-    <div class="step">
-      <div class="step-number">1</div>
-      <span class="step-icon">🔍</span>
-      <div class="step-title">Détection en temps réel</div>
-      <div class="step-desc">Les appels, SMS et URLs sont analysés pour détecter les caractéristiques connues de fraude. Une alerte vous est envoyée si une anomalie est détectée.</div>
-    </div>
-    <div class="step">
-      <div class="step-number">2</div>
-      <span class="step-icon">⚡</span>
-      <div class="step-title">Alerte immédiate</div>
-      <div class="step-desc">Notification d'alerte avec les informations disponibles sur le signal détecté.</div>
-    </div>
-    <div class="step">
-      <div class="step-number">3</div>
-      <span class="step-icon">🛡️</span>
-      <div class="step-title">Vous gardez le contrôle</div>
-      <div class="step-desc">DYLETH vous informe, vous décidez. Jamais intrusif, toujours silencieux — sauf quand ça compte.</div>
-    </div>
-    <div class="step">
-      <div class="step-number">4</div>
-      <span class="step-icon">🔄</span>
-      <div class="step-title">Analyse enrichie</div>
-      <div class="step-desc">Base de signatures enrichie en continu. Chaque nouvelle menace intégrée dès son apparition.</div>
-    </div>
+<!-- ═══ POSITIONNEMENT ═══ -->
+<section class="d2-section d2-pos-section">
+  <div class="d2-section-head reveal">
+    <p class="d2-eyebrow">Positionnement</p>
+    <h2>Une protection qui reste en arrière-plan jusqu'à ce qu'elle soit utile.</h2>
+  </div>
+  <div class="d2-pos reveal">
+    <p class="d2-pos-lead">DYLETH fonctionne <strong>en continu et silencieusement</strong>, sans intervention de votre part. Il ne se manifeste que lorsqu'un signal mérite votre attention.</p>
+    <dl>
+      <div><dt>Temps réel</dt><dd>Détection active sur les sept canaux, avec un impact batterie optimisé et minimisé.</dd></div>
+      <div><dt>Silencieux par défaut</dt><dd>Aucune notification inutile : vous n'êtes alerté que lorsque c'est important.</dd></div>
+      <div><dt>Rapport mensuel</dt><dd>Chaque mois, un résumé des alertes émises par l'application.</dd></div>
+      <div><dt>Mise à jour continue</dt><dd>Les nouvelles menaces sont intégrées au fil de l'eau, sans action de votre part.</dd></div>
+    </dl>
+  </div>
+  <div class="d2-pos-claim reveal">
+    <b>DYLETH — Le bouclier numérique mondial contre la fraude.</b>
+    <span>Ne pas seulement détecter la fraude : contribuer à l'empêcher et à l'anticiper.</span>
   </div>
 </section>
 
-<!-- ═══ BOUCLIER ═══ -->
-<section class="section-shield">
-  <p class="section-eyebrow blue">Positionnement</p>
-
-  <div class="shield-visual">
-    <div class="shield-outer">
-      <div class="shield-mid">
-        <div class="shield-inner">🛡️</div>
-      </div>
-    </div>
+<!-- ═══ CONFIDENTIALITÉ / RGPD ═══ -->
+<section class="d2-section d2-privacy-section">
+  <div class="d2-section-head reveal">
+    <p class="d2-eyebrow">Confidentialité</p>
+    <h2>Conçu pour traiter le minimum de données.</h2>
+    <p>DYLETH est pensé Privacy by Design : les données que l'application peut traiter sont limitées à ce qui est nécessaire à la détection.</p>
   </div>
-
-  <h2 class="section-title" style="margin-bottom:16px">
-    Pas un simple outil.<br><em class="blue">Un bouclier numérique personnel.</em>
-  </h2>
-  <p class="section-sub">DYLETH tourne en permanence, silencieusement, sans intervention de votre part. 24h/24.</p>
-
-  <div class="shield-features">
-    <div class="shield-feat">
-      <span class="feat-icon">⚡️</span>
-      <div class="feat-title">Temps réel</div>
-      <div class="feat-desc">Détection active sur les 7 canaux simultanément, impact batterie optimisé et minimisé.</div>
-    </div>
-    <div class="shield-feat">
-      <span class="feat-icon">🔇</span>
-      <div class="feat-title">Silencieux par défaut</div>
-      <div class="feat-desc">Aucune notification inutile. Vous n'êtes alerté que quand c'est vraiment important.</div>
-    </div>
-    <div class="shield-feat">
-      <span class="feat-icon">📈</span>
-      <div class="feat-title">Rapport mensuel</div>
-      <div class="feat-desc">Chaque mois, un résumé des alertes émises par l'application vous est envoyé.</div>
-    </div>
-    <div class="shield-feat">
-      <span class="feat-icon">🔃</span>
-      <div class="feat-title">Mise à jour continue</div>
-      <div class="feat-desc">Nouvelles menaces intégrées en temps réel. Toujours à jour, sans action de votre part.</div>
-    </div>
+  <div class="d2-priv reveal">
+    <div class="d2-priv-head">Confidentialité &amp; données</div>
+    <div class="d2-priv-row"><span class="t">Privacy by Design</span><p class="d">L'application est conçue dès le départ pour limiter les données traitées.</p></div>
+    <div class="d2-priv-row"><span class="t">Traitement local</span><p class="d">La majorité des analyses est effectuée sur votre appareil. Certaines fonctionnalités échangent avec nos serveurs, détaillées dans la politique de confidentialité.</p></div>
+    <div class="d2-priv-row"><span class="t">Données minimisées</span><p class="d">Avec votre consentement : numéros des appels entrants et SMS. L'application n'accède pas à vos contacts.</p></div>
+    <div class="d2-priv-row"><span class="t">Aucune publicité, aucune revente</span><p class="d">Aucune donnée personnelle identifiable n'est vendue. Aucune revente à des tiers.</p></div>
+    <div class="d2-priv-row"><span class="t">Conformité RGPD</span><p class="d">Droit d'accès, de rectification et de suppression, exerçable à tout moment via l'application.</p></div>
+    <div class="d2-priv-row"><span class="t">Politique de confidentialité</span><p class="d"><a href="legal/confidentialite.html">Consulter la politique de confidentialité &rarr;</a></p></div>
   </div>
-
-  <p class="shield-quote">"DYLETH analyse et <em>vous alerte</em> en cas de signal suspect."</p>
+  <div class="d2-patent-box reveal">
+    <b>Brevet déposé auprès de l'INPI et de l'USPTO.</b>
+    <p>L'architecture technique de DYLETH — codage chromatique, annonce vocale, traitement local et modules de détection IA — est protégée par brevet en France et aux États-Unis.</p>
+  </div>
 </section>
 
 <!-- ═══ SECTEURS ═══ -->
-<section class="section-sectors">
-  <p class="section-eyebrow blue">Par secteur</p>
-  <h2 class="section-title">Chaque secteur a ses risques.<br><em class="blue">DYLETH les connaît tous.</em></h2>
-  <p class="section-sub">Une protection adaptée à chaque métier, chaque contexte, chaque menace.</p>
-
-  <div class="sectors-grid">
-    <a href="secteurs/particuliers.html" class="sector-card"><div class="sector-name">Particuliers <span class="sector-arrow">→</span></div><div class="sector-loss">62 000 € perdus en une après-midi</div></a>
-    <a href="secteurs/professions-liberales.html" class="sector-card"><div class="sector-name">Professions libérales <span class="sector-arrow">→</span></div><div class="sector-loss">280 000 € de fraude au virement</div></a>
-    <a href="secteurs/tpe-pme.html" class="sector-card"><div class="sector-name">TPE / PME <span class="sector-arrow">→</span></div><div class="sector-loss">47 000 € sur un faux changement de RIB</div></a>
-    <a href="secteurs/grandes-entreprises.html" class="sector-card"><div class="sector-name">Grandes entreprises <span class="sector-arrow">→</span></div><div class="sector-loss">2,3 M€ en fraude coordonnée</div></a>
-    <a href="secteurs/administrations.html" class="sector-card"><div class="sector-name">Administrations <span class="sector-arrow">→</span></div><div class="sector-loss">3 semaines de paralysie par ransomware</div></a>
-    <a href="secteurs/mairies.html" class="sector-card"><div class="sector-name">Mairies <span class="sector-arrow">→</span></div><div class="sector-loss">95 000 € détournés sur un marché public</div></a>
-    <a href="secteurs/sante.html" class="sector-card"><div class="sector-name">Santé <span class="sector-arrow">→</span></div><div class="sector-loss">Interventions chirurgicales reportées</div></a>
-    <a href="secteurs/enseignement.html" class="sector-card"><div class="sector-name">Enseignement <span class="sector-arrow">→</span></div><div class="sector-loss">12 000 inscriptions bloquées</div></a>
-    <a href="secteurs/banques-assurances.html" class="sector-card"><div class="sector-name">Banques &amp; Assurances <span class="sector-arrow">→</span></div><div class="sector-loss">Comptes clients consultés frauduleusement</div></a>
-    <a href="secteurs/associations.html" class="sector-card"><div class="sector-name">Associations &amp; ONG <span class="sector-arrow">→</span></div><div class="sector-loss">Dizaines de milliers d'€ de dons détournés</div></a>
-    <a href="secteurs/droit-finance.html" class="sector-card"><div class="sector-name">Droit &amp; Finance <span class="sector-arrow">→</span></div><div class="sector-loss">650 000 € de fraude immobilière</div></a>
-    <a href="secteurs/immobilier.html" class="sector-card"><div class="sector-name">Immobilier <span class="sector-arrow">→</span></div><div class="sector-loss">Clés remises sur un faux chèque de banque</div></a>
-    <a href="secteurs/commerce.html" class="sector-card"><div class="sector-name">Commerce &amp; Distribution <span class="sector-arrow">→</span></div><div class="sector-loss">2 M€ de faux virements fournisseurs</div></a>
-    <a href="secteurs/crypto.html" class="sector-card"><div class="sector-name">Cryptomonnaies <span class="sector-arrow">→</span></div><div class="sector-loss">180 000 € perdus, sans recours</div></a>
-    <a href="secteurs/sport-culture.html" class="sector-card"><div class="sector-name">Sport &amp; Culture <span class="sector-arrow">→</span></div><div class="sector-loss">Milliers de faux billets vendus</div></a>
-    <a href="secteurs/medias.html" class="sector-card"><div class="sector-name">Médias &amp; Communication <span class="sector-arrow">→</span></div><div class="sector-loss">Sources confidentielles compromises</div></a>
+<section class="d2-section d4-sectors">
+  <div class="d2-section-head reveal">
+    <p class="d2-eyebrow">Par secteur</p>
+    <h2>Chaque secteur a ses risques. <em>DYLETH</em> les connaît tous.</h2>
+    <p>Une protection adaptée à chaque métier, chaque contexte, chaque menace.</p>
+  </div>
+  <div class="d4-index reveal">
+    <a class="d4-sec" href="secteurs/particuliers.html"><span class="n">01</span><span class="b"><strong>Particuliers</strong><span>62 000 € perdus en une après-midi</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/professions-liberales.html"><span class="n">02</span><span class="b"><strong>Professions libérales</strong><span>280 000 € de fraude au virement</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/tpe-pme.html"><span class="n">03</span><span class="b"><strong>TPE / PME</strong><span>47 000 € sur un faux changement de RIB</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/grandes-entreprises.html"><span class="n">04</span><span class="b"><strong>Grandes entreprises</strong><span>2,3 M€ en fraude coordonnée</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/administrations.html"><span class="n">05</span><span class="b"><strong>Administrations</strong><span>3 semaines de paralysie par ransomware</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/mairies.html"><span class="n">06</span><span class="b"><strong>Mairies</strong><span>95 000 € détournés sur un marché public</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/sante.html"><span class="n">07</span><span class="b"><strong>Santé</strong><span>Interventions chirurgicales reportées</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/enseignement.html"><span class="n">08</span><span class="b"><strong>Enseignement</strong><span>12 000 inscriptions bloquées</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/banques-assurances.html"><span class="n">09</span><span class="b"><strong>Banques &amp; Assurances</strong><span>Comptes clients consultés frauduleusement</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/associations.html"><span class="n">10</span><span class="b"><strong>Associations &amp; ONG</strong><span>Dizaines de milliers d'€ de dons détournés</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/droit-finance.html"><span class="n">11</span><span class="b"><strong>Droit &amp; Finance</strong><span>650 000 € de fraude immobilière</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/immobilier.html"><span class="n">12</span><span class="b"><strong>Immobilier</strong><span>Clés remises sur un faux chèque de banque</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/commerce.html"><span class="n">13</span><span class="b"><strong>Commerce &amp; Distribution</strong><span>2 M€ de faux virements fournisseurs</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/crypto.html"><span class="n">14</span><span class="b"><strong>Cryptomonnaies</strong><span>180 000 € perdus, sans recours</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/sport-culture.html"><span class="n">15</span><span class="b"><strong>Sport &amp; Culture</strong><span>Milliers de faux billets vendus</span></span><span class="ar">&rarr;</span></a>
+    <a class="d4-sec" href="secteurs/medias.html"><span class="n">16</span><span class="b"><strong>Médias &amp; Communication</strong><span>Sources confidentielles compromises</span></span><span class="ar">&rarr;</span></a>
   </div>
 </section>
 
 <!-- ═══ CHARTE ═══ -->
-<section class="section-charter">
-  <p class="section-eyebrow green">Nos engagements</p>
-  <h2 class="section-title">La charte <em class="green">DYLETH</em></h2>
-  <p class="section-sub">Six engagements concrets. Pas de compromis, pas de petits caractères.</p>
-
-  <div class="charter-grid">
-    <div class="charter-card"><span class="charter-icon">🎀</span><div class="charter-title">Gratuit sans engagement</div><div class="charter-desc">Accès gratuit sans carte bancaire ni engagement. Nous vous informerons avec un préavis de 30 jours de tout changement de conditions.</div></div>
-    <div class="charter-card"><span class="charter-icon">🔏</span><div class="charter-title">Données protégées</div><div class="charter-desc">Aucune donnée personnelle identifiable collectée ou vendue par DYLETH. Certaines fonctionnalités utilisent des services tiers (voir <a href="legal/confidentialite.html" style="color:var(--blue);text-decoration:underline">Politique de confidentialité</a>).</div></div>
-    <div class="charter-card"><span class="charter-icon">🔍</span><div class="charter-title">Transparence totale</div><div class="charter-desc">Dépôts INPI, conformité RGPD vérifiable, ancrage français documenté.</div></div>
-    <div class="charter-card"><span class="charter-icon">🛡</span><div class="charter-title">Protection 24/7</div><div class="charter-desc">Fonctionne en permanence, silencieusement, sans intervention de votre part.</div></div>
-    <div class="charter-card"><span class="charter-icon">🛸</span><div class="charter-title">Innovation permanente</div><div class="charter-desc">Base de signatures enrichie en continu. Nouvelles menaces intégrées dès leur apparition.</div></div>
-    <div class="charter-card"><span class="charter-icon">🗣️</span><div class="charter-title">Un interlocuteur réel</div><div class="charter-desc">Chaque demande reçoit une réponse. Nous construisons DYLETH avec nos utilisateurs.</div></div>
+<section class="d2-section d4-charter">
+  <div class="d2-section-head reveal">
+    <p class="d2-eyebrow">Nos engagements</p>
+    <h2>La charte DYLETH</h2>
+    <p>Six engagements concrets. Pas de compromis, pas de petits caractères.</p>
   </div>
-</section>
-
-<!-- ═══ TRUST / RGPD ═══ -->
-<section class="section-trust">
-  <div class="trust-inner">
-    <div class="trust-left">
-      <p class="section-eyebrow green">Sécurité & données</p>
-      <h2 class="trust-title">La confiance<br>n'est pas <em>une option.</em></h2>
-      <p class="trust-desc">Contrairement à beaucoup d'applications, DYLETH a été conçu dès le départ avec une philosophie simple : <strong>vos données vous appartiennent.</strong> Entièrement. Sans compromis.</p>
-      <div class="trust-badges">
-        <span class="trust-badge">✓ RGPD natif</span>
-        <span class="trust-badge">✓ Privacy by Design</span>
-        <span class="trust-badge">✓ Développé en France</span>
-        <span class="trust-badge">✓ Zéro publicité</span>
-        <span class="trust-badge">✓ Dépôts INPI</span>
-      </div>
-    </div>
-    <div class="trust-right">
-      <div class="rgpd-card">
-        <div class="rgpd-header"><span class="rgpd-icon">📋</span><span class="rgpd-title">Données traitées</span></div>
-        <div class="rgpd-body">Avec votre consentement : numéros des appels entrants et SMS, analysés localement pour détecter des signaux de fraude. L'application n'accède pas à vos contacts.</div>
-      </div>
-      <div class="rgpd-card">
-        <div class="rgpd-header"><span class="rgpd-icon">🔒</span><span class="rgpd-title">Stockage & transfert</span></div>
-        <div class="rgpd-body">Les données traitées le sont selon les finalités décrites dans notre Politique de confidentialité. Aucune revente à des tiers.</div>
-      </div>
-      <div class="rgpd-card">
-        <div class="rgpd-header"><span class="rgpd-icon">⚙️</span><span class="rgpd-title">Traitement local</span></div>
-        <div class="rgpd-body">La majorité des analyses est effectuée localement sur votre appareil. Certaines fonctionnalités nécessitent des échanges avec nos serveurs, détaillés dans notre <a href="legal/confidentialite.html" style="color:var(--blue)">Politique de confidentialité</a>.</div>
-      </div>
-      <div class="rgpd-card">
-        <div class="rgpd-header"><span class="rgpd-icon">⚖️</span><span class="rgpd-title">Vos droits RGPD</span></div>
-        <div class="rgpd-body">Droit d'accès, de rectification et de suppression. Vous pouvez exercer vos droits à tout moment via l'application.</div>
-      </div>
-    </div>
+  <div class="d4-manifest reveal">
+    <div class="d4-eng"><span class="n">01</span><h3>Gratuit sans engagement</h3><p>Accès gratuit sans carte bancaire ni engagement. Nous vous informerons avec un préavis de 30 jours de tout changement de conditions.</p></div>
+    <div class="d4-eng"><span class="n">02</span><h3>Données protégées</h3><p>Aucune donnée personnelle identifiable collectée ou vendue par DYLETH. Certaines fonctionnalités utilisent des services tiers (voir <a href="legal/confidentialite.html">Politique de confidentialité</a>).</p></div>
+    <div class="d4-eng"><span class="n">03</span><h3>Transparence totale</h3><p>Dépôts INPI, conformité RGPD vérifiable, ancrage français documenté.</p></div>
+    <div class="d4-eng"><span class="n">04</span><h3>Protection 24/7</h3><p>Fonctionne en permanence, silencieusement, sans intervention de votre part.</p></div>
+    <div class="d4-eng"><span class="n">05</span><h3>Innovation permanente</h3><p>Base de signatures enrichie en continu. Nouvelles menaces intégrées dès leur apparition.</p></div>
+    <div class="d4-eng"><span class="n">06</span><h3>Un interlocuteur réel</h3><p>Chaque demande reçoit une réponse. Nous construisons DYLETH avec nos utilisateurs.</p></div>
   </div>
 </section>
 
 <!-- ═══ TARIFS ═══ -->
-<section class="section-pricing" id="tarifs">
-  <p class="section-eyebrow gold">Tarifs</p>
-  <h2 class="section-title">La protection numérique<br>ne doit pas être <em class="blue">un privilège.</em></h2>
-  <p class="section-sub">DYLETH est <strong>gratuit pour tous</strong> — particuliers et professionnels. Seul le module WiFi Pro est payant.</p>
-
-  <div style="max-width:680px;margin:0 auto">
-    <!-- Carte principale gratuit -->
-    <div class="price-card featured" style="margin-bottom:20px">
-      <div class="price-badge">GRATUIT POUR TOUS</div>
-      <div class="price-big free" style="margin-top:12px">0€</div>
-      <div class="price-unit">Accès gratuit · Sans carte bancaire · Sans engagement de durée</div>
-
-      <ul class="price-features">
-        <li><span class="price-check">✓</span> 7 modules de protection inclus</li>
-        <li><span class="price-check">✓</span> Aucune donnée personnelle identifiable collectée</li>
-        <li><span class="price-check">✓</span> Zéro revente de données · Zéro publicité</li>
-        <li><span class="price-check">✓</span> Rapport mensuel des alertes émises</li>
-        <li><span class="price-check">✓</span> Toutes les fonctionnalités accessibles</li>
-        <li><span class="price-check">✓</span> Développé en France — conforme RGPD</li>
+<section class="d2-section d5-tarifs" id="tarifs">
+  <div class="d2-section-head reveal">
+    <p class="d2-eyebrow">Tarifs</p>
+    <h2>La protection numérique ne doit pas être un privilège.</h2>
+    <p>DYLETH est gratuit pour tous les particuliers. Le module Wi-Fi Pro constitue une offre professionnelle distincte.</p>
+  </div>
+  <div class="d5-pricing reveal">
+    <div class="d5-plan">
+      <p class="k">Particuliers</p>
+      <div class="d5-price"><span class="amt">0&nbsp;€</span><span class="per">Gratuit</span></div>
+      <p class="cond">Sans carte bancaire · Sans engagement de durée</p>
+      <ul class="d5-feat">
+        <li>7 modules de protection inclus</li>
+        <li>Aucune donnée personnelle identifiable collectée</li>
+        <li>Zéro revente de données · Zéro publicité</li>
+        <li>Rapport mensuel des alertes émises</li>
+        <li>Toutes les fonctionnalités accessibles</li>
+        <li>Développé en France — conforme RGPD</li>
       </ul>
-
-      <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="price-btn primary">Télécharger gratuitement sur Google Play →</a>
     </div>
-
-    <!-- Encart WiFi Pro add-on -->
-    <div style="background:rgba(255,214,10,0.04);border:1px solid rgba(255,214,10,0.2);border-radius:20px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
-      <div>
-        <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px">MODULE ADD-ON · WIFI PRO</div>
-        <div style="font-size:18px;font-weight:800;margin-bottom:6px">📡 WiFi Pro Entreprise</div>
-        <div style="font-size:13px;color:var(--white-60);line-height:1.6;max-width:420px">Dashboard menaces, déploiement multi-modems, rapports mensuels, support prioritaire. Pour les entreprises qui souhaitent une protection réseau avancée.</div>
-      </div>
-      <div style="text-align:center;flex-shrink:0">
-        <div style="font-size:36px;font-weight:900;color:var(--gold);letter-spacing:-1px;line-height:1">29€</div>
-        <div style="font-size:12px;color:var(--white-30);margin-bottom:14px">HT / an · Sans engagement</div>
-        <a href="mailto:contact@dyleth.com" class="price-btn" style="display:inline-block;padding:10px 24px;font-size:13px">Souscrire</a>
-      </div>
+    <div class="d5-plan">
+      <p class="k">Wi-Fi Pro Entreprise</p>
+      <div class="d5-price"><span class="amt blue">À partir de 29&nbsp;€</span><span class="per">HT / mois · Sans engagement</span></div>
+      <p class="cond">Protection réseau pour les organisations</p>
+      <ul class="d5-feat">
+        <li>Protection DNS chiffrée DoT + DoH</li>
+        <li>Tableau de bord surveillance réseau</li>
+        <li>Filtrage par catégories</li>
+        <li>Alertes temps réel</li>
+        <li>Rapport mensuel menaces</li>
+        <li>Configuration 2 minutes</li>
+        <li>Support prioritaire</li>
+        <li>Conforme directive NIS2</li>
+        <li>Documentation RGPD fournie</li>
+      </ul>
+      <p class="free-note">Collectivités et administrations : gratuit</p>
+      <a class="d5-cta-line ghost" href="mailto:contact@dyleth.com">Demander un devis</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ FINAL CTA avec VRAIS LOGOS ═══ -->
-<section class="section-final" id="stores">
-  <h2 class="final-title">Chaque jour sans DYLETH,<br>c'est <em>un risque de trop.</em></h2>
-  <p class="final-sub">Application disponible sur <strong>Google Play</strong> — App Store en cours de validation par Apple.</p>
-
-  <div class="store-row">
-    <!-- APP STORE — GRISÉ (en cours de validation par Apple) -->
-    <div class="store-btn store-btn-disabled" aria-label="En cours de validation par Apple" title="En cours de validation par Apple">
-      <svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/>
-      </svg>
-      <div class="store-text-wrap">
-        <span class="store-sub-text">En validation sur l'</span>
-        <span class="store-name-text">App Store</span>
-      </div>
-    </div>
-
-    <!-- GOOGLE PLAY — LIEN ACTIF -->
-    <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Disponible sur Google Play">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="gp1" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#00A0FF"/>
-            <stop offset="100%" stop-color="#00E3FF"/>
-          </linearGradient>
-          <linearGradient id="gp2" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#00E676"/>
-            <stop offset="100%" stop-color="#00C853"/>
-          </linearGradient>
-          <linearGradient id="gp3" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#FF3A44"/>
-            <stop offset="100%" stop-color="#C31162"/>
-          </linearGradient>
-          <linearGradient id="gp4" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#FFE000"/>
-            <stop offset="100%" stop-color="#FFC500"/>
-          </linearGradient>
-        </defs>
-        <path d="M3.609 1.814L13.792 12 3.61 22.186c-.317-.211-.518-.555-.518-.949V2.763c0-.394.201-.738.517-.949z" fill="url(#gp1)"/>
-        <path d="M17.074 8.378l-2.932 2.932L3.609 1.814c.156-.104.34-.164.536-.164.196 0 .39.053.575.158l12.354 6.57z" fill="url(#gp2)"/>
-        <path d="M17.074 15.622L4.72 22.192c-.185.105-.379.158-.575.158a1.04 1.04 0 0 1-.536-.164l10.533-10.186 2.932 3.622z" fill="url(#gp3)"/>
-        <path d="M20.165 12.685l-3.09 1.643-3.15-3.018 3.15-3.018 3.09 1.644c.668.356.668 1.392 0 1.749z" fill="url(#gp4)"/>
-      </svg>
-      <div class="store-text-wrap">
-        <span class="store-sub-text">Disponible sur</span>
-        <span class="store-name-text">Google Play</span>
-      </div>
+<!-- ═══ CTA FINAL / STORES ═══ -->
+<section class="d2-section d5-final" id="stores">
+  <h2 class="reveal">Chaque jour sans DYLETH, c'est un risque de trop.</h2>
+  <p class="reveal">Application disponible sur Google Play et sur l'App Store.</p>
+  <div class="d2-store-row reveal">
+    <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="d2-badge" aria-label="Disponible sur Google Play">
+      <img src="assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250">
+    </a>
+    <a href="https://apps.apple.com/fr/app/dyleth/id6774315923" target="_blank" rel="noopener noreferrer" class="d2-badge" aria-label="Télécharger sur l'App Store">
+      <img src="assets/store/app-store-fr.svg" alt="Télécharger sur l'App Store" width="127" height="40">
     </a>
   </div>
-  <p class="store-launch-note">Disponible maintenant sur Google Play · App Store en cours de validation</p>
+  <p class="d5-note reveal">Disponible sur Google Play et sur l'App Store.</p>
 </section>
 
 <!-- ═══ FOOTER ═══ -->
-<footer class="main-footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="footer-logo">DYL<span>ETH</span></a>
-      <div class="footer-tagline">Protection Numérique 7-en-1 — Pour chacun, contre les menaces connues. Société française de cybersécurité.</div>
-      <div class="footer-badges">
-        <span class="footer-badge">🇫🇷 Développé en France</span>
-        <span class="footer-badge">🔒 RGPD</span>
-        <span class="footer-badge">⚡ Privacy by Design</span>
+<footer class="d5-footer">
+  <div class="d5-footer-in">
+    <div class="d5-foot-grid">
+      <div class="d5-brand">
+        <a href="index.html" class="wm">DYL<span>ETH</span></a>
+        <p>Protection numérique 7-en-1 — pour chacun, contre les menaces connues. Société française de cybersécurité.</p>
+        <div class="tags"><span>Développé en France</span><span>RGPD</span><span>Privacy by Design</span></div>
+      </div>
+      <div class="d5-foot-col">
+        <h4>Solution</h4>
+        <ul>
+          <li><a href="solution/7-modules.html">Les 7 modules</a></li>
+          <li><a href="solution/technologie.html">Technologie</a></li>
+          <li><a href="solution/comparatif.html">Comparatif</a></li>
+          <li><a href="solution/faq.html">FAQ</a></li>
+          <li><a href="telecharger/index.html">Télécharger</a></li>
+        </ul>
+      </div>
+      <div class="d5-foot-col">
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="ressources/blog.html">Blog</a></li>
+          <li><a href="comprendre/glossaire.html">Glossaire</a></li>
+          <li><a href="ressources/livre-blanc.html">Livre Blanc</a></li>
+          <li><a href="ressources/newsletter.html">Newsletter</a></li>
+          <li><a href="roadmap/index.html">Roadmap</a></li>
+          <li><a href="innovations/index.html">Innovations</a></li>
+        </ul>
+      </div>
+      <div class="d5-foot-col">
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="a-propos/mission.html">Notre mission</a></li>
+          <li><a href="a-propos/charte.html">Notre charte</a></li>
+          <li><a href="a-propos/contact.html">Contact</a></li>
+          <li><a href="rejoindre/ambassadeurs.html">Ambassadeurs</a></li>
+          <li><a href="entreprises/index.html">Entreprises</a></li>
+        </ul>
+      </div>
+      <div class="d5-foot-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="legal/mentions-legales.html">Mentions légales</a></li>
+          <li><a href="legal/confidentialite.html">Confidentialité</a></li>
+          <li><a href="legal/cgu.html">CGU</a></li>
+          <li><a href="legal/cgv.html">CGV Pro</a></li>
+          <li><a href="legal/cookies.html">Cookies</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Solution</h4>
-      <ul>
-        <li><a href="solution/7-modules.html">Les 7 modules</a></li>
-        <li><a href="solution/technologie.html">Technologie</a></li>
-        <li><a href="solution/comparatif.html">Comparatif</a></li>
-        <li><a href="solution/faq.html">FAQ</a></li>
-        <li><a href="#stores">Télécharger</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Ressources</h4>
-      <ul>
-        <li><a href="ressources/blog.html">Blog</a></li>
-        <li><a href="comprendre/glossaire.html">Glossaire</a></li>
-        <li><a href="ressources/livre-blanc.html">Livre Blanc</a></li>
-        <li><a href="ressources/newsletter.html">Newsletter</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Entreprise</h4>
-      <ul>
-        <li><a href="a-propos/mission.html">Notre mission</a></li>
-        <li><a href="a-propos/charte.html">Notre charte</a></li>
-        <li><a href="a-propos/contact.html">Contact</a></li>
-        <li><a href="rejoindre/ambassadeurs.html">Ambassadeurs</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Légal</h4>
-      <ul>
-        <li><a href="legal/mentions-legales.html">Mentions légales</a></li>
-        <li><a href="legal/confidentialite.html">Confidentialité</a></li>
-        <li><a href="legal/cgu.html">CGU</a></li>
-        <li><a href="legal/cgv.html">CGV Pro</a></li>
-        <li><a href="legal/cookies.html">Cookies</a></li>
-      </ul>
-    </div>
   </div>
-
-  <div class="footer-bottom">
-    <div>© 2026 DYLETH — Société Française de Cybersécurité. Tous droits réservés.</div>
-    <div>Cookies techniques uniquement · Aucun tracking</div>
+  <div class="d5-foot-bottom">
+    <span>© 2026 DYLETH SAS · Brevet déposé INPI &amp; USPTO</span>
+    <span>DYLETH SAS · France · SIREN 103 432 555 · <a href="mailto:dpo@dyleth.com">dpo@dyleth.com</a></span>
+    <span>Cookies techniques uniquement · Aucun tracking</span>
   </div>
 </footer>
 
@@ -1142,6 +1495,21 @@
 <div id="google_translate_element" style="display:none"></div>
 <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"fr",autoDisplay:false},"google_translate_element");}</script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script id="d2-js">
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  var i;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    for (i = 0; i < els.length; i++) els[i].classList.add('is-in');
+    return;
+  }
+  var io = new IntersectionObserver(function(ents){
+    ents.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  for (i = 0; i < els.length; i++) io.observe(els[i]);
+})();
+</script>
 </body>
 </html>
 <style id="fix-mobile-nav-final">

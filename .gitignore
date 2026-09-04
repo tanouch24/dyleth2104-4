@@ -1,2 +1,11 @@
 # OS
 .DS_Store
+
+# Outils de travail
+.impeccable/
+.claude/
+
+# Captures de review générées à la racine du repo
+# (règles ancrées à la racine : assets/**/*.png reste versionné)
+/*_1440.png
+/*_375.png

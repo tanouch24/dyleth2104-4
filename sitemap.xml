@@ -65,6 +65,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://dyleth.com/menace/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://dyleth.com/menace/chiffres-cles/</loc>
     <priority>0.6</priority>
   </url>
@@ -89,15 +93,15 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dyleth.com/ressources/blog/faux-sms-colis/</loc>
+    <loc>https://dyleth.com/ressources/blog/ia-arnaqueurs/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dyleth.com/ressources/blog/reconnaitre-appel-frauduleux/</loc>
+    <loc>https://dyleth.com/ressources/blog/deepfakes-voix/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dyleth.com/ressources/blog/wifi-public-dangers/</loc>
+    <loc>https://dyleth.com/ressources/blog/reconnaitre-appel/</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -137,7 +141,15 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://dyleth.com/secteurs/familles-seniors/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://dyleth.com/secteurs/grandes-entreprises/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dyleth.com/secteurs/hotellerie/</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -195,5 +207,21 @@
   <url>
     <loc>https://dyleth.com/solution/technologie/</loc>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dyleth.com/roadmap/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dyleth.com/telecharger/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dyleth.com/entreprises/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dyleth.com/innovations/</loc>
+    <priority>0.7</priority>
   </url>
 </urlset>

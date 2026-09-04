@@ -1,1 +1,9 @@
 /ambassadeurs.html    /rejoindre/ambassadeurs.html    301
+
+# Anciens brouillons blog supprimes -> versions publiques
+/ressources/blog/appel-frauduleux         /ressources/blog/reconnaitre-appel/    301
+/ressources/blog/appel-frauduleux.html    /ressources/blog/reconnaitre-appel/    301
+/ressources/blog/deepfakes-audio          /ressources/blog/deepfakes-voix/       301
+/ressources/blog/deepfakes-audio.html     /ressources/blog/deepfakes-voix/       301
+/ressources/blog/phishing-ia              /ressources/blog/ia-arnaqueurs/        301
+/ressources/blog/phishing-ia.html         /ressources/blog/ia-arnaqueurs/        301
