@@ -1,9 +1,75 @@
-/ambassadeurs.html    /rejoindre/ambassadeurs.html    301
+# --- Domain / TLS handled automatically by Netlify (www->apex, http->https) ---
 
-# Anciens brouillons blog supprimes -> versions publiques
-/ressources/blog/appel-frauduleux         /ressources/blog/reconnaitre-appel/    301
-/ressources/blog/appel-frauduleux.html    /ressources/blog/reconnaitre-appel/    301
-/ressources/blog/deepfakes-audio          /ressources/blog/deepfakes-voix/       301
-/ressources/blog/deepfakes-audio.html     /ressources/blog/deepfakes-voix/       301
-/ressources/blog/phishing-ia              /ressources/blog/ia-arnaqueurs/        301
-/ressources/blog/phishing-ia.html         /ressources/blog/ia-arnaqueurs/        301
+# --- Anciens brouillons blog supprimes -> URL finale canonique (1 saut) ---
+/ressources/blog/appel-frauduleux            /ressources/blog/reconnaitre-appel       301
+/ressources/blog/appel-frauduleux.html       /ressources/blog/reconnaitre-appel       301
+/ressources/blog/deepfakes-audio             /ressources/blog/deepfakes-voix          301
+/ressources/blog/deepfakes-audio.html        /ressources/blog/deepfakes-voix          301
+/ressources/blog/phishing-ia                 /ressources/blog/ia-arnaqueurs           301
+/ressources/blog/phishing-ia.html            /ressources/blog/ia-arnaqueurs           301
+
+# --- Ancienne URL ambassadeurs -> forme canonique finale (1 saut) ---
+/ambassadeurs                                /rejoindre/ambassadeurs                  301
+/ambassadeurs.html                           /rejoindre/ambassadeurs                  301
+
+# --- .html explicite -> URL propre (301! car le fichier existe physiquement) ---
+/menace/chiffres-cles.html                   /menace/chiffres-cles                    301!
+/menace/etat-des-lieux.html                  /menace/etat-des-lieux                   301!
+/menace/intelligence-artificielle.html       /menace/intelligence-artificielle        301!
+/menace/types-de-fraudes.html                /menace/types-de-fraudes                 301!
+/comprendre/deepfakes.html                   /comprendre/deepfakes                    301!
+/comprendre/glossaire.html                   /comprendre/glossaire                    301!
+/comprendre/phishing.html                    /comprendre/phishing                     301!
+/comprendre/smishing.html                    /comprendre/smishing                     301!
+/comprendre/urls-malveillantes.html          /comprendre/urls-malveillantes           301!
+/comprendre/vishing.html                     /comprendre/vishing                      301!
+/comprendre/wifi-public.html                 /comprendre/wifi-public                  301!
+/solution/7-modules.html                     /solution/7-modules                      301!
+/solution/comparatif.html                    /solution/comparatif                     301!
+/solution/faq.html                           /solution/faq                            301!
+/solution/privacy-by-design.html             /solution/privacy-by-design              301!
+/solution/rgpd.html                          /solution/rgpd                           301!
+/solution/technologie.html                   /solution/technologie                    301!
+/secteurs/administrations.html               /secteurs/administrations                301!
+/secteurs/associations.html                  /secteurs/associations                   301!
+/secteurs/banques-assurances.html            /secteurs/banques-assurances             301!
+/secteurs/commerce.html                      /secteurs/commerce                       301!
+/secteurs/crypto.html                        /secteurs/crypto                         301!
+/secteurs/droit-finance.html                 /secteurs/droit-finance                  301!
+/secteurs/enseignement.html                  /secteurs/enseignement                   301!
+/secteurs/familles-seniors.html              /secteurs/familles-seniors               301!
+/secteurs/grandes-entreprises.html           /secteurs/grandes-entreprises            301!
+/secteurs/hotellerie.html                    /secteurs/hotellerie                     301!
+/secteurs/immobilier.html                    /secteurs/immobilier                     301!
+/secteurs/mairies.html                       /secteurs/mairies                        301!
+/secteurs/medias.html                        /secteurs/medias                         301!
+/secteurs/particuliers.html                  /secteurs/particuliers                   301!
+/secteurs/professions-liberales.html         /secteurs/professions-liberales          301!
+/secteurs/sante.html                         /secteurs/sante                          301!
+/secteurs/sport-culture.html                 /secteurs/sport-culture                  301!
+/secteurs/tpe-pme.html                       /secteurs/tpe-pme                        301!
+/ressources/blog.html                        /ressources/blog                         301!
+/ressources/blog/deepfakes-voix.html         /ressources/blog/deepfakes-voix          301!
+/ressources/blog/ia-arnaqueurs.html          /ressources/blog/ia-arnaqueurs           301!
+/ressources/blog/reconnaitre-appel.html      /ressources/blog/reconnaitre-appel       301!
+/ressources/livre-blanc.html                 /ressources/livre-blanc                  301!
+/ressources/newsletter.html                  /ressources/newsletter                   301!
+/a-propos/charte.html                        /a-propos/charte                         301!
+/a-propos/contact.html                       /a-propos/contact                        301!
+/a-propos/mission.html                       /a-propos/mission                        301!
+/rejoindre/ambassadeurs.html                 /rejoindre/ambassadeurs                  301!
+/legal/cgu.html                              /legal/cgu                               301!
+/legal/cgv.html                              /legal/cgv                               301!
+/legal/confidentialite.html                  /legal/confidentialite                   301!
+/legal/cookies.html                          /legal/cookies                           301!
+/legal/mentions-legales.html                 /legal/mentions-legales                  301!
+
+# --- index.html explicite -> URL de dossier (301! car le fichier existe) ---
+/index.html                                  /                                        301!
+/menace/index.html                           /menace/                                 301!
+/entreprises/index.html                      /entreprises/                            301!
+/innovations/index.html                      /innovations/                            301!
+/roadmap/index.html                          /roadmap/                                301!
+/telecharger/index.html                      /telecharger/                            301!
+/merci/index.html                            /merci/                                  301!
+
