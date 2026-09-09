@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le smishing : reconnaître les SMS frauduleux | DYLETH</title>
-<meta name="description" content="Les SMS frauduleux imitent La Poste, l'assurance maladie ou les impôts et renvoient vers de fausses pages. Exemples courants et méthode pour les reconnaître.">
-<link rel="canonical" href="https://dyleth.com/comprendre/smishing">
+<title>Arnaque colis SMS : reconnaître un faux message | DYLETH</title>
+<meta name="description" content="Reconnaître un faux SMS de livraison ou de colis, éviter le piège et savoir quoi faire après un clic, un paiement ou la communication de vos données.">
+<link rel="canonical" href="https://dyleth.com/comprendre/arnaque-colis-sms">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Le smishing : arnaque par SMS — DYLETH">
-<meta property="og:description" content="Les SMS frauduleux imitent La Poste, l'assurance maladie ou les impôts et renvoient vers de fausses pages. Exemples courants et méthode pour les reconnaître.">
-<meta property="og:url" content="https://dyleth.com/comprendre/smishing">
+<meta property="og:title" content="Arnaque colis SMS : reconnaître un faux message | DYLETH">
+<meta property="og:description" content="Reconnaître un faux SMS de livraison ou de colis, éviter le piège et savoir quoi faire après un clic, un paiement ou la communication de vos données.">
+<meta property="og:url" content="https://dyleth.com/comprendre/arnaque-colis-sms">
 <meta property="og:locale" content="fr_FR">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="apple-touch-icon" href="../favicon.svg">
@@ -239,7 +239,7 @@ main{display:block}
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "@id": "https://dyleth.com/comprendre/smishing#breadcrumb",
+  "@id": "https://dyleth.com/comprendre/arnaque-colis-sms#breadcrumb",
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -250,12 +250,42 @@ main{display:block}
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Smishing",
-      "item": "https://dyleth.com/comprendre/smishing"
+      "name": "Arnaque colis SMS",
+      "item": "https://dyleth.com/comprendre/arnaque-colis-sms"
     }
   ]
 }
 </script>
+<style id="fix-mobile-nav-final">
+@media (max-width:1100px){
+  .nav-overlay.active{z-index:9998!important}
+  .nav-menu.open{display:flex!important;z-index:9999!important;top:64px!important;height:calc(100vh - 64px)!important;bottom:auto!important;background:#04060E!important}
+  .nav-item-lang{display:block!important}
+  .nav-item-lang .lang-dropdown.open{display:block!important}
+  .nav-right-desktop{display:none!important}
+}
+@media (min-width:1101px){
+  .nav-item-lang{display:none!important}
+  .nav-right-desktop{display:flex!important}
+}
+</style>
+<style id="fix-desktop-nav-center">
+@media (min-width:1101px){
+  nav.main-nav{justify-content:space-between!important}
+  .nav-logo{position:static!important;margin-right:0!important;flex:0 0 auto!important}
+  .nav-menu{flex:1 1 auto!important;justify-content:center!important;min-width:0!important}
+  .nav-right-desktop{position:static!important;margin-left:0!important;flex:0 0 auto!important}
+}
+</style>
+<style id="fix-lang-next-burger-mobile">
+@media (max-width:1100px){
+  .nav-item-lang{display:none!important}
+  .nav-right-desktop{display:flex!important;position:absolute!important;right:72px!important;top:50%!important;transform:translateY(-50%)!important;margin:0!important;z-index:10002!important}
+  .nav-right-desktop .nav-cta,.nav-right-desktop .nav-cta-soon{display:none!important}
+  .nav-right-desktop .lang-wrap{display:inline-flex!important}
+  .nav-right-desktop .lang-dropdown{position:absolute!important;top:52px!important;right:0!important;left:auto!important;bottom:auto!important;border-radius:12px!important;padding:8px!important;min-width:170px!important;z-index:10003!important}
+}
+</style>
 </head>
 <body>
 
@@ -393,69 +423,121 @@ main{display:block}
 
 <main>
   <section class="pg-wrap pg-hero">
-    <p class="d2-eyebrow reveal">Comprendre · Smishing</p>
-    <h1 class="reveal">Le smishing&nbsp;: l'arnaque par SMS</h1>
-    <p class="pg-lead reveal">Le SMS frauduleux exploite la confiance accordée aux messages courts. <strong>Il renvoie presque toujours vers une fausse page.</strong></p>
+    <p class="d2-eyebrow reveal">Comprendre · Arnaque au colis</p>
+    <h1 class="reveal">Arnaque au colis par SMS : reconnaître le piège et réagir</h1>
+    <p class="pg-lead reveal">Un colis bloqué, une livraison à reprogrammer, quelques euros à payer : un faux SMS peut transformer une attente banale en vol de données. <strong>Vérifiez le suivi officiel avant d'agir.</strong></p>
+    <p class="pg-note reveal">Mis à jour le 9 septembre 2026 · DYLETH</p>
   </section>
 
   <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Exemples courants</p>
-      <h2>Quatre modèles très répandus.</h2>
-    </div>
-    <div class="num-list reveal">
-      <div class="num-item">
-        <div class="n">01</div>
-        <div>
-          <h3><a href="/comprendre/arnaque-colis-sms">Faux avis de colis</a></h3>
-          <p>« Votre colis n'a pas pu être livré, des frais sont requis pour la reprogrammation : [lien]. » Le lien vole des coordonnées bancaires ou installe une application piégée.</p>
-        </div>
-      </div>
-      <div class="num-item">
-        <div class="n">02</div>
-        <div>
-          <h3>Fausse mise à jour d'assurance maladie</h3>
-          <p>« Votre carte expire, mettez à jour vos informations pour continuer à être remboursé. » Objectif : vol d'identité et de données personnelles.</p>
-        </div>
-      </div>
-      <div class="num-item">
-        <div class="n">03</div>
-        <div>
-          <h3>Faux remboursement d'impôt</h3>
-          <p>« Un remboursement vous est dû, cliquez pour le recevoir. » L'administration fiscale ne rembourse jamais via un lien envoyé par SMS.</p>
-        </div>
-      </div>
-      <div class="num-item">
-        <div class="n">04</div>
-        <div>
-          <h3>Fausse amende</h3>
-          <p>« Une contravention est en attente, paiement sous 72 h sinon majoration. » Les avis officiels arrivent par courrier.</p>
-        </div>
-      </div>
+    <div class="d2-section-head reveal"><p class="d2-eyebrow">Le scénario</p><h2>Qu'est-ce qu'une arnaque au colis par SMS ?</h2></div>
+    <div class="pg-prose reveal">
+      <p>Un fraudeur se présente comme un livreur ou un transporteur et invente un problème d'acheminement pour obtenir des données ou un paiement. C'est une forme fréquente de <a href="/comprendre/smishing">smishing, l'hameçonnage par SMS</a>. Ce guide détaille le piège de la livraison et les gestes à faire selon votre situation.</p>
+      <p>Les fraudeurs peuvent usurper l'identité de transporteurs connus : La Poste, Colissimo, Chronopost ou Mondial Relay sont cités par <a href="#source-colis">Cybermalveillance.gouv.fr</a>. Ces entreprises subissent l'usurpation ; elles ne sont pas à l'origine des faux messages.</p>
     </div>
   </section>
 
   <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Reconnaître</p>
-      <h2>Quatre indices.</h2>
+    <div class="d2-section-head reveal"><p class="d2-eyebrow">Le mécanisme</p><h2>Comment fonctionne le faux SMS de livraison ?</h2></div>
+    <div class="pg-prose reveal">
+      <p>Le lien mène à une imitation de suivi de colis. La page demande identité, adresse puis carte bancaire, sous prétexte de terminer la livraison. Les données saisies peuvent être récupérées même sans paiement abouti. Elles peuvent ensuite servir à d'autres fraudes, notamment un appel de faux conseiller bancaire. Le <a href="#source-colis">dossier officiel sur les colis</a> décrit cet enchaînement.</p>
+      <p>Une demande de 1 €, 1,99 €, 2 € ou 2,99 €, par exemple, peut rendre le piège rassurant et pousser à saisir sa carte. <strong>Un faible montant ne rend pas une demande légitime.</strong> Ces montants illustrent l'appât ; tous les petits frais ne sont pas frauduleux.</p>
     </div>
+  </section>
+
+  <section class="d2-section">
+    <div class="d2-section-head reveal"><p class="d2-eyebrow">Les prétextes</p><h2>Les messages les plus fréquents</h2></div>
+    <div class="pg-prose reveal"><p>Voici des scénarios paraphrasés, sans reproduire de SMS ni de lien :</p></div>
     <ul class="facts reveal">
-      <li><b><a class="pg-inline-link" href="/comprendre/urls-malveillantes">URL qui n'est pas le domaine officiel</a></b> : un tiret, un sous-domaine ou une extension inhabituelle suffit à révéler la fraude.</li>
-      <li><b>Urgence associée à un montant précis</b>, qui crée une crédibilité artificielle.</li>
-      <li><b>Demande de données bancaires</b> par SMS : jamais le fait d'une institution officielle.</li>
-      <li><b>Numéro d'expéditeur inconnu</b> ou usurpant un numéro officiel.</li>
+      <li><b>Livraison impossible :</b> absence supposée ou colis trop volumineux pour la boîte aux lettres.</li>
+      <li><b>Adresse incomplète :</b> correction demandée ou reprogrammation vers un autre créneau ou point relais.</li>
+      <li><b>Colis en attente :</b> prétendus frais de livraison, d'affranchissement ou de douane à régler.</li>
+      <li><b>Dernier rappel :</b> colis annoncé bloqué ou retour à l'expéditeur imminent pour provoquer une réaction pressée.</li>
+    </ul>
+    <div class="pg-prose reveal"><p>Un incident réel peut aussi nécessiter une action. <a href="#source-douane">La Poste confirme que des droits et taxes peuvent être dus</a> sur certains colis. Vérifiez leur présence dans le suivi officiel ouvert par vos soins.</p></div>
+  </section>
+
+  <section class="d2-section">
+    <div class="d2-section-head reveal"><p class="d2-eyebrow">Les indices</p><h2>Comment reconnaître un faux SMS de colis ?</h2></div>
+    <ul class="facts reveal">
+      <li><b>Contexte incohérent :</b> aucun colis attendu ou référence différente de celle fournie par le vendeur.</li>
+      <li><b>Urgence artificielle :</b> délai très court, menace de retour ou paiement immédiat de quelques euros.</li>
+      <li><b>Adresse suspecte :</b> domaine légèrement modifié, URL inhabituelle ou lien raccourci qui masque la destination.</li>
+      <li><b>Demande sensible :</b> carte bancaire ou identifiants réclamés pour une simple reprogrammation.</li>
+      <li><b>Expéditeur inhabituel :</b> numéro mobile inconnu, formulation étrange ou fautes. Aucun de ces indices ne suffit seul à conclure.</li>
+    </ul>
+    <div class="pg-prose reveal"><p>Attendre vraiment un colis ne valide pas le SMS. Un texte sans faute et un nom familier ne prouvent pas son authenticité, comme l'explique le <a href="#source-sms">dossier officiel sur les SMS frauduleux</a>. Consultez aussi notre guide pour <a href="/comprendre/urls-malveillantes">vérifier un lien</a>.</p></div>
+  </section>
+
+  <section class="d2-section">
+    <div class="d2-section-head reveal"><p class="d2-eyebrow">Avant le clic</p><h2>Ne cliquez pas : les bons réflexes</h2></div>
+    <div class="pg-prose reveal">
+      <p>En cas de doute, ne passez pas par le lien reçu. Ouvrez vous-même le site ou l'application officielle du transporteur. Retrouvez la référence dans votre commande et comparez le suivi. <a href="#source-douane">La Poste explique comment contrôler le suivi et les éventuels droits de douane</a>.</p>
+      <p>Ne répondez pas au SMS et ne transmettez ni carte ni identifiants. Si le doute persiste, contactez le vendeur ou le transporteur par ses coordonnées habituelles. Conservez le message avant de le signaler.</p>
+    </div>
+  </section>
+
+  <section class="d2-section">
+    <div class="d2-section-head reveal"><p class="d2-eyebrow">Après le clic</p><h2>J'ai cliqué sur le lien : que faire ?</h2></div>
+    <div class="num-list reveal">
+      <div class="num-item"><span class="n">A</span><div><h3>J'ai cliqué mais rien saisi</h3><p>Fermez la page sans rien accepter. Vérifiez les téléchargements éventuels et gardez navigateur et téléphone à jour. Un clic seul ne prouve pas une infection ; demandez assistance en cas d'alerte ou de comportement inhabituel.</p></div></div>
+      <div class="num-item"><span class="n">B</span><div><h3>J'ai saisi un mot de passe</h3><p>Changez-le immédiatement sur le service officiel et sur chaque compte où il était réutilisé. Choisissez des mots de passe distincts et activez la double authentification si possible. Si l'accès est perdu, contactez le support officiel.</p></div></div>
+      <div class="num-item"><span class="n">C</span><div><h3>J'ai donné mes informations personnelles</h3><p>Notez les données transmises. Méfiez-vous des nouvelles sollicitations qui les reprennent, notamment d'un prétendu banquier. Si votre identité est utilisée frauduleusement, déposez plainte. Les <a href="#source-phishing">conseils de Cybermalveillance.gouv.fr</a> détaillent ces démarches.</p></div></div>
+      <div class="num-item"><span class="n">F</span><div><h3>J'ai installé une application ou téléchargé un fichier</h3><p>N'ouvrez pas le fichier. Si vous avez installé ou exécuté quelque chose de suspect, cessez les opérations sensibles, déconnectez l'appareil en cas d'infection suspectée et demandez assistance depuis un autre équipement. Faites vérifier l'appareil selon les <a href="#source-virus">conseils officiels sur les virus</a>.</p></div></div>
+    </div>
+  </section>
+
+  <section class="d2-section">
+    <div class="d2-section-head reveal"><p class="d2-eyebrow">Banque et paiement</p><h2>J'ai saisi mes coordonnées bancaires ou payé : que faire ?</h2></div>
+    <div class="num-list reveal">
+      <div class="num-item"><span class="n">D</span><div><h3>J'ai saisi ma carte bancaire</h3><p>Contactez immédiatement votre banque via son application ou son numéro officiel et faites opposition à la carte compromise, même sans débit constaté. Surveillez ensuite vos opérations. L'opposition et la contestation d'un débit sont deux démarches distinctes.</p></div></div>
+      <div class="num-item"><span class="n">E</span><div><h3>J'ai validé un paiement</h3><p>Expliquez précisément à la banque ce que vous avez saisi et validé. Demandez les possibilités de contestation. Conservez SMS, URL sans la rouvrir, captures, montants et références. Une opération non autorisée et un paiement validé sous manipulation doivent être examinés selon leurs circonstances.</p></div></div>
+    </div>
+    <div class="pg-prose reveal">
+      <p>Selon la <a href="#source-bdf">Banque de France</a>, l'authentification forte ne suffit pas, à elle seule, à établir qu'une opération était autorisée. Le remboursement n'est pas automatique pour toute situation. Agissez sans attendre : <a href="#source-carte">Service Public précise les délais et recours applicables</a>. Un signalement ne remplace pas la demande auprès de la banque.</p>
+    </div>
+  </section>
+
+  <section class="d2-section">
+    <div class="d2-section-head reveal"><p class="d2-eyebrow">Avec DYLETH</p><h2>Comment DYLETH peut aider</h2></div>
+    <div class="pg-prose reveal">
+      <p>Le module Anti-fraude SMS analyse le contenu du SMS et émet une alerte lorsqu'un lien ou un message présente des caractéristiques connues de fraude. Le module Vérification des URLs analyse les liens avant ouverture et alerte sur les caractéristiques connues de sites frauduleux.</p>
+      <p>Ces alertes apportent un repère supplémentaire. Elles ne garantissent pas la détection de chaque faux SMS de livraison. Vérifiez le suivi officiel avant toute saisie ou tout paiement.</p>
+    </div>
+    <a class="pg-cta reveal" href="/solution/7-modules">Découvrir les modules DYLETH</a>
+  </section>
+
+  <section class="d2-section">
+    <div class="d2-section-head reveal"><p class="d2-eyebrow">Signaler</p><h2>Où signaler un faux SMS de colis ?</h2></div>
+    <ul class="facts reveal">
+      <li><b>SMS frauduleux :</b> transférez-le au <a class="pg-inline-link" href="#source-33700">33700</a> ou utilisez son formulaire. Prévenez aussi le transporteur usurpé via sa page officielle, comme celle de <a class="pg-inline-link" href="#source-laposte">La Poste</a>.</li>
+      <li><b>Besoin d'aide :</b> <a class="pg-inline-link" href="https://17cyber.gouv.fr/">17Cyber</a> propose un diagnostic et une orientation.</li>
+      <li><b>Achats en ligne non autorisés :</b> <a class="pg-inline-link" href="#source-perceval">Perceval</a> convient si vous possédez encore la carte, n'êtes pas à l'origine des achats et avez fait opposition.</li>
+      <li><b>Escroquerie subie :</b> déposez plainte auprès de la police ou de la gendarmerie. <a class="pg-inline-link" href="#source-thesee">THESEE</a> concerne certains scénarios en ligne ; vérifiez l'éligibilité, un simple SMS suspect ne suffit pas.</li>
     </ul>
   </section>
 
   <section class="d2-section">
-    <div class="pg-prose reveal">
-      <p>En cas de doute : ne pas cliquer, se rendre directement sur le site officiel ou l'application concernée, et signaler le message au 33700.</p>
-    </div>
-    <div class="pg-end reveal">
-      <div class="big">Analysez chaque SMS suspect.</div>
-      <p>Le module Anti-fraude SMS repère les liens et formulations caractéristiques du smishing et vous alerte.</p>
-      <div class="pg-cta-row"><a class="pg-cta" href="/telecharger/">Télécharger DYLETH</a><a class="pg-cta ghost" href="/solution/7-modules">Voir les 7 modules</a></div>
+    <div class="d2-section-head reveal"><p class="d2-eyebrow">À retenir</p><h2>Le suivi officiel avant le lien reçu</h2></div>
+    <div class="pg-prose reveal"><p>Le nom du transporteur et le petit montant ne prouvent rien. Vérifiez votre commande. Après une interaction, réagissez selon les informations communiquées, le paiement validé ou l'installation effectuée.</p></div>
+  </section>
+
+  <section class="d2-section">
+    <div class="article-sources pg-prose reveal">
+      <h2>Sources</h2>
+      <ul>
+        <li id="source-colis">Cybermalveillance.gouv.fr — <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/escroqueries-livraison-colis">Hameçonnage à la livraison de colis</a> : scénarios et usurpations.</li>
+        <li id="source-sms">Cybermalveillance.gouv.fr — <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/smishing-hameconnage-sms">Smishing</a> : indices et mécanismes.</li>
+        <li id="source-phishing">Cybermalveillance.gouv.fr — <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/hameconnage-phishing">Hameçonnage</a> : comptes, preuves et plainte.</li>
+        <li id="source-virus">Cybermalveillance.gouv.fr — <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/virus-informatiques">Virus informatiques</a> : assistance technique.</li>
+        <li id="source-laposte">La Poste — <a href="https://aide.laposte.fr/contenu/que-faire-si-je-recois-un-mail-ou-un-message-potentiellement-frauduleux">Message frauduleux</a> : signalement.</li>
+        <li id="source-douane">La Poste — <a href="https://aide.laposte.fr/contenu/j-ai-recu-un-sms-ou-un-mail-me-demandant-de-payer-des-droits-de-douane-comment-etre-sur-qu-il-ne-s-agit-pas-d-une-arnaque">Droits de douane</a> : vérifier une demande.</li>
+        <li id="source-bdf">Banque de France — <a href="https://www.banque-france.fr/fr/espace-presse/communiques-de-presse/lobservatoire-de-la-securite-des-moyens-de-paiement-emet-des-recommandations-sur-le-remboursement">Recommandations sur le remboursement</a> : authentification et autorisation.</li>
+        <li id="source-carte">Service Public — <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F31324">Fraude à la carte bancaire</a> : opposition et contestation.</li>
+        <li id="source-perceval">Service Public — <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R46526">Perceval</a> : conditions d'accès.</li>
+        <li id="source-33700">33700 — <a href="https://www.33700.fr/informations-pratiques/signaler-un-message-sms-indesirable/">Signaler un SMS indésirable</a> : modalités.</li>
+        <li id="source-thesee">Ministère de l'Intérieur — <a href="https://www.masecurite.interieur.gouv.fr/fr/demarches-en-ligne/thesee-arnaques-internet-plainte-en-ligne">THESEE</a> : périmètre.</li>
+      </ul>
     </div>
   </section>
 </main>
@@ -531,33 +613,3 @@ for(i=0;i<els.length;i++)io.observe(els[i]);})();
 </script>
 </body>
 </html>
-<style id="fix-mobile-nav-final">
-@media (max-width:1100px){
-  .nav-overlay.active{z-index:9998!important}
-  .nav-menu.open{display:flex!important;z-index:9999!important;top:64px!important;height:calc(100vh - 64px)!important;bottom:auto!important;background:#04060E!important}
-  .nav-item-lang{display:block!important}
-  .nav-item-lang .lang-dropdown.open{display:block!important}
-  .nav-right-desktop{display:none!important}
-}
-@media (min-width:1101px){
-  .nav-item-lang{display:none!important}
-  .nav-right-desktop{display:flex!important}
-}
-</style>
-<style id="fix-desktop-nav-center">
-@media (min-width:1101px){
-  nav.main-nav{justify-content:space-between!important}
-  .nav-logo{position:static!important;margin-right:0!important;flex:0 0 auto!important}
-  .nav-menu{flex:1 1 auto!important;justify-content:center!important;min-width:0!important}
-  .nav-right-desktop{position:static!important;margin-left:0!important;flex:0 0 auto!important}
-}
-</style>
-<style id="fix-lang-next-burger-mobile">
-@media (max-width:1100px){
-  .nav-item-lang{display:none!important}
-  .nav-right-desktop{display:flex!important;position:absolute!important;right:72px!important;top:50%!important;transform:translateY(-50%)!important;margin:0!important;z-index:10002!important}
-  .nav-right-desktop .nav-cta,.nav-right-desktop .nav-cta-soon{display:none!important}
-  .nav-right-desktop .lang-wrap{display:inline-flex!important}
-  .nav-right-desktop .lang-dropdown{position:absolute!important;top:52px!important;right:0!important;left:auto!important;bottom:auto!important;border-radius:12px!important;padding:8px!important;min-width:170px!important;z-index:10003!important}
-}
-</style>
