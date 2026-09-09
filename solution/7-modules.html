@@ -202,6 +202,13 @@ main{display:block}
   ]
 }
 </script>
+<style id="product-offer-style">
+.product-offer{display:flex;flex-direction:column;align-items:flex-start;gap:10px;line-height:1.5}
+.product-offer .offer-label{font-size:14px;font-weight:600;color:#f5f5f7}
+.product-offer .offer-unit{font-size:16px;font-weight:500;letter-spacing:0}
+.product-offer .per{font-size:17px;color:#c5c6cd}
+</style>
+<style>.mod p.product-ios{font-size:13px;color:#b9bac1}.mod p strong{color:#fff}</style>
 </head>
 <body>
 
@@ -359,10 +366,15 @@ main{display:block}
         <div class="num">01</div>
         <div>
           <h3>Anti-fraude Appels <span class="tag">Gratuit</span></h3>
-          <p>Analyse le numéro de chaque appel entrant — sur le réseau <b>GSM</b> classique comme sur les applications <b>VoIP</b> — et affiche un signal clair avant que vous ne décrochiez, face aux <a class="pg-inline-link" href="/comprendre/vishing">appels frauduleux</a>. Base de signatures enrichie en continu.</p>
+          <p>Analyse le numéro de chaque appel entrant — sur les appels classiques et, sur Android, sur <b>WhatsApp, Telegram et Signal</b> — et affiche un signal clair avant que vous ne décrochiez, face aux <a class="pg-inline-link" href="/comprendre/vishing">appels frauduleux</a>. Base de signatures enrichie en continu.</p>
+          <p>Sur Android — DYLETH va plus loin. L'écran change de couleur sur vos appels WhatsApp, Telegram et Signal, pas seulement sur les appels classiques.</p>
+          <p><strong>Les escrocs appellent aussi sur WhatsApp. DYLETH aussi les détecte.</strong></p>
+          <p class="product-ios">Sur iPhone, cette protection est limitée aux appels classiques en raison des restrictions d'iOS.</p>
           <div class="chan">
             <span>Appels GSM</span>
-            <span>Appels VoIP</span>
+            <span>WhatsApp · Android</span>
+            <span>Telegram · Android</span>
+            <span>Signal · Android</span>
           </div>
           <div class="sig">
             <span><i class="g"></i> Vert — aucun risque connu</span>
@@ -433,8 +445,9 @@ main{display:block}
     </div>
 
     <div class="mod-detail reveal">
-      <div class="pg-price"><span class="amt">À partir de 29&nbsp;€</span><span class="per">HT / mois · Sans engagement</span></div>
-      <p class="pg-free">Collectivités et administrations : gratuit</p>
+      <div class="pg-price product-offer"><span class="offer-label">Offre de lancement :</span> <span class="amt">9,90 € <span class="offer-unit">HT/mois</span></span> <span class="per">— soit 120 € HT/an</span></div>
+      <p class="pg-note">Par modem / routeur · Sans engagement</p>
+      <p class="pg-free">Collectivités et administrations : Tarif normal. Gratuité possible sur décision de DYLETH.</p>
       <ul class="pg-feat">
         <li>Protection DNS chiffrée DoT + DoH</li>
         <li>Tableau de bord surveillance réseau</li>

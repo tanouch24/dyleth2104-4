@@ -467,6 +467,19 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
   ]
 }
 </script>
+<style id="product-offer-style">
+.product-offer{display:flex;flex-direction:column;align-items:flex-start;gap:10px;line-height:1.5}
+.product-offer .offer-label{font-size:14px;font-weight:600;color:#f5f5f7}
+.product-offer .offer-unit{font-size:16px;font-weight:500;letter-spacing:0}
+.product-offer .per{font-size:17px;color:#c5c6cd}
+</style>
+<style id="product-sections-style">
+.hp-product-call{margin-top:28px;padding:24px 0;border-top:1px solid var(--hp-line);max-width:780px}
+.hp-product-call p{color:var(--hp-muted);font-size:16px;line-height:1.7;margin:0 0 16px}
+.hp-product-key,.hp-product-call .hp-product-key{font-size:clamp(20px,2.4vw,30px);font-weight:650;line-height:1.35;color:#f5f5f7;max-width:36ch;margin:28px 0 0;letter-spacing:-.015em}
+.hp-product-call .hp-product-ios{font-size:13px;margin-top:18px;color:#b9bac1}
+#dashboard .hp-priv{margin-top:32px}
+</style>
 </head>
 <body>
 
@@ -739,10 +752,31 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
       <div><b>Wi-Fi Pro Entreprise</b><span>Protection réseau multi-appareils pour les organisations.</span></div>
       <span class="badge">PRO</span>
     </div>
+    <div class="hp-product-call reveal">
+      <p>Sur Android — DYLETH va plus loin. L'écran change de couleur sur vos appels WhatsApp, Telegram et Signal, pas seulement sur les appels classiques.</p>
+      <p class="hp-product-key">Les escrocs appellent aussi sur WhatsApp. DYLETH aussi les détecte.</p>
+      <p class="hp-product-ios">Sur iPhone, cette protection est limitée aux appels classiques en raison des restrictions d'iOS.</p>
+    </div>
     <a class="hp-link reveal" href="/solution/7-modules">Les 7 modules en détail &rarr;</a>
   </div>
 </section>
 
+
+<section class="hp-section" id="dashboard">
+  <div class="hp-wrap">
+    <div class="hp-head reveal">
+      <p class="hp-eyebrow">Tableau de bord</p>
+      <h2 class="hp-h2">Votre protection en temps réel — le tableau de bord DYLETH</h2>
+      <p class="hp-sub">Des alertes pour vous aider à repérer les risques, un tableau de bord pour piloter votre protection selon vos préférences.</p>
+    </div>
+    <div class="hp-priv reveal">
+      <div class="hp-priv-row"><span class="t">Vos modules, votre choix</span><p class="d">Depuis ce même tableau de bord, vous pouvez activer ou désactiver chaque module de protection selon vos préférences.</p></div>
+      <div class="hp-priv-row"><span class="t">L'annonce vocale</span><p class="d">Vous choisissez d'activer ou de désactiver l'annonce vocale de l'appelant depuis votre tableau de bord.</p></div>
+      <div class="hp-priv-row"><span class="t">Des alertes compréhensibles</span><p class="d">DYLETH affiche un signal de couleur pour les appels et vous alerte lorsqu'un SMS, un e-mail ou un lien présente des caractéristiques connues de fraude.</p></div>
+    </div>
+    <p class="hp-product-key reveal">Chaque menace détectée est visible. Votre protection est transparente.</p>
+  </div>
+</section>
 
 <!-- ═══ 5 · LE CONSTAT ═══ -->
 <section class="hp-section">
@@ -828,10 +862,10 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
     </div>
     <div class="hp-pro reveal">
       <div>
-        <p class="hp-pro-price"><span class="amt">À partir de 29&nbsp;€</span><span class="per">HT / mois</span></p>
+        <p class="hp-pro-price product-offer"><span class="offer-label">Offre de lancement :</span> <span class="amt">9,90 € <span class="offer-unit">HT/mois</span></span> <span class="per">— soit 120 € HT/an</span></p>
         <p class="hp-pro-cond">Par modem / routeur · sans engagement</p>
         <p class="hp-pro-eng">Conçu pour accompagner les exigences de cybersécurité des organisations.</p>
-        <p class="hp-pro-free">Collectivités et administrations : gratuit sur demande validée par DYLETH.</p>
+        <p class="hp-pro-free">Collectivités et administrations : Tarif normal. Gratuité possible sur décision de DYLETH.</p>
         <br>
         <a class="hp-pro-cta" href="mailto:contact@dyleth.com">Demander un devis &rarr;</a>
       </div>
@@ -848,6 +882,18 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
   </div>
 </section>
 
+
+<section class="hp-section" id="innovations">
+  <div class="hp-wrap">
+    <div class="hp-head reveal">
+      <p class="hp-eyebrow">Deepfakes vocaux et vidéo · En développement</p>
+      <h2 class="hp-h2">Détecter les deepfakes vocaux et vidéo.</h2>
+      <p class="hp-sub">Nous développons déjà la détection des deepfakes vocaux et vidéo générés par intelligence artificielle — ces appels où l'escroc imite parfaitement la voix de votre banque ou de vos proches. DYLETH sera là avant eux.</p>
+      <p class="hp-sub">D'autres fonctionnalités sont en cours de développement pour faire de DYLETH le bouclier antifraude le plus complet et le plus puissant au monde.</p>
+      <a class="hp-link" href="/innovations/">Découvrir nos innovations &rarr;</a>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ 9 · TÉLÉCHARGER ═══ -->
 <section class="hp-section hp-dl" id="stores">
