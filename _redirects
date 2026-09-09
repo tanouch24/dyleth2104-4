@@ -13,6 +13,7 @@
 /ambassadeurs.html                           /rejoindre/ambassadeurs                  301
 
 # --- .html explicite -> URL propre (301! car le fichier existe physiquement) ---
+/delete-my-account.html                     /delete-my-account                       301!
 /menace/chiffres-cles.html                   /menace/chiffres-cles                    301!
 /menace/etat-des-lieux.html                  /menace/etat-des-lieux                   301!
 /menace/intelligence-artificielle.html       /menace/intelligence-artificielle        301!

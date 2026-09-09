@@ -128,3 +128,36 @@ Si tu casses quelque chose accidentellement : GitHub garde l'historique de TOUS 
 ---
 
 © 2026 DYLETH — Société Française de Cybersécurité
+
+## Demandes de suppression de compte
+
+Page publique : https://dyleth.com/delete-my-account (`delete-my-account.html`).
+Formulaire Netlify dédié : `delete-account-request`, POST avec `form-name`,
+`email`, `confirmation` et honeypot `bot-field`. Aucun backend de suppression
+n'est connecté. Avec JavaScript, le message dédié apparaît uniquement après
+une réponse HTTP réussie au POST Netlify. En cas d'échec, une erreur s'affiche
+et les champs sont conservés. Sans JavaScript, le POST natif utilise la
+confirmation standard Netlify ; aucune redirection vers la newsletter `/merci/`.
+
+**Notification vers contact@dyleth.com : configuration Netlify encore requise
+ou à vérifier dans l'interface. La réception email n'est pas confirmée.**
+Aucune adresse de notification n'est configurée par ce dépôt.
+Après l'auto-déploiement, le responsable du site devra :
+
+1. Vérifier que `delete-account-request` apparaît dans les formulaires actifs
+   de l'onglet Forms (la détection des formulaires doit être active).
+2. Ouvrir **Project configuration > Notifications > Emails and webhooks >
+   Form submission notifications**.
+3. Ajouter une notification email pour le formulaire `delete-account-request`
+   avec **contact@dyleth.com** comme destinataire, ou vérifier qu'une notification
+   existante couvrant tous les formulaires inclut cette adresse.
+4. Vérifier la réception d'une demande de test identifiée comme telle et sa
+   présence dans Forms avant d'affirmer que la livraison email fonctionne.
+   Consulter également les soumissions classées comme spam si nécessaire.
+
+Ces opérations dans l'interface n'ont pas été effectuées pendant cette session.
+L'équipe doit traiter les demandes reçues ; ni suppression automatique, ni délai,
+ni email de confirmation au demandeur ne sont promis par cette page.
+
+Références : [notifications Netlify](https://docs.netlify.com/manage/forms/notifications/)
+et [configuration des formulaires](https://docs.netlify.com/manage/forms/setup/).
