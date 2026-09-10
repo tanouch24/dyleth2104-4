@@ -407,7 +407,7 @@ main{display:block}
       <li><b>442 milliards de dollars</b> de pertes mondiales liées aux arnaques numériques (Bitdefender, 2026).</li>
       <li><b>453 200 délits numériques</b> en France en un an, <b>+14 %</b> (Ministère de l'Intérieur · Interstats 2025).</li>
       <li><b>Un appel sur six</b> environ relève d'une tentative d'arnaque.</li>
-      <li><b>+159 %</b> de signalements « faux conseiller bancaire » (Cybermalveillance.gouv.fr, 2025).</li>
+      <li><b>+159 %</b> de demandes d’assistance de particuliers liées au faux conseiller bancaire (Cybermalveillance.gouv.fr, 2025).</li>
     </ul>
   </section>
 
@@ -418,7 +418,7 @@ main{display:block}
     </div>
     <div class="pg-prose reveal">
       <p>La cybercriminalité n'est plus un risque abstrait. Son ampleur dépasse la capacité des seuls pouvoirs publics à y répondre, et les solutions du marché souffrent d'un décalage : elles protègent surtout les organisations et laissent les particuliers et les petites structures peu couverts.</p>
-      <p>Les antivirus ne traitent pas les appels ni les SMS ; les opérateurs ne filtrent pas les messages frauduleux ; peu d'outils couvrent l'ensemble des canaux à la fois. <strong>DYLETH est né de ce constat</strong> : une application mobile réunissant <a class="pg-inline-link" href="/solution/7-modules">sept modules de protection</a>, gratuite pour les particuliers, avec un traitement sur l'appareil privilégié.</p>
+      <p>La couverture des antivirus, des services opérateurs et des VPN dépend de l’offre et du système utilisé. Il faut vérifier les protections incluses pour chaque canal. <strong>DYLETH est né de ce constat</strong> : une application mobile réunissant <a class="pg-inline-link" href="/solution/7-modules">sept modules de protection</a> : six gratuits pour les particuliers et Wi-Fi Pro Entreprise payant, avec un traitement sur l'appareil privilégié.</p>
       <p>Ce document présente l'état de la menace, les mécanismes d'attaque et la réponse apportée à chaque vecteur. Les chiffres cités sont détaillés et sourcés sur la page <a class="pg-inline-link" href="/menace/chiffres-cles">chiffres clés</a>.</p>
     </div>
   </section>
@@ -548,7 +548,7 @@ main{display:block}
         <div class="n">04</div>
         <div>
           <h3>Vérification URLs <span style="color:var(--d2-blue)">· gratuit</span></h3>
-          <p>Analyse des liens avant ouverture, quelle que soit la source. Détection du typosquatting, des domaines connus et des redirections suspectes.</p>
+          <p>Vérification des liens suspects avant ouverture. Cette protection ne signifie pas une analyse automatique de tous les QR codes. Détection du typosquatting, des domaines connus et des redirections suspectes.</p>
         </div>
       </div>
       <div class="num-item">
@@ -618,13 +618,13 @@ main{display:block}
     <table class="mini-table">
       <thead><tr><th>Critère</th><th>Antivirus</th><th>Opérateur</th><th>VPN</th><th>DYLETH</th></tr></thead>
       <tbody>
-        <tr><td>Appels frauduleux</td><td class="no">Non</td><td>Partiel</td><td class="no">Non</td><td class="yes">Oui</td></tr>
-        <tr><td>Smishing</td><td class="no">Non</td><td>Partiel</td><td class="no">Non</td><td class="yes">Oui</td></tr>
-        <tr><td>Phishing e-mail</td><td>Partiel</td><td class="no">Non</td><td class="no">Non</td><td class="yes">Oui</td></tr>
-        <tr><td>Vérification des liens</td><td>Analyse</td><td class="no">Non</td><td>Partiel</td><td class="yes">Oui</td></tr>
-        <tr><td>WiFi mobile</td><td class="no">Non</td><td class="no">Non</td><td>Partiel</td><td class="yes">Oui</td></tr>
-        <tr><td>WiFi domestique</td><td class="no">Non</td><td class="no">Non</td><td>Partiel</td><td class="yes">Oui</td></tr>
-        <tr><td>Gratuit pour les particuliers</td><td class="no">Non</td><td class="no">Non</td><td class="no">Non</td><td class="yes">Oui</td></tr>
+        <tr><td>Appels frauduleux</td><td>Selon l’offre</td><td>Selon l’offre</td><td>Selon l’offre</td><td class="yes">Oui</td></tr>
+        <tr><td>Smishing</td><td>Selon l’offre</td><td>Selon l’offre</td><td>Selon l’offre</td><td class="yes">Oui</td></tr>
+        <tr><td>Phishing e-mail</td><td>Selon l’offre</td><td>Selon l’offre</td><td>Selon l’offre</td><td class="yes">Oui</td></tr>
+        <tr><td>Vérification des liens</td><td>Selon l’offre</td><td>Selon l’offre</td><td>Selon l’offre</td><td class="yes">Oui</td></tr>
+        <tr><td>WiFi mobile</td><td>Selon l’offre</td><td>Selon l’offre</td><td>Selon l’offre</td><td class="yes">Oui</td></tr>
+        <tr><td>WiFi domestique</td><td>Selon l’offre</td><td>Selon l’offre</td><td>Selon l’offre</td><td class="yes">Oui</td></tr>
+        <tr><td>Gratuit pour les particuliers</td><td>Selon l’offre</td><td>Selon l’offre</td><td>Selon l’offre</td><td>6 modules gratuits ; Wi-Fi Pro payant</td></tr>
       </tbody>
     </table>
     </div>
@@ -737,7 +737,8 @@ main{display:block}
   </div>
 </footer>
 
-<script id="nv-js">(function(){var b=document.getElementById("nav-burger-btn"),m=document.querySelector(".nav-menu"),o=document.getElementById("nav-overlay");if(!b||!m)return;function cl(){m.classList.remove("open");if(o)o.classList.remove("active");b.innerHTML="&#9776;";document.body.style.overflow="";}b.addEventListener("click",function(e){e.stopPropagation();var op=m.classList.toggle("open");if(o)o.classList.toggle("active",op);b.innerHTML=op?"&#10005;":"&#9776;";document.body.style.overflow=op?"hidden":"";});if(o)o.addEventListener("click",cl);document.querySelectorAll(".nav-sub-btn").forEach(function(btn){btn.addEventListener("click",function(e){if(window.innerWidth>1100)return;e.stopPropagation();var li=btn.closest(".nav-item"),was=li.classList.contains("open");document.querySelectorAll(".nav-menu .nav-item.open").forEach(function(el){if(el!==li)el.classList.remove("open");});li.classList.toggle("open",!was);});});m.querySelectorAll("a[href]").forEach(function(a){a.addEventListener("click",function(){if(window.innerWidth<=1100)cl();});});window.addEventListener("resize",function(){if(window.innerWidth>1100)cl();});})();window.toggleLang=function(id){var dd=document.getElementById(id);if(!dd)return;var was=dd.classList.contains("open");document.querySelectorAll(".lang-dropdown").forEach(function(el){el.classList.remove("open");});if(!was)dd.classList.add("open");};document.addEventListener("click",function(e){if(!e.target.closest(".lang-wrap")&&!e.target.closest(".nav-item-lang"))document.querySelectorAll(".lang-dropdown").forEach(function(el){el.classList.remove("open");});});window.doTranslate=function(lang){document.querySelectorAll(".lang-dropdown").forEach(function(el){el.classList.remove("open");});if(lang==="fr"){document.cookie="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";document.cookie="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=."+location.hostname;location.reload();return;}document.cookie="googtrans=/fr/"+lang+"; path=/";document.cookie="googtrans=/fr/"+lang+"; path=/; domain=."+location.hostname;location.reload();};</script>
+<script src="/navigation.js" defer></script>
+<script id="nv-js">window.toggleLang=function(id){var dd=document.getElementById(id);if(!dd)return;var was=dd.classList.contains("open");document.querySelectorAll(".lang-dropdown").forEach(function(el){el.classList.remove("open");});if(!was)dd.classList.add("open");};document.addEventListener("click",function(e){if(!e.target.closest(".lang-wrap")&&!e.target.closest(".nav-item-lang"))document.querySelectorAll(".lang-dropdown").forEach(function(el){el.classList.remove("open");});});window.doTranslate=function(lang){document.querySelectorAll(".lang-dropdown").forEach(function(el){el.classList.remove("open");});if(lang==="fr"){document.cookie="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";document.cookie="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=."+location.hostname;location.reload();return;}document.cookie="googtrans=/fr/"+lang+"; path=/";document.cookie="googtrans=/fr/"+lang+"; path=/; domain=."+location.hostname;location.reload();};</script>
 <div id="google_translate_element" style="display:none"></div>
 <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"fr",autoDisplay:false},"google_translate_element");}</script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

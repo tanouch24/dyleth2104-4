@@ -34,6 +34,39 @@ body {
 
 a { color: inherit; }
 
+/* Accessibilité : mêmes couleurs et composants, contraste des petits textes. */
+html:root {
+  --hp-faint: #92949c;
+  --d2-faint: #92949c;
+}
+body .hp-alert .acts span:first-child { color: #04060e; }
+body .d5-brand .tags span, body .d5-foot-bottom { color: #92949c; }
+body .pg-inline-link,
+body .pg-prose a,
+body .num-item a,
+body .pg-row .d a,
+body .legal-dl dd a,
+body .hp-priv-row .d a,
+body main p a:not(.pg-cta):not(.d2-badge) {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+body a:focus-visible, body button:focus-visible,
+body input:focus-visible, body [tabindex]:focus-visible {
+  outline: 2px solid #2997ff;
+  outline-offset: 3px;
+}
+/* Le bouton de fermeture doit rester au-dessus de l'overlay existant. */
+nav.main-nav #nav-burger-btn { position: relative; z-index: 10001; }
+@media (min-width: 1101px) {
+  nav.nav-accessible .nav-item .nav-dropdown { display: none; }
+  nav.nav-accessible .nav-item.open .nav-dropdown {
+    display: block; opacity: 1; transform: none;
+  }
+  nav.nav-accessible .nav-item:not(.open) .caret { transform: none; }
+  nav.nav-accessible .nav-item.open .caret { transform: rotate(180deg); }
+}
+
 /* ═══ FOND DÉCORATIF ═══ */
 .noise {
   position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.025;
