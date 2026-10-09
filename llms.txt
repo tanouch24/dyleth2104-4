@@ -25,6 +25,8 @@ Nom de marque : DYLETH (en majuscules). Langue principale du site : français. L
 - [Deepfakes](https://dyleth.com/comprendre/deepfakes)
 - [Glossaire](https://dyleth.com/comprendre/glossaire)
 - [Signaler une arnaque : qui contacter ?](https://dyleth.com/comprendre/signaler-une-arnaque)
+- [Appel frauduleux : que faire ?](https://dyleth.com/comprendre/appel-frauduleux-que-faire): réflexes pendant et après l'appel, opposition, où signaler
+- [Bloquer ou filtrer les appels indésirables](https://dyleth.com/comprendre/bloquer-appels-indesirables): réglages iPhone et Android, cadre légal depuis la fin de Bloctel
 
 ## La menace en chiffres
 - [Chiffres clés et tendances](https://dyleth.com/menace/chiffres-cles)
