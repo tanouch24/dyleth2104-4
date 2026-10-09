@@ -213,9 +213,53 @@ main{display:block}
   ]
 }
 </script>
+<meta property="og:image" content="https://dyleth.com/assets/seo/dyleth-og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DYLETH, votre bouclier anti-fraude : appels, SMS, liens, Wi-Fi.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/premium.css">
+<link rel="stylesheet" href="/assets/home.css">
+<style id="pv2">
+/* Innovations premium : une carte phare + grille */
+.in-top{padding:clamp(112px,14vw,156px) 0 0}
+.in-top h1{margin:0;font-size:clamp(44px,6.4vw,84px);line-height:.98;text-wrap:balance}
+.in-top .h-lead{margin-top:22px;font-size:clamp(17px,1.45vw,20px)}
+.in-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:clamp(48px,7vw,80px) 0 0;padding:0;list-style:none}
+.in-card{display:flex;flex-direction:column;padding:clamp(24px,3vw,36px);border-radius:var(--pm-radius-l);border:1px solid var(--pm-line);background:var(--pm-surface)}
+.in-card .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.in-card .n{font-family:var(--pm-serif);font-size:17px;color:var(--pm-faint);font-variant-numeric:tabular-nums}
+.in-card h2{margin:22px 0 0;font-size:clamp(24px,2.4vw,30px);line-height:1.12;text-wrap:balance}
+.in-card p{margin:12px 0 0;color:var(--pm-muted);font-size:15px;line-height:1.65;max-width:62ch}
+
+/* Carte phare : la seule mise en avant de la page */
+.in-card.lead{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:clamp(24px,5vw,72px);align-items:center;
+  padding:clamp(28px,4.5vw,56px);border-color:var(--pm-line-2);
+  background:radial-gradient(700px 320px at 100% 50%,rgba(43,63,214,.28),transparent 70%),var(--pm-surface)}
+.in-card.lead h2{font-size:clamp(30px,3.6vw,46px);line-height:1.04}
+.in-card.lead p{font-size:16px}
+.in-wave{display:flex;align-items:center;justify-content:center;gap:6px;height:140px}
+.in-wave i{width:6px;border-radius:99px;background:linear-gradient(180deg,var(--pm-brand),color-mix(in srgb,var(--pm-brand) 30%,transparent));height:var(--h);opacity:.85}
+.in-wave i:nth-child(n+12){background:linear-gradient(180deg,var(--pm-faint),transparent);opacity:.5}
+@media (prefers-reduced-motion:no-preference){
+  .in-wave i{animation:in-pulse 2.6s ease-in-out infinite;animation-delay:calc(var(--d) * -1s)}
+  @keyframes in-pulse{50%{transform:scaleY(.55)}}
+}
+
+.in-end{margin-top:16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 48px;align-items:end;
+  padding:clamp(28px,4vw,48px);border-radius:var(--pm-radius-l);border:1px solid var(--pm-line)}
+.in-end .h-h2{font-size:clamp(28px,3.2vw,40px)}
+.in-end .h-link{margin-top:0;white-space:nowrap}
+
+@media (max-width:860px){
+  .in-grid{grid-template-columns:1fr}
+  .in-card.lead{grid-template-columns:1fr}
+  .in-wave{height:90px;justify-content:flex-start}
+  .in-end{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
@@ -351,30 +395,57 @@ main{display:block}
   </div>
 </nav>
 
-<main>
-  <section class="pg-wrap pg-hero">
-    <p class="d2-eyebrow reveal">Innovations</p>
-    <h1 class="reveal">Innovations DYLETH</h1>
-    <p class="pg-lead reveal">Les prochaines protections contre les nouvelles formes de fraude. Ces fonctionnalités sont en développement ou à venir ; elles ne sont pas disponibles aujourd’hui.</p>
-  </section>
-
-  <section class="d2-section">
-    <div class="pg-inno reveal">
-      <div class="pg-inno-row"><span class="n">01</span><div><h2>Détection deepfake vocal <span class="badge">En développement</span></h2><p>Nous développons une détection des voix générées par IA. L'objectif : vous alerter pendant l'appel lorsqu'une voix semble imiter un proche ou un conseiller bancaire. Fonction non disponible aujourd'hui.</p></div></div>
-      <div class="pg-inno-row"><span class="n">02</span><div><h2>Détection deepfake vidéo <span class="badge">En développement</span></h2><p>Lors d'un appel vidéo, DYLETH analysera les caractéristiques visuelles pour aider à repérer les visages synthétiques générés par IA. Fonction non disponible aujourd'hui.</p></div></div>
-      <div class="pg-inno-row"><span class="n">03</span><div><h2>QR codes frauduleux — Quishing <span class="badge">Prochainement</span></h2><p>Un scanner intégré à DYLETH analysera le lien contenu dans le QR code avant ouverture et affichera le résultat en code couleur (vert, orange, rouge). L'ouverture du lien restera toujours votre décision. Sur iPhone, vous ouvrez le scanner DYLETH : l'appareil photo natif n'est pas intercepté.</p></div></div>
-      <div class="pg-inno-row"><span class="n">04</span><div><h2>Faux comptes et usurpation sur les réseaux sociaux <span class="badge">En développement</span></h2><p>Nous travaillons à vous aider à repérer les faux profils et les comptes qui usurpent l'identité d'un proche, d'une personnalité ou d'une marque. Fonction non disponible aujourd'hui.</p></div></div>
-      <div class="pg-inno-row"><span class="n">05</span><div><h2>Protection des emails <span class="badge">En cours d'activation</span></h2><p>L'analyse des emails suspects est en attente de l'approbation de Google. Elle n'est pas encore disponible.</p></div></div>
+<main id="contenu">
+  <section class="in-top">
+    <div class="h-wrap">
+      <div class="h-head">
+        <p class="h-kicker reveal">Innovations</p>
+        <h1 class="reveal">Innovations DYLETH</h1>
+        <p class="h-lead reveal">Les prochaines protections contre les nouvelles formes de fraude. Ces fonctionnalités sont en développement ou à venir ; elles ne sont pas disponibles aujourd’hui.</p>
+      </div>
     </div>
   </section>
 
-  <section class="d2-section">
-    <div class="pg-end reveal">
-      <p class="big">Et ce n'est que le début.</p>
-      <p>Notre ambition : étendre progressivement l'aide à l'identification des fraudes, en restant gratuit pour tous et respectueux de la vie privée. Chaque fonction est annoncée avec son statut réel.</p>
-      <a class="pg-cta" href="/roadmap/">Voir la Roadmap complète</a>
-    </div>
-  </section>
+  <div class="h-wrap">
+    <ul class="in-grid">
+      <li class="in-card lead reveal">
+        <div>
+          <div class="top"><span class="n">01</span><span class="pm-status dev">En développement</span></div>
+          <h2>Détection deepfake vocal</h2>
+          <p>Nous développons une détection des voix générées par IA. L'objectif : vous alerter pendant l'appel lorsqu'une voix semble imiter un proche ou un conseiller bancaire. Fonction non disponible aujourd'hui.</p>
+        </div>
+        <div class="in-wave" aria-hidden="true"><i style="--h:28px;--d:.1"></i><i style="--h:52px;--d:.5"></i><i style="--h:86px;--d:.9"></i><i style="--h:64px;--d:1.3"></i><i style="--h:110px;--d:.2"></i><i style="--h:74px;--d:.7"></i><i style="--h:96px;--d:1.1"></i><i style="--h:44px;--d:1.6"></i><i style="--h:120px;--d:.4"></i><i style="--h:68px;--d:1.9"></i><i style="--h:36px;--d:.8"></i><i style="--h:58px;--d:1.4"></i><i style="--h:30px;--d:.3"></i><i style="--h:48px;--d:1.0"></i><i style="--h:22px;--d:1.7"></i><i style="--h:38px;--d:.6"></i></div>
+      </li>
+      <li class="in-card reveal">
+        <div class="top"><span class="n">02</span><span class="pm-status dev">En développement</span></div>
+        <h2>Détection deepfake vidéo</h2>
+        <p>Lors d'un appel vidéo, DYLETH analysera les caractéristiques visuelles pour aider à repérer les visages synthétiques générés par IA. Fonction non disponible aujourd'hui.</p>
+      </li>
+      <li class="in-card reveal">
+        <div class="top"><span class="n">03</span><span class="pm-status soon">Prochainement</span></div>
+        <h2>QR codes frauduleux — Quishing</h2>
+        <p>Un scanner intégré à DYLETH analysera le lien contenu dans le QR code avant ouverture et affichera le résultat en code couleur (vert, orange, rouge). L'ouverture du lien restera toujours votre décision. Sur iPhone, vous ouvrez le scanner DYLETH : l'appareil photo natif n'est pas intercepté.</p>
+      </li>
+      <li class="in-card reveal">
+        <div class="top"><span class="n">04</span><span class="pm-status dev">En développement</span></div>
+        <h2>Faux comptes et usurpation sur les réseaux sociaux</h2>
+        <p>Nous travaillons à vous aider à repérer les faux profils et les comptes qui usurpent l'identité d'un proche, d'une personnalité ou d'une marque. Fonction non disponible aujourd'hui.</p>
+      </li>
+      <li class="in-card reveal">
+        <div class="top"><span class="n">05</span><span class="pm-status soon">En cours d'activation</span></div>
+        <h2>Protection des emails</h2>
+        <p>L'analyse des emails suspects est en attente de l'approbation de Google. Elle n'est pas encore disponible.</p>
+      </li>
+    </ul>
+
+    <section class="in-end reveal">
+      <div>
+        <h2 class="h-h2">Et ce n'est que le début.</h2>
+        <p class="h-lead">Notre ambition : étendre progressivement l'aide à l'identification des fraudes, en restant gratuit pour tous et respectueux de la vie privée. Chaque fonction est annoncée avec son statut réel.</p>
+      </div>
+      <a class="h-link" href="/roadmap/">Voir la Roadmap complète</a>
+    </section>
+  </div>
 </main>
 
 <footer class="d5-footer">

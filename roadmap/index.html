@@ -185,9 +185,72 @@ a{color:inherit}
   ]
 }
 </script>
+<meta property="og:image" content="https://dyleth.com/assets/seo/dyleth-og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DYLETH, votre bouclier anti-fraude : appels, SMS, liens, Wi-Fi.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/premium.css">
+<link rel="stylesheet" href="/assets/home.css">
+<style id="pv2">
+/* Roadmap premium : frise verticale */
+.rm-top{padding:clamp(112px,14vw,156px) 0 0}
+.rm-top h1{margin:0;font-size:clamp(44px,6.4vw,84px);line-height:.98;text-wrap:balance}
+.rm-top .h-lead{margin-top:22px;font-size:clamp(17px,1.45vw,20px)}
+.rm-strap{margin:26px 0 0;font-family:var(--pm-serif);font-size:clamp(22px,2.2vw,28px);font-weight:420;line-height:1.2;color:var(--pm-ink)}
+.rm-strap span{color:var(--pm-muted)}
+.rm-vision{margin:18px 0 0;max-width:62ch}
+
+.rm-tl{margin:clamp(56px,8vw,88px) 0 0;padding:0;list-style:none}
+.rm-ph{--c:var(--pm-faint);display:grid;grid-template-columns:200px 64px minmax(0,1fr);grid-template-areas:"meta rail body";padding-bottom:clamp(48px,6vw,72px)}
+.rm-ph.on{--c:var(--pm-safe)} .rm-ph.soon{--c:var(--pm-warn)} .rm-ph.dev{--c:var(--pm-faint)}
+.rm-meta{grid-area:meta;text-align:right;padding-top:4px}
+.rm-meta .k{display:block;color:var(--pm-faint);font-size:13.5px;font-weight:500;font-variant-numeric:tabular-nums}
+.rm-meta .pm-status{margin-top:10px}
+.rm-rail{grid-area:rail;position:relative}
+.rm-rail::before{content:"";position:absolute;left:50%;top:0;bottom:calc(-1 * clamp(48px,6vw,72px));width:1px;transform:translateX(-50%);background:var(--pm-line-2)}
+.rm-ph:first-child .rm-rail::before{top:14px;background:linear-gradient(180deg,var(--pm-safe),var(--pm-line-2) 70%)}
+.rm-ph:last-child .rm-rail::before{bottom:auto;height:14px}
+.rm-rail i{position:absolute;left:50%;top:7px;width:15px;height:15px;transform:translateX(-50%);border-radius:50%;background:var(--pm-night);border:1.5px solid var(--c)}
+.rm-rail i::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--c)}
+.rm-ph.dev .rm-rail i::after{background:transparent}
+.rm-ph.on .rm-rail i{box-shadow:0 0 0 6px color-mix(in srgb,var(--pm-safe) 14%,transparent),0 0 28px color-mix(in srgb,var(--pm-safe) 55%,transparent)}
+.rm-body{grid-area:body;min-width:0}
+.rm-body h2{margin:0;font-size:clamp(28px,3.2vw,42px);line-height:1.05}
+.rm-note{margin:14px 0 0;max-width:62ch;color:var(--pm-muted);font-size:15px;line-height:1.6}
+
+.rm-items{margin:22px 0 0;padding:0;list-style:none;border-top:1px solid var(--pm-line)}
+.rm-items li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;padding:16px 0;border-bottom:1px solid var(--pm-line)}
+.rm-items .n{font-family:var(--pm-serif);font-size:17px;line-height:1.3;color:var(--pm-brand);font-variant-numeric:tabular-nums}
+.rm-items strong{display:block;color:#fff;font-size:16px;font-weight:600;line-height:1.4}
+.rm-items span.d{display:block;margin-top:5px;color:var(--pm-muted);font-size:14px;line-height:1.6}
+
+/* Phase en cours : la seule mise en avant de la page */
+.rm-now{margin-top:24px;padding:clamp(20px,3vw,32px);border-radius:var(--pm-radius-l);border:1px solid var(--pm-line-2);
+  background:radial-gradient(520px 240px at 0% 0%,color-mix(in srgb,var(--pm-safe) 10%,transparent),transparent 70%),var(--pm-surface)}
+.rm-now .rm-items{margin:0;border-top:0;display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+.rm-now .rm-items li.wide{grid-column:1 / -1}
+
+.rm-pos{margin-top:clamp(24px,4vw,40px);padding:clamp(28px,4vw,48px);border-radius:var(--pm-radius-l);border:1px solid var(--pm-line);background:var(--pm-surface)}
+.rm-pos .h-h2{max-width:20ch}
+.rm-tokens{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0;list-style:none}
+.rm-tokens li{padding:8px 14px;border-radius:999px;border:1px solid var(--pm-line-2);color:var(--pm-ink);font-size:13.5px}
+.rm-disc{margin:28px 0 0;padding-bottom:clamp(40px,6vw,72px);max-width:78ch}
+
+@media (max-width:760px){
+  .rm-ph{grid-template-columns:30px minmax(0,1fr);grid-template-areas:"rail meta" "rail body"}
+  .rm-meta{text-align:left;padding:3px 0 12px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px}
+  .rm-meta .pm-status{margin-top:0}
+  .rm-rail{grid-row:1 / span 2}
+  .rm-rail i{top:5px}
+  .rm-ph:first-child .rm-rail::before{top:12px}
+  .rm-now{margin-top:18px;padding:6px 18px}
+  .rm-now .rm-items{grid-template-columns:1fr}
+  .rm-items li{grid-template-columns:28px minmax(0,1fr);gap:10px}
+}
+</style>
 </head>
 <body>
 
@@ -323,99 +386,96 @@ a{color:inherit}
   </div>
 </nav>
 
-<main class="rm">
-  <section class="rm-wrap rm-hero">
-    <p class="rm-eyebrow reveal">Roadmap</p>
-    <h1 class="reveal">Roadmap DYLETH</h1>
-    <p class="rm-lead reveal">Ce qui est disponible aujourd'hui, et ce qui arrive ensuite.</p>
-    <p class="rm-strap reveal">Les escrocs innovent. DYLETH aussi.</p>
-    <p class="rm-vision reveal">Aucune date précise n'est publiée. Les fonctions qui ne sont pas encore disponibles sont indiquées « Prochainement », « En cours d'activation » ou « En développement ».</p>
-  </section>
-
-  <div class="rm-wrap">
-  <section class="rm-phase">
-    <div class="rm-phase-head">
-      <div>
-        <p class="rm-phase-k">Phase 01 · Lancement</p>
-        <h2>Fondations</h2>
+<main class="rm" id="contenu">
+  <section class="rm-top">
+    <div class="h-wrap">
+      <div class="h-head">
+        <p class="h-kicker reveal">Roadmap</p>
+        <h1 class="reveal">Roadmap DYLETH</h1>
+        <p class="h-lead reveal">Ce qui est disponible aujourd'hui, et ce qui arrive ensuite.</p>
+        <p class="rm-strap reveal">Les escrocs innovent. <span>DYLETH aussi.</span></p>
+        <p class="h-small rm-vision reveal">Aucune date précise n'est publiée. Les fonctions qui ne sont pas encore disponibles sont indiquées « Prochainement », « En cours d'activation » ou « En développement ».</p>
       </div>
-      <span class="rm-status now">Disponible</span>
-    </div>
-    <p class="rm-phase-note">Disponible aujourd'hui sur Google Play et sur l'App Store, gratuitement pour tous. Application proposée en 22 langues.</p>
-    <div class="rm-list">
-      <div class="rm-item"><span class="n">01</span><span class="b"><strong>Appels enrichis : code couleur vert / orange / rouge</strong><span>Android : écran d'appel plein format coloré et affichage enrichi de l'appelant. iPhone : pastille automatique sur l'écran natif, détail à la demande (bouton « Détails » ou Back Tap).</span></span></div>
-      <div class="rm-item"><span class="n">02</span><span class="b"><strong>Appels classiques, WhatsApp, Telegram, Signal</strong><span>Disponible sur Android, selon les capacités et autorisations propres à chaque plateforme et système. Sur iPhone : appels classiques.</span></span></div>
-      <div class="rm-item"><span class="n">03</span><span class="b"><strong>Annonce vocale</strong></span></div>
-      <div class="rm-item"><span class="n">04</span><span class="b"><strong>Protection SMS</strong></span></div>
-      <div class="rm-item"><span class="n">05</span><span class="b"><strong>Protection des liens (URL) et DNS</strong></span></div>
-      <div class="rm-item"><span class="n">06</span><span class="b"><strong>Protection Wi-Fi (analyse et DNS)</strong></span></div>
-      <div class="rm-item"><span class="n">07</span><span class="b"><strong>Tableau de bord personnel en temps réel</strong></span></div>
     </div>
   </section>
 
-  <section class="rm-phase">
-    <div class="rm-phase-head">
-      <div>
-        <p class="rm-phase-k">Phase 02</p>
-        <h2>QR codes</h2>
-      </div>
-      <span class="rm-status ">Prochainement</span>
-    </div>
-    <div class="rm-list">
-      <div class="rm-item key"><span class="n">08</span><span class="b"><strong>QR Shield</strong><span>Scanner intégré à DYLETH : analyse du lien avant ouverture, résultat en code couleur, ouverture toujours à votre décision.</span></span></div>
-    </div>
-  </section>
+  <div class="h-wrap">
+    <ol class="rm-tl" aria-label="Phases de la roadmap">
+      <li class="rm-ph on reveal">
+        <div class="rm-meta"><span class="k">Phase 01 · Lancement</span><span class="pm-status on">Disponible</span></div>
+        <div class="rm-rail" aria-hidden="true"><i></i></div>
+        <div class="rm-body">
+          <h2>Fondations</h2>
+          <p class="rm-note">Disponible aujourd'hui sur Google Play et sur l'App Store, gratuitement pour tous. Certaines fonctions sont réservées à Android. Application proposée en 22 langues.</p>
+          <div class="rm-now">
+            <ul class="rm-items">
+              <li class="wide"><span class="n">01</span><div><strong>Appels enrichis : code couleur vert / orange / rouge</strong><span class="d">Android : écran d'appel plein format coloré et affichage enrichi de l'appelant. iPhone : pastille automatique sur l'écran natif, détail à la demande (bouton « Détails » ou Back Tap).</span></div></li>
+              <li class="wide"><span class="n">02</span><div><strong>Appels classiques, WhatsApp, Telegram, Signal</strong><span class="d">Disponible sur Android, selon les capacités et autorisations propres à chaque plateforme et système. Sur iPhone : appels classiques.</span></div></li>
+              <li><span class="n">03</span><div><strong>Annonce vocale</strong></div></li>
+              <li><span class="n">04</span><div><strong>Protection SMS</strong></div></li>
+              <li><span class="n">05</span><div><strong>Protection des liens (URL) et DNS</strong></div></li>
+              <li><span class="n">06</span><div><strong>Protection Wi-Fi (analyse et DNS)</strong></div></li>
+              <li class="wide"><span class="n">07</span><div><strong>Tableau de bord personnel en temps réel</strong></div></li>
+            </ul>
+          </div>
+        </div>
+      </li>
 
-  <section class="rm-phase">
-    <div class="rm-phase-head">
-      <div>
-        <p class="rm-phase-k">Phase 03</p>
-        <h2>Emails</h2>
-      </div>
-      <span class="rm-status ">En cours d'activation</span>
-    </div>
-    <div class="rm-list">
-      <div class="rm-item key"><span class="n">09</span><span class="b"><strong>Protection des emails</strong><span>En attente de l'approbation de Google. Pas encore disponible.</span></span></div>
-    </div>
-  </section>
+      <li class="rm-ph soon reveal">
+        <div class="rm-meta"><span class="k">Phase 02</span><span class="pm-status soon">Prochainement</span></div>
+        <div class="rm-rail" aria-hidden="true"><i></i></div>
+        <div class="rm-body">
+          <h2>QR codes</h2>
+          <ul class="rm-items">
+            <li><span class="n">08</span><div><strong>QR Shield</strong><span class="d">Scanner intégré à DYLETH : analyse du lien avant ouverture, résultat en code couleur, ouverture toujours à votre décision.</span></div></li>
+          </ul>
+        </div>
+      </li>
 
-  <section class="rm-phase">
-    <div class="rm-phase-head">
-      <div>
-        <p class="rm-phase-k">Phase 04 · Moyen terme</p>
-        <h2>IA &amp; usurpation</h2>
-      </div>
-      <span class="rm-status ">En développement</span>
-    </div>
-    <div class="rm-list">
-      <div class="rm-item key"><span class="n">10</span><span class="b"><strong>Deepfake Shield</strong><span>Détection des deepfakes vocaux et vidéo.</span></span></div>
-      <div class="rm-item key"><span class="n">11</span><span class="b"><strong>Social &amp; Messenger Shield : faux comptes et usurpation sur les réseaux sociaux</strong><span>Repérer les faux profils et les comptes qui usurpent l'identité d'une personne ou d'une marque.</span></span></div>
-    </div>
-  </section>
+      <li class="rm-ph soon reveal">
+        <div class="rm-meta"><span class="k">Phase 03</span><span class="pm-status soon">En cours d'activation</span></div>
+        <div class="rm-rail" aria-hidden="true"><i></i></div>
+        <div class="rm-body">
+          <h2>Emails</h2>
+          <ul class="rm-items">
+            <li><span class="n">09</span><div><strong>Protection des emails</strong><span class="d">En attente de l'approbation de Google. Pas encore disponible.</span></div></li>
+          </ul>
+        </div>
+      </li>
 
-  <section class="rm-phase">
-    <div class="rm-phase-head">
-      <div>
-        <p class="rm-phase-k">Phase 05 · Long terme</p>
-        <h2>Vision</h2>
-      </div>
-      <span class="rm-status ">En développement</span>
-    </div>
-    <div class="rm-list">
-      <div class="rm-item"><span class="n">12</span><span class="b"><strong>Numéros virtuels</strong></span></div>
-      <div class="rm-item"><span class="n">13</span><span class="b"><strong>Protection des lignes fixes d'entreprise</strong></span></div>
-      <div class="rm-item"><span class="n">14</span><span class="b"><strong>Module dédié aux entreprises</strong></span></div>
-    </div>
-  </section>
+      <li class="rm-ph dev reveal">
+        <div class="rm-meta"><span class="k">Phase 04 · Moyen terme</span><span class="pm-status dev">En développement</span></div>
+        <div class="rm-rail" aria-hidden="true"><i></i></div>
+        <div class="rm-body">
+          <h2>IA &amp; usurpation</h2>
+          <ul class="rm-items">
+            <li><span class="n">10</span><div><strong>Deepfake Shield</strong><span class="d">Détection des deepfakes vocaux et vidéo.</span></div></li>
+            <li><span class="n">11</span><div><strong>Social &amp; Messenger Shield : faux comptes et usurpation sur les réseaux sociaux</strong><span class="d">Repérer les faux profils et les comptes qui usurpent l'identité d'une personne ou d'une marque.</span></div></li>
+          </ul>
+        </div>
+      </li>
 
-  <section class="rm-pos reveal">
-    <p class="wm">DYL<span>ETH</span></p>
-    <h2>Vous aider à repérer la fraude avant d'agir.</h2>
-    <p>L'ambition de DYLETH : étendre progressivement l'aide à l'identification des fraudes aux canaux que vous utilisez, en commençant par ce qui fonctionne déjà.</p>
-    <div class="tokens"><span>Privacy by Design</span><span>Gratuit pour tous</span><span>Sans publicité</span><span>Développement français</span></div>
-  </section>
+      <li class="rm-ph dev reveal">
+        <div class="rm-meta"><span class="k">Phase 05 · Long terme</span><span class="pm-status dev">En développement</span></div>
+        <div class="rm-rail" aria-hidden="true"><i></i></div>
+        <div class="rm-body">
+          <h2>Vision</h2>
+          <ul class="rm-items">
+            <li><span class="n">12</span><div><strong>Numéros virtuels</strong></div></li>
+            <li><span class="n">13</span><div><strong>Protection des lignes fixes d'entreprise</strong></div></li>
+            <li><span class="n">14</span><div><strong>Module dédié aux entreprises</strong></div></li>
+          </ul>
+        </div>
+      </li>
+    </ol>
 
-  <p class="rm-disclaimer reveal">Les fonctionnalités indiquées « Prochainement », « En cours d'activation » ou « En développement » ne sont pas encore disponibles et sont susceptibles d'évoluer. Leur présence sur cette roadmap ne constitue pas un engagement de date de livraison.</p>
+    <section class="rm-pos reveal">
+      <h2 class="h-h2">Vous aider à repérer la fraude avant d'agir.</h2>
+      <p class="h-lead">L'ambition de DYLETH : étendre progressivement l'aide à l'identification des fraudes aux canaux que vous utilisez, en commençant par ce qui fonctionne déjà.</p>
+      <ul class="rm-tokens"><li>Privacy by Design</li><li>Gratuit pour tous</li><li>Sans publicité</li><li>Développement français</li></ul>
+    </section>
+
+    <p class="h-small rm-disc reveal">Les fonctionnalités indiquées « Prochainement », « En cours d'activation » ou « En développement » ne sont pas encore disponibles et sont susceptibles d'évoluer. Leur présence sur cette roadmap ne constitue pas un engagement de date de livraison.</p>
   </div>
 </main>
 

@@ -253,9 +253,89 @@ main{display:block}
   ]
 }
 </script>
+<meta property="og:image" content="https://dyleth.com/assets/seo/dyleth-og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DYLETH, votre bouclier anti-fraude : appels, SMS, liens, Wi-Fi.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/premium.css">
+<link rel="stylesheet" href="/assets/home.css">
+<style id="pv2">
+/* Technologie premium : schéma d'architecture + listes éditoriales */
+.te-top{padding:clamp(112px,14vw,156px) 0 0}
+.te-top .h-hero-grid{align-items:center}
+.te-top h1{margin:0;font-size:clamp(42px,5.6vw,76px);line-height:1;text-wrap:balance}
+.te-top .h-lead{margin-top:22px;font-size:clamp(17px,1.45vw,20px)}
+.te-top .h-lead strong{color:#fff;font-weight:600}
+
+/* Schéma : la seule mise en avant de la page */
+.te-diag{position:relative;justify-self:center;width:min(400px,100%);display:flex;flex-direction:column;align-items:stretch}
+.te-node{padding:18px 20px;border-radius:var(--pm-radius-m);border:1px solid var(--pm-line-2);background:var(--pm-surface)}
+.te-node b{display:block;color:#fff;font-size:15px;font-weight:600}
+.te-node small{display:block;margin-top:4px;color:var(--pm-faint);font-size:12.5px;line-height:1.5}
+.te-node.srv{align-self:center;width:78%;text-align:center}
+.te-flow{position:relative;height:116px;display:flex;align-items:center;justify-content:center}
+.te-flow::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--pm-line-2),var(--pm-brand))}
+.te-flow i{position:absolute;left:50%;top:0;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--pm-brand);box-shadow:0 0 16px var(--pm-brand)}
+.te-flow span{position:absolute;left:calc(50% + 20px);top:50%;transform:translateY(-50%);max-width:180px;color:var(--pm-muted);font-size:12.5px;line-height:1.45}
+@media (prefers-reduced-motion:no-preference){
+  .te-flow i{animation:te-down 2.8s cubic-bezier(.45,0,.55,1) infinite}
+  @keyframes te-down{0%{top:0;opacity:0}15%{opacity:1}85%{opacity:1}100%{top:calc(100% - 9px);opacity:0}}
+}
+@media (prefers-reduced-motion:reduce){ .te-flow i{top:calc(50% - 4.5px)} }
+.te-node.dev{padding:24px;border-radius:var(--pm-radius-l);
+  background:radial-gradient(420px 200px at 50% 0%,rgba(43,63,214,.32),transparent 70%),var(--pm-raised);
+  box-shadow:0 40px 90px -40px rgba(0,0,0,.8)}
+.te-chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.te-chips li{padding:7px 12px;border-radius:999px;border:1px solid var(--pm-line-2);color:var(--pm-ink);font-size:13px}
+.te-res{display:flex;gap:8px;margin-top:18px}
+.te-res span{flex:1;padding:9px 0;border-radius:12px;text-align:center;font-size:12px;font-weight:600;color:var(--pm-ink);background:rgba(255,255,255,.05);border:1px solid var(--pm-line)}
+.te-res span::before{content:"";display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;vertical-align:1px}
+.te-res span:nth-child(1)::before{background:var(--pm-safe)}
+.te-res span:nth-child(2)::before{background:var(--pm-warn)}
+.te-res span:nth-child(3)::before{background:var(--pm-risk)}
+
+.te-princ{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:44px 0 0;padding:0;list-style:none;counter-reset:pr}
+.te-princ li{padding:clamp(24px,3vw,34px);border-radius:var(--pm-radius-m);border:1px solid var(--pm-line)}
+.te-princ li::before{counter-increment:pr;content:counter(pr,decimal-leading-zero);display:block;font-family:var(--pm-serif);font-size:34px;line-height:1;color:var(--pm-brand)}
+.te-princ h3{margin:18px 0 0;font-family:var(--pm-serif);font-weight:450;font-size:24px;line-height:1.15;color:#fff}
+.te-princ p{margin:10px 0 0;color:var(--pm-muted);font-size:15px;line-height:1.65}
+.te-princ a{color:#fff;text-decoration:underline;text-decoration-color:rgba(111,139,255,.6);text-underline-offset:3px}
+
+.te-status li .t{font-size:20px !important;line-height:1.25}
+.te-status .pm-status{white-space:normal;text-align:right}
+
+.te-ip .h-priv{margin-top:0}
+.te-ip .h-lead{margin-top:20px}
+.te-ip dd .pm-status{display:inline-flex;margin-right:6px}
+.te-more{margin:22px 0 0}
+
+.te-end{margin-top:clamp(56px,8vw,96px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 48px;align-items:end;
+  padding:clamp(28px,4vw,48px);border-radius:var(--pm-radius-l);border:1px solid var(--pm-line);
+  background:linear-gradient(160deg,rgba(43,63,214,.16),var(--pm-surface) 60%)}
+.te-end .h-h2{font-size:clamp(28px,3.2vw,40px)}
+.te-end .h-lead{margin-top:14px}
+.te-end .pg-cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.te-end .pg-cta{margin-top:0}
+
+@media (max-width:960px){
+  .te-diag{margin-top:12px}
+  .te-end{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .te-princ{grid-template-columns:1fr}
+  .te-flow{height:104px;justify-content:flex-start}
+  .te-flow::before,.te-flow i{left:24%}
+  .te-flow span{left:calc(24% + 20px);max-width:none;right:0}
+  .te-status .pm-status{text-align:left}
+  .te-node.dev{padding:20px 16px}
+  .te-res{gap:6px}
+  .te-res span{font-size:11px}
+  .te-res span::before{margin-right:4px}
+}
+</style>
 </head>
 <body>
 
@@ -391,89 +471,103 @@ main{display:block}
   </div>
 </nav>
 
-<main>
-  <section class="pg-wrap pg-hero">
-    <p class="d2-eyebrow reveal">La Solution · Technologie</p>
-    <h1 class="reveal">La technologie de détection DYLETH</h1>
-    <p class="pg-lead reveal">DYLETH combine <strong>analyse sur l'appareil</strong> et mise à jour continue des signatures de menaces.</p>
+<main id="contenu">
+  <section class="te-top">
+    <div class="h-wrap h-hero-grid">
+      <div>
+        <p class="h-kicker reveal">La Solution · Technologie</p>
+        <h1 class="reveal">La technologie de détection DYLETH</h1>
+        <p class="h-lead reveal">DYLETH combine <strong>analyse sur l'appareil</strong> et mise à jour continue des signatures de menaces.</p>
+      </div>
+      <figure class="te-diag reveal" aria-label="Schéma simplifié : la base de signatures est envoyée du serveur vers l'appareil, l'analyse se fait sur le téléphone">
+        <div class="te-node srv"><b>Serveurs</b><small>Hébergés dans l'Union européenne</small></div>
+        <div class="te-flow" aria-hidden="true"><i></i><span>Signatures de menaces, du serveur vers l'appareil, sans donnée utilisateur</span></div>
+        <div class="te-node dev">
+          <b>Votre téléphone</b>
+          <small>Analyse sur l'appareil, contacts traités localement</small>
+          <ul class="te-chips"><li>Appels</li><li>SMS</li><li>Liens</li></ul>
+          <div class="te-res"><span>Risque faible</span><span>Vigilance</span><span>Risque élevé</span></div>
+        </div>
+        <figcaption class="h-mock-note">Schéma simplifié. Certaines fonctions nécessitent des échanges avec les serveurs, décrits dans la politique de confidentialité.</figcaption>
+      </figure>
+    </div>
   </section>
 
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Principes d'architecture</p>
-      <h2>Quatre choix structurants.</h2>
-    </div>
-    <div class="num-list reveal">
-      <div class="num-item">
-        <div class="n">01</div>
-        <div>
-          <h3>Traitement sur l'appareil privilégié</h3>
-          <p>L'analyse des appels, SMS et liens est effectuée sur l'appareil — une application concrète du <a class="pg-inline-link" href="/solution/privacy-by-design">privacy by design</a>. Vos contacts sont traités sur votre téléphone et ne sont jamais envoyés à nos serveurs. Certaines fonctions nécessitent des échanges avec les serveurs, hébergés dans l'Union européenne et décrits dans la politique de confidentialité.</p>
-        </div>
+  <section class="h-sec">
+    <div class="h-wrap">
+      <div class="h-head reveal">
+        <p class="h-kicker">Principes d'architecture</p>
+        <h2 class="h-h2">Quatre choix structurants.</h2>
       </div>
-      <div class="num-item">
-        <div class="n">02</div>
-        <div>
+      <ol class="te-princ reveal">
+        <li>
+          <h3>Traitement sur l'appareil privilégié</h3>
+          <p>L'analyse des appels, SMS et liens est effectuée sur l'appareil — une application concrète du <a href="/solution/privacy-by-design">privacy by design</a>. Vos contacts sont traités sur votre téléphone et ne sont jamais envoyés à nos serveurs. Certaines fonctions nécessitent des échanges avec les serveurs, hébergés dans l'Union européenne et décrits dans la politique de confidentialité.</p>
+        </li>
+        <li>
           <h3>Analyse à réception</h3>
           <p>L'évaluation intervient dès l'événement — appel entrant, SMS, lien — et le résultat s'affiche en code couleur : risque faible, vigilance ou risque élevé. La couleur n'est jamais calculée sur le seul pays ou le seul opérateur du numéro.</p>
-        </div>
-      </div>
-      <div class="num-item">
-        <div class="n">03</div>
-        <div>
+        </li>
+        <li>
           <h3>Modèles adaptatifs</h3>
-          <p>Les modèles évoluent avec les techniques de fraude, y compris le <a class="pg-inline-link" href="/menace/intelligence-artificielle">phishing rédigé par IA</a>.</p>
-        </div>
-      </div>
-      <div class="num-item">
-        <div class="n">04</div>
-        <div>
+          <p>Les modèles évoluent avec les techniques de fraude, y compris le <a href="/menace/intelligence-artificielle">phishing rédigé par IA</a>.</p>
+        </li>
+        <li>
           <h3>Base de signatures tenue à jour</h3>
           <p>Flux unidirectionnel serveur vers appareil : la mise à jour ne contient aucune donnée utilisateur.</p>
-        </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="h-sec">
+    <div class="h-wrap">
+      <div class="h-head reveal">
+        <p class="h-kicker">Statut des fonctions</p>
+        <h2 class="h-h2">Ce qui est disponible aujourd'hui.</h2>
+      </div>
+      <div class="h-status te-status reveal">
+        <ul>
+          <li><span class="t">Appels classiques (code couleur)</span><span class="d">Android : écran d'appel plein format coloré. iPhone : DYLETH s'adapte aux possibilités du système, avec une pastille automatique sur l'écran d'appel natif et le détail coloré complet à la demande (bouton « Détails » ou double tapotement au dos de l'iPhone, Back Tap).</span><span class="pm-status on">Disponible</span></li>
+          <li><span class="t">Affichage enrichi de l'appelant</span><span class="d">Identité, niveau de confiance, pays / zone associés au numéro, opérateur, type de ligne.</span><span class="pm-status on">Disponible sur Android</span></li>
+          <li><span class="t">Appels WhatsApp, Telegram, Signal</span><span class="d">Selon les capacités et autorisations propres à chaque plateforme et système.</span><span class="pm-status on">Disponible sur Android</span></li>
+          <li><span class="t">SMS, liens et Wi-Fi</span><span class="d">SMS, liens (URL) et DNS, Wi-Fi (analyse et DNS), tableau de bord personnel.</span><span class="pm-status on">Disponibles</span></li>
+          <li><span class="t">Emails</span><span class="d">Approbation de Google en attente.</span><span class="pm-status soon">En cours d'activation</span></li>
+          <li><span class="t">QR codes</span><span class="d">Scanner intégré à DYLETH.</span><span class="pm-status soon">Prochainement</span></li>
+          <li><span class="t">Deepfakes et faux comptes</span><span class="d">Deepfake vocal et vidéo, faux comptes sur les réseaux sociaux.</span><span class="pm-status dev">En développement</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Statut des fonctions</p>
-      <h2>Ce qui est disponible aujourd'hui.</h2>
+  <section class="h-sec te-ip">
+    <div class="h-wrap h-priv">
+      <div class="reveal">
+        <p class="h-kicker">Propriété industrielle</p>
+        <h2 class="big">Dépôts en cours d'instruction.</h2>
+        <p class="h-lead">DYLETH a procédé à des dépôts auprès de l'INPI et de l'USPTO concernant son architecture de détection multi-canal en traitement local. Ces dépôts sont en cours d'instruction.</p>
+      </div>
+      <div class="reveal">
+        <dl>
+          <div><dt>Détection deepfakes</dt><dd>En développement, non disponible aujourd'hui.</dd></div>
+          <div><dt>Analyse Wi-Fi multi-couche</dt><dd>Aide à repérer les faux points d'accès (Evil Twin) et les tentatives d'interception.</dd></div>
+          <div><dt>Classification du phishing IA</dt><dd>Repérage des e-mails générés par modèle de langage via analyse stylistique et sémantique (protection des emails : en cours d'activation).</dd></div>
+          <div><dt>Regroupement des numéros frauduleux</dt><dd>Identification de campagnes de vishing coordonnées.</dd></div>
+        </dl>
+        <p class="h-small te-more">D'autres briques technologiques figurent à la <a href="/roadmap/">roadmap</a>, avec leur statut : prochainement ou en développement.</p>
+      </div>
     </div>
-    <ul class="facts reveal">
-      <li><b>Appels classiques (code couleur) — Disponible.</b> Android : écran d'appel plein format coloré. iPhone : DYLETH s'adapte aux possibilités du système, avec une pastille automatique sur l'écran d'appel natif et le détail coloré complet à la demande (bouton « Détails » ou double tapotement au dos de l'iPhone, Back Tap).</li>
-      <li><b>Affichage enrichi de l'appelant — Disponible sur Android.</b> Identité, niveau de confiance, pays / zone associés au numéro, opérateur, type de ligne.</li>
-      <li><b>Appels WhatsApp, Telegram, Signal — Disponible sur Android</b>, selon les capacités et autorisations propres à chaque plateforme et système.</li>
-      <li><b>SMS, liens (URL) et DNS, Wi-Fi (analyse et DNS), tableau de bord personnel — Disponibles.</b></li>
-      <li><b>Emails — En cours d'activation</b> (approbation de Google en attente).</li>
-      <li><b>QR codes — Prochainement.</b> Scanner intégré à DYLETH.</li>
-      <li><b>Deepfake vocal et vidéo, faux comptes sur les réseaux sociaux — En développement.</b></li>
-    </ul>
   </section>
 
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Propriété industrielle</p>
-      <h2>Dépôts en cours d'instruction.</h2>
-    </div>
-    <div class="pg-prose reveal">
-      <p>DYLETH a procédé à des dépôts auprès de l'INPI et de l'USPTO concernant son architecture de détection multi-canal en traitement local. Ces dépôts sont en cours d'instruction.</p>
-    </div>
-    <ul class="facts reveal">
-      <li><b>Détection deepfakes</b> — en développement, non disponible aujourd'hui.</li>
-      <li><b>Analyse Wi-Fi multi-couche</b> — aide à repérer les faux points d'accès (Evil Twin) et les tentatives d'interception, sans dégrader la connexion.</li>
-      <li><b>Classification du phishing IA</b> — repérage des e-mails générés par modèle de langage via analyse stylistique et sémantique (protection des emails : en cours d'activation).</li>
-      <li><b>Regroupement des numéros frauduleux</b> — identification de campagnes de vishing coordonnées.</li>
-    </ul>
-    <div class="pg-prose reveal">
-      <p>D'autres briques technologiques figurent à la <a class="pg-inline-link" href="/roadmap/">roadmap</a>, avec leur statut : prochainement ou en développement.</p>
-    </div>
-    <div class="pg-end reveal">
-      <div class="big">La technologie au service de la protection.</div>
-      <p>Architecture locale privilégiée, dépôts INPI et USPTO, développement en France.</p>
+  <div class="h-wrap">
+    <section class="te-end reveal">
+      <div>
+        <h2 class="h-h2">La technologie au service de la protection.</h2>
+        <p class="h-lead">Architecture locale privilégiée, dépôts INPI et USPTO, développement en France.</p>
+      </div>
       <div class="pg-cta-row"><a class="pg-cta" href="/telecharger/">Télécharger DYLETH</a><a class="pg-cta ghost" href="/solution/privacy-by-design">Privacy by Design</a></div>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>
 
 <footer class="d5-footer">
