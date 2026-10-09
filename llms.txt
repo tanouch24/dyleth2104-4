@@ -1,0 +1,61 @@
+# DYLETH
+
+> DYLETH est une application française gratuite d'aide à la détection des fraudes numériques : elle aide à repérer les appels, SMS, liens et réseaux Wi-Fi suspects avant d'agir. Éditée par DYLETH SAS (Villeurbanne, France). Aucune protection n'est absolue : DYLETH aide à décider, elle ne remplace ni la vigilance ni les services officiels.
+
+Nom de marque : DYLETH (en majuscules). Langue principale du site : français. Les statuts ci-dessous reflètent l'état réel des fonctions ; en cas de doute, les pages /solution/7-modules et /roadmap/ font foi.
+
+## Statut des fonctions
+- Disponibles : analyse des appels, des SMS, des liens, des réseaux Wi-Fi, tableau de bord.
+- En cours d'activation : analyse des e-mails.
+- Prochainement : analyse des QR codes (quishing).
+- En développement : détection des deepfakes, détection des faux comptes.
+- Messageries : WhatsApp, Telegram et Signal pris en charge sur Android.
+- Les capacités varient selon le système : sur Android, l'écran d'appel change de couleur ; sur iPhone (iOS 17 ou plus), une pastille de risque apparaît sur l'écran d'appel natif et le détail s'ouvre sur demande.
+- Gratuit pour tous, particuliers comme organisations. Serveurs de l'application dans l'Union européenne.
+
+## Comprendre les fraudes
+- [Phishing (hameçonnage)](https://dyleth.com/comprendre/phishing): définition, déroulé d'une attaque, indices et réflexes
+- [Smishing (SMS frauduleux)](https://dyleth.com/comprendre/smishing)
+- [Vishing (appels frauduleux)](https://dyleth.com/comprendre/vishing)
+- [Quishing (QR codes piégés)](https://dyleth.com/comprendre/quishing)
+- [Arnaque au colis par SMS](https://dyleth.com/comprendre/arnaque-colis-sms)
+- [Faux conseiller bancaire](https://dyleth.com/comprendre/faux-conseiller-bancaire)
+- [URLs malveillantes](https://dyleth.com/comprendre/urls-malveillantes)
+- [Wi-Fi public](https://dyleth.com/comprendre/wifi-public)
+- [Deepfakes](https://dyleth.com/comprendre/deepfakes)
+- [Glossaire](https://dyleth.com/comprendre/glossaire)
+- [Signaler une arnaque : qui contacter ?](https://dyleth.com/comprendre/signaler-une-arnaque)
+
+## La menace en chiffres
+- [Chiffres clés et tendances](https://dyleth.com/menace/chiffres-cles)
+- [État des lieux](https://dyleth.com/menace/etat-des-lieux)
+- [IA et cybermenaces](https://dyleth.com/menace/intelligence-artificielle)
+- [Types de fraudes](https://dyleth.com/menace/types-de-fraudes)
+
+## L'application
+- [Fonctionnalités et statut de chaque protection](https://dyleth.com/solution/7-modules)
+- [FAQ : fonctionnement, gratuité, confidentialité](https://dyleth.com/solution/faq)
+- [Confidentialité dès la conception](https://dyleth.com/solution/privacy-by-design)
+- [Conformité RGPD](https://dyleth.com/solution/rgpd)
+- [Technologie](https://dyleth.com/solution/technologie)
+- [Feuille de route](https://dyleth.com/roadmap/)
+- [Organisations : gratuit aussi](https://dyleth.com/entreprises/)
+- [Comparatif](https://dyleth.com/solution/comparatif)
+- [Télécharger](https://dyleth.com/telecharger/)
+
+## Secteurs (usage par profil)
+- [Familles et seniors](https://dyleth.com/secteurs/familles-seniors)
+- [Banques et assurances](https://dyleth.com/secteurs/banques-assurances)
+- [Administrations](https://dyleth.com/secteurs/administrations)
+- [Associations](https://dyleth.com/secteurs/associations)
+
+## Optional
+- [Blog](https://dyleth.com/ressources/blog)
+- [Presse](https://dyleth.com/presse/)
+- [Soutenir DYLETH](https://dyleth.com/soutenir/)
+- [Politique de confidentialité](https://dyleth.com/legal/confidentialite)
+- [À propos](https://dyleth.com/a-propos/mission)
+- [Sitemap](https://dyleth.com/sitemap.xml)
+
+## Contact
+contact@dyleth.com

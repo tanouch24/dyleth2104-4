@@ -79,3 +79,12 @@
 /telecharger/index.html                      /telecharger/                            301!
 /merci/index.html                            /merci/                                  301!
 
+
+# --- Dossiers sans page d'index -> page principale de la rubrique ---
+/comprendre/                                 /comprendre/glossaire                    302
+/solution/                                   /solution/7-modules                      302
+/secteurs/                                   /secteurs/particuliers                   302
+/ressources/                                 /ressources/blog                         302
+/a-propos/                                   /a-propos/mission                        302
+/legal/                                      /legal/mentions-legales                  302
+/rejoindre/                                  /rejoindre/ambassadeurs                  302
