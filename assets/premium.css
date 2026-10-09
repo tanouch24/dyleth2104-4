@@ -216,3 +216,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+/* Bouton « Télécharger » de la barre de menu */
+.nav-right-desktop { display: flex !important; align-items: center; gap: 10px; }
+.pm-nav-dl {
+  display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 999px;
+  background: #fff; color: var(--pm-night) !important; font-size: 13.5px; font-weight: 650;
+  text-decoration: none; white-space: nowrap; transition: box-shadow .18s ease;
+}
+.pm-nav-dl:hover { box-shadow: 0 8px 24px -8px rgba(111, 139, 255, .8); }
+@media (max-width: 380px) { .pm-nav-dl { padding: 7px 12px; font-size: 12.5px; } }
