@@ -479,6 +479,9 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
 .hp-product-call .hp-product-ios{font-size:13px;margin-top:18px;color:#b9bac1}
 #dashboard .hp-priv{margin-top:32px}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/premium.css">
+<link rel="stylesheet" href="/assets/home.css">
 </head>
 <body>
 
@@ -618,287 +621,296 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
 </nav>
 
 
-<!-- ═══ 1 · HERO ═══ -->
-<section class="hp-hero">
-  <div class="hp-hero-copy reveal">
-    <p class="hp-eyebrow">Société française · Privacy by Design</p>
-    <h1>Détectez les appels, SMS<br>et liens frauduleux.</h1>
-    <p class="hp-sub">DYLETH analyse les signaux liés aux appels, SMS, liens et réseaux Wi-Fi pour vous aider à identifier une situation suspecte avant d'agir. Gratuit pour tous.</p>
-    <div class="hp-stores">
-      <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="hp-badge" aria-label="Disponible sur Google Play">
-        <img src="assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250">
-      </a>
-      <a href="https://apps.apple.com/fr/app/dyleth/id6774315923" target="_blank" rel="noopener noreferrer" class="hp-badge" aria-label="Télécharger sur l'App Store">
-        <img src="assets/store/app-store-fr.svg" alt="Télécharger sur l'App Store" width="127" height="40">
-      </a>
-    </div>
-  </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-safe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3.5L2.5 20h19L12 3.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4.5M12 17.2v.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-risk" viewBox="0 0 24 24"><path d="M8.2 2.8h7.6l5.4 5.4v7.6l-5.4 5.4H8.2l-5.4-5.4V8.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
 
-  <div class="hp-device-col reveal">
-    <div class="hp-phone" aria-label="Aperçu de l'application DYLETH">
-      <div class="hp-screen">
-        <div class="hp-screen-top">
-          <span>DYL<span class="b">ETH</span></span>
-          <span class="live">Analyse active</span>
-        </div>
-        <div class="hp-screen-body">
-          <div class="hp-alert">
-            <span class="type"><img src="assets/icons/call.svg" alt="">Appel entrant</span>
-            <p class="num">+33&nbsp;1&nbsp;62&nbsp;34&nbsp;56&nbsp;78</p>
-            <span class="hp-pill risk">Risque élevé</span>
-            <p class="note">Numéro associé à des signalements de faux conseiller bancaire.</p>
-            <div class="acts"><span>Bloquer</span><span>Détails</span></div>
+<main id="contenu">
+
+<!-- ═══ HERO ═══ -->
+<section class="h-hero" data-v="risk" id="hero">
+  <div class="h-wrap h-hero-grid">
+    <div>
+      <h1>Sachez qui vous appelle avant de décrocher.</h1>
+      <p class="h-lead">DYLETH analyse les appels, les SMS, les liens et les réseaux Wi-Fi pour vous aider à repérer une situation suspecte avant d'agir. Vert, orange ou rouge : vous comprenez le risque d'un coup d'œil.</p>
+      <div class="h-stores">
+        <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="h-badge" aria-label="Disponible sur Google Play">
+          <img src="/assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250">
+        </a>
+        <a href="https://apps.apple.com/fr/app/dyleth/id6774315923" target="_blank" rel="noopener noreferrer" class="h-badge" aria-label="Télécharger dans l'App Store">
+          <img src="/assets/store/app-store-fr.svg" alt="Télécharger dans l'App Store" width="127" height="40">
+        </a>
+      </div>
+      <div class="h-free">
+        <span><svg aria-hidden="true"><use href="#i-safe"/></svg>Gratuit pour tous</span>
+        <span><svg aria-hidden="true"><use href="#i-safe"/></svg>Développé en France</span>
+        <span><svg aria-hidden="true"><use href="#i-safe"/></svg>Serveurs dans l'UE</span>
+      </div>
+    </div>
+
+    <div class="h-device">
+      <div class="h-phone">
+        <div class="h-screen" id="h-screen" role="img" aria-live="polite" aria-label="Exemple d'écran d'appel DYLETH sur Android : risque élevé">
+          <div class="h-call">
+            <span class="app"><i></i>Analyse DYLETH</span>
+            <p class="lvl swap"><svg aria-hidden="true"><use data-k="icon" href="#i-risk"/></svg><span data-k="lvl">Risque élevé</span></p>
+            <p class="num swap" data-k="num">+33 1 99 00 42 17</p>
+            <p class="who swap" data-k="who">Identité communautaire : faux conseiller bancaire</p>
           </div>
-          <div class="hp-rows">
-            <div class="r">
-              <img src="assets/icons/sms.svg" alt="">
-              <span class="t"><b>SMS suspect</b><small>Lien de suivi de colis</small></span>
-              <span class="hp-tag warn">À vérifier</span>
-            </div>
-            <div class="r">
-              <img src="assets/icons/link.svg" alt="">
-              <span class="t"><b>Lien analysé</b><small>Redirection vérifiée</small></span>
-              <span class="hp-tag ok">Risque faible</span>
-            </div>
-            <div class="r">
-              <img src="assets/icons/wifi.svg" alt="">
-              <span class="t"><b>Wi-Fi</b><small>Réseau domestique</small></span>
-              <span class="hp-tag ok">Protégé</span>
-            </div>
+          <div class="h-why swap">
+            <b>Pourquoi cette couleur ?</b>
+            <p data-k="why">Plusieurs signalements récents de la communauté pour une usurpation de banque, sur une ligne de type VoIP.</p>
           </div>
+          <dl class="h-facts swap">
+            <div><dt>Niveau de confiance</dt><dd data-k="conf">Élevé</dd></div>
+            <div><dt>Pays / zone du numéro</dt><dd data-k="pays">France</dd></div>
+            <div><dt>Indicatif</dt><dd data-k="ind">+33</dd></div>
+            <div><dt>Type de ligne</dt><dd data-k="type">VoIP</dd></div>
+          </dl>
+          <div class="h-actions"><span>Ignorer</span><span>Détails</span></div>
         </div>
       </div>
+      <div class="h-legend" role="group" aria-label="Voir un exemple par couleur">
+        <button type="button" data-v="safe" aria-pressed="false"><svg aria-hidden="true"><use href="#i-safe"/></svg>Risque faible</button>
+        <button type="button" data-v="warn" aria-pressed="false"><svg aria-hidden="true"><use href="#i-warn"/></svg>Vigilance</button>
+        <button type="button" data-v="risk" aria-pressed="true"><svg aria-hidden="true"><use href="#i-risk"/></svg>Risque élevé</button>
+      </div>
+      <p class="h-mock-note">Illustration de l'écran Android, numéros fictifs. Sur iPhone, l'affichage est différent (voir plus bas).</p>
     </div>
   </div>
-</section>
 
-
-<!-- ═══ 2 · COMMENT ÇA MARCHE ═══ -->
-<section class="hp-section">
-  <div class="hp-wrap">
-    <div class="hp-head reveal">
-      <p class="hp-eyebrow">Comment ça marche</p>
-      <h2 class="hp-h2">Un seul réflexe avant d'agir.</h2>
-    </div>
-    <div class="hp-flow reveal">
-      <div class="step">
-        <span class="n">01</span>
-        <h3>Un signal arrive.</h3>
-        <p>Appel, SMS, lien ou réseau Wi-Fi.</p>
-      </div>
-      <div class="step">
-        <span class="n">02</span>
-        <h3>DYLETH analyse.</h3>
-        <p>Les signaux sont évalués avant votre action.</p>
-      </div>
-      <div class="step">
-        <span class="n">03</span>
-        <h3>Vous décidez.</h3>
-        <p>Vert, orange ou rouge : le niveau de risque est immédiatement compréhensible.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ 3 · SIGNATURE 3 COULEURS ═══ -->
-<section class="hp-section">
-  <div class="hp-wrap">
-    <div class="hp-head reveal">
-      <p class="hp-eyebrow">La signature DYLETH</p>
-      <h2 class="hp-h2">Un code lisible en une seconde.</h2>
-    </div>
-    <div class="hp-sig reveal">
-      <div class="cell green">
-        <span class="bar"></span>
-        <p class="lbl">Vert</p>
-        <p class="txt">Risque faible.</p>
-      </div>
-      <div class="cell orange">
-        <span class="bar"></span>
-        <p class="lbl">Orange</p>
-        <p class="txt">Vigilance.</p>
-      </div>
-      <div class="cell red">
-        <span class="bar"></span>
-        <p class="lbl">Rouge</p>
-        <p class="txt">Risque élevé.</p>
-      </div>
-    </div>
-    <p class="hp-sig-note reveal">Le même code de couleur sur les appels, les messages et les liens. Une voix peut annoncer l'appelant — désactivable à tout moment.</p>
-  </div>
-</section>
-
-
-<!-- ═══ 4 · 7 PROTECTIONS ═══ -->
-<section class="hp-section">
-  <div class="hp-wrap">
-    <div class="hp-head reveal">
-      <p class="hp-eyebrow">Protection</p>
-      <h2 class="hp-h2">Vos protections. Une seule application.</h2>
-      <p class="hp-sub"><a href="/comprendre/vishing">Appels</a>, SMS, liens et réseaux Wi-Fi : les principaux points de vigilance réunis dans une même interface. Chaque protection est présentée avec son statut réel.</p>
-    </div>
-    <div class="hp-protect reveal">
-      <div class="p"><span class="n">01</span><div><b>Appels · Disponible</b><span>Appels classiques ; aussi WhatsApp, Telegram et Signal sur Android.</span></div></div>
-      <div class="p"><span class="n">02</span><div><b>SMS · Disponible</b><span>Messages et liens suspects.</span></div></div>
-      <div class="p"><span class="n">03</span><div><b>Liens (URL) et DNS · Disponible</b><span>Analyse des liens avant ouverture.</span></div></div>
-      <div class="p"><span class="n">04</span><div><b>Wi-Fi · Disponible</b><span>Analyse des réseaux et protection DNS.</span></div></div>
-      <div class="p"><span class="n">05</span><div><b>Tableau de bord · Disponible</b><span>Votre protection en temps réel, avec vos données réelles.</span></div></div>
-      <div class="p"><span class="n">06</span><div><b><a href="/comprendre/phishing">E-mails</a> · En cours d'activation</b><span>En attente de l'approbation de Google. Pas encore disponible.</span></div></div>
-    </div>
-    <div class="hp-protect-pro reveal">
-      <span class="n">07</span>
-      <div><b>QR codes · Prochainement</b><span>Scanner intégré à DYLETH. Deepfakes vocaux et vidéo, faux comptes sur les réseaux sociaux : en développement.</span></div>
-      <span class="badge">BIENTÔT</span>
-    </div>
-    <div class="hp-product-call reveal">
-      <p class="hp-eyebrow">Appels classiques • WhatsApp • Telegram • Signal</p>
-      <p class="hp-product-key">Appels classiques, WhatsApp, Telegram, Signal : DYLETH étend sa protection aux communications que vous utilisez déjà.</p>
-      <p class="hp-product-ios">Selon les capacités et autorisations propres à chaque plateforme et système, DYLETH applique ses mécanismes de protection aux communications prises en charge. Appels WhatsApp, Telegram et Signal : disponible sur Android.</p>
-    </div>
-    <div class="hp-priv reveal">
-      <div class="hp-priv-row"><span class="t">Sur Android</span><p class="d">L'écran d'appel change de couleur automatiquement : vert, orange ou rouge. Appels classiques, WhatsApp, Telegram et Signal.</p></div>
-      <div class="hp-priv-row"><span class="t">Sur iPhone</span><p class="d">DYLETH s'adapte aux possibilités du système : une pastille de risque apparaît automatiquement à côté du nom sur l'écran d'appel natif des appels classiques. Le détail coloré complet s'ouvre sur demande, avec le bouton « Détails » ou un double tapotement au dos de l'iPhone (Back Tap).</p></div>
-    </div>
-    <a class="hp-link reveal" href="/solution/7-modules">Les modules en détail &rarr;</a>
-  </div>
-</section>
-
-
-<section class="hp-section" id="dashboard">
-  <div class="hp-wrap">
-    <div class="hp-head reveal">
-      <p class="hp-eyebrow">Tableau de bord</p>
-      <h2 class="hp-h2">Votre protection en temps réel — le tableau de bord DYLETH</h2>
-      <p class="hp-sub">Des alertes pour vous aider à repérer les risques, un tableau de bord pour piloter votre protection selon vos préférences.</p>
-    </div>
-    <div class="hp-priv reveal">
-      <div class="hp-priv-row"><span class="t">Vos modules, votre choix</span><p class="d">Depuis ce même tableau de bord, vous pouvez activer ou désactiver chaque module de protection selon vos préférences.</p></div>
-      <div class="hp-priv-row"><span class="t">L'annonce vocale</span><p class="d">Vous choisissez d'activer ou de désactiver l'annonce vocale de l'appelant depuis votre tableau de bord.</p></div>
-      <div class="hp-priv-row"><span class="t">Des alertes compréhensibles</span><p class="d">DYLETH affiche un signal de couleur pour les appels et vous alerte lorsqu'un SMS ou un lien présente des caractéristiques connues de fraude.</p></div>
-    </div>
-    <p class="hp-product-key reveal">Chaque menace détectée est visible. Votre protection est transparente.</p>
-  </div>
-</section>
-
-<!-- ═══ 5 · LE CONSTAT ═══ -->
-<section class="hp-section">
-  <div class="hp-wrap">
-    <p class="hp-eyebrow reveal">Le constat</p>
-    <div class="hp-stat reveal">
+  <div class="h-wrap h-band">
+    <div class="h-band-in">
+      <p class="apps"><span>Appels classiques</span><span>WhatsApp</span><span>Telegram</span><span>Signal</span></p>
       <div>
-        <div class="hp-stat-big">442&nbsp;Mds&nbsp;$</div>
-        <p class="hp-stat-lbl">de pertes mondiales liées aux arnaques numériques</p>
-        <p class="hp-stat-ctx"><strong>Bloctel a fermé le 11 août 2026</strong> — plus aucune liste officielle de protection contre le démarchage.</p>
-        <span class="hp-src">Source · Bitdefender, 2026</span>
-      </div>
-      <div class="hp-stat-rows">
-        <div class="row"><span class="v">453&nbsp;200</span><span class="m"><b>Délits numériques en France · +14&nbsp;% sur un an</b><span class="hp-src">Source · Ministère de l'Intérieur · Interstats 2025</span></span></div>
-        <div class="row"><span class="v">1 appel sur 6</span><span class="m"><b>Est une tentative d'arnaque</b><span class="hp-src">Source · Bitdefender, 2026</span></span></div>
-        <div class="row"><span class="v">+159&nbsp;%</span><span class="m"><b>De demandes d’assistance de particuliers liées au faux conseiller bancaire en 2025</b><span class="hp-src">Source · Cybermalveillance.gouv.fr, 2025</span></span></div>
+        <p>Appels classiques, WhatsApp, Telegram, Signal : DYLETH étend sa protection aux communications que vous utilisez déjà. Les appels WhatsApp, Telegram et Signal sont pris en charge sur Android.</p>
+        <p class="h-small">Selon les capacités et autorisations propres à chaque plateforme et système, DYLETH applique ses mécanismes de protection aux communications prises en charge.</p>
       </div>
     </div>
-    <p class="hp-stat-note reveal">Chiffres sourcés auprès des organismes cités : Bitdefender (2026), Ministère de l'Intérieur / Interstats (2025), Cybermalveillance.gouv.fr (2025). <a href="/menace/chiffres-cles">Voir les chiffres de la fraude numérique</a> ; analyse d'ensemble dans le <a href="/ressources/livre-blanc">livre blanc</a>.</p>
   </div>
 </section>
 
-
-<!-- ═══ 6 · CONFIDENTIALITÉ / PRIVACY BY DESIGN ═══ -->
-<section class="hp-section">
-  <div class="hp-wrap">
-    <div class="hp-head reveal">
-      <p class="hp-eyebrow">Confidentialité</p>
-      <h2 class="hp-h2">Conçu pour traiter le minimum de données.</h2>
-      <p class="hp-sub">DYLETH est pensé Privacy by Design : les données que l'application peut traiter sont limitées à ce qui est nécessaire à la détection.</p>
+<!-- ═══ ANDROID / IPHONE ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-head">
+      <p class="h-kicker">Sur votre téléphone</p>
+      <h2 class="h-h2">DYLETH s'adapte aux possibilités de chaque système.</h2>
     </div>
-    <div class="hp-priv reveal">
-      <div class="hp-priv-head">Confidentialité &amp; données</div>
-      <div class="hp-priv-row"><span class="t">Privacy by Design</span><p class="d">L'application est conçue dès le départ pour limiter les données traitées.</p></div>
-      <div class="hp-priv-row"><span class="t">Traitement sur l'appareil</span><p class="d">DYLETH privilégie le traitement sur l'appareil et limite les transmissions au strict nécessaire.</p></div>
-      <div class="hp-priv-row"><span class="t">Vos contacts restent les vôtres</span><p class="d">Ils sont traités sur votre téléphone et ne sont jamais envoyés à nos serveurs.</p></div>
-      <div class="hp-priv-row"><span class="t">Données minimisées</span><p class="d">Avec votre consentement : numéros des appels entrants et SMS.</p></div>
-      <div class="hp-priv-row"><span class="t">Serveurs dans l'UE</span><p class="d">Les serveurs de DYLETH sont hébergés dans l'Union européenne.</p></div>
-      <div class="hp-priv-row"><span class="t">Pas d'exploitation publicitaire</span><p class="d">Aucune revente de données. Pas de publicité comportementale.</p></div>
-      <div class="hp-priv-row"><span class="t">Conformité RGPD</span><p class="d">Droit d'accès, de rectification et de suppression, exerçable à tout moment.</p></div>
-      <div class="hp-priv-row"><span class="t">Politique de confidentialité</span><p class="d"><a href="/legal/confidentialite">Consulter la politique de confidentialité &rarr;</a></p></div>
-    </div>
-    <p class="hp-priv-foot reveal">Architecture technique de DYLETH déposée auprès de l'INPI et de l'USPTO.</p>
-  </div>
-</section>
-
-
-<!-- ═══ 7 · SECTEURS ═══ -->
-<section class="hp-section">
-  <div class="hp-wrap">
-    <div class="hp-head reveal">
-      <p class="hp-eyebrow">Par secteur</p>
-      <h2 class="hp-h2">Chaque secteur, ses risques.</h2>
-      <p class="hp-sub">Une lecture des menaces adaptée à chaque métier et chaque contexte.</p>
-    </div>
-    <div class="hp-sectors reveal">
-      <a class="hp-sec" href="/secteurs/particuliers"><span class="n">01</span><span class="b"><strong>Particuliers</strong><span>Faux conseiller, hameçonnage, usurpation</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/professions-liberales"><span class="n">02</span><span class="b"><strong>Professions libérales</strong><span>Fraude au virement, usurpation d'identité</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/tpe-pme"><span class="n">03</span><span class="b"><strong>TPE / PME</strong><span>Faux changement de RIB, fraude au président</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/grandes-entreprises"><span class="n">04</span><span class="b"><strong>Grandes entreprises</strong><span>Ingénierie sociale ciblée</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/administrations"><span class="n">05</span><span class="b"><strong>Administrations</strong><span>Hameçonnage, rançongiciel, usurpation</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/mairies"><span class="n">06</span><span class="b"><strong>Mairies</strong><span>Fraude aux marchés publics, faux fournisseurs</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/sante"><span class="n">07</span><span class="b"><strong>Santé</strong><span>Hameçonnage, accès frauduleux aux données</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/enseignement"><span class="n">08</span><span class="b"><strong>Enseignement</strong><span>Usurpation, fraude aux inscriptions</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/banques-assurances"><span class="n">09</span><span class="b"><strong>Banques &amp; Assurances</strong><span>Usurpation de marque, faux services clients</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/associations"><span class="n">10</span><span class="b"><strong>Associations &amp; ONG</strong><span>Détournement de dons, faux appels</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/droit-finance"><span class="n">11</span><span class="b"><strong>Droit &amp; Finance</strong><span>Faux ordres de virement, fraude aux fonds</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/immobilier"><span class="n">12</span><span class="b"><strong>Immobilier</strong><span>Faux mandats, faux chèques de banque</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/commerce"><span class="n">13</span><span class="b"><strong>Commerce &amp; Distribution</strong><span>Faux fournisseurs, fraude aux paiements</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/crypto"><span class="n">14</span><span class="b"><strong>Crypto &amp; Web3</strong><span>Faux support, hameçonnage de portefeuilles</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/sport-culture"><span class="n">15</span><span class="b"><strong>Sport &amp; Culture</strong><span>Faux billets, sites de revente frauduleux</span></span><span class="ar">&rarr;</span></a>
-      <a class="hp-sec" href="/secteurs/medias"><span class="n">16</span><span class="b"><strong>Médias &amp; Communication</strong><span>Usurpation, compromission de sources</span></span><span class="ar">&rarr;</span></a>
+    <div class="h-os">
+      <article class="h-os-card">
+        <div class="h-mini android" aria-hidden="true">
+          <div class="s"><span class="l">Analyse DYLETH</span><span class="n">Risque élevé</span><span class="l">+33 1 99 00 42 17</span><span class="btns"><i></i><i></i></span></div>
+        </div>
+        <div>
+          <h3>Sur Android</h3>
+          <p>L'écran d'appel change de couleur automatiquement : vert, orange ou rouge. Pour les appels classiques, WhatsApp, Telegram et Signal.</p>
+        </div>
+      </article>
+      <article class="h-os-card">
+        <div class="h-mini ios" aria-hidden="true">
+          <div class="s"><span class="l">appel mobile</span><span class="n">+33 1 99 00 42 17</span><span class="row"><span class="dot">Risque élevé</span></span><span class="det">Détails</span><span class="btns"><i></i><i></i></span></div>
+        </div>
+        <div>
+          <h3>Sur iPhone</h3>
+          <p>Une pastille de risque apparaît automatiquement à côté du nom, sur l'écran d'appel natif des appels classiques. Le détail coloré complet s'ouvre sur demande : bouton « Détails » ou double tapotement au dos de l'iPhone (Back Tap).</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
+<!-- ═══ PROTECTIONS ═══ -->
+<section class="h-sec" id="protections">
+  <div class="h-wrap">
+    <div class="h-head">
+      <p class="h-kicker">Vos protections</p>
+      <h2 class="h-h2">Une seule application, avec le statut réel de chaque protection.</h2>
+    </div>
+    <div class="h-status">
+      <ul>
+        <li><span class="t">Appels</span><span class="d">Appels classiques ; aussi WhatsApp, Telegram et Signal sur Android. <a class="pg-inline-link" href="/comprendre/vishing">Reconnaître un appel frauduleux</a></span><span class="pm-status on">Disponible</span></li>
+        <li><span class="t">SMS</span><span class="d">Messages et liens suspects reçus par SMS.</span><span class="pm-status on">Disponible</span></li>
+        <li><span class="t">Liens et DNS</span><span class="d">Analyse des liens avant ouverture.</span><span class="pm-status on">Disponible</span></li>
+        <li><span class="t">Wi-Fi</span><span class="d">Analyse des réseaux et protection DNS.</span><span class="pm-status on">Disponible</span></li>
+        <li><span class="t">Tableau de bord</span><span class="d">Vos alertes et vos réglages, avec vos données réelles. Chaque protection et l'annonce vocale de l'appelant s'activent ou se désactivent ici.</span><span class="pm-status on">Disponible</span></li>
+        <li><span class="t">E-mails</span><span class="d">En attente de l'approbation de Google. Pas encore disponible.</span><span class="pm-status soon">En cours d'activation</span></li>
+        <li><span class="t">QR codes</span><span class="d">Un scanner intégré à DYLETH analyse le lien avant ouverture. L'ouverture reste toujours votre décision.</span><span class="pm-status soon">Prochainement</span></li>
+        <li><span class="t">Deepfakes et faux comptes</span><span class="d">Voix et vidéos truquées, usurpation sur les réseaux sociaux.</span><span class="pm-status dev">En développement</span></li>
+      </ul>
+    </div>
+    <a class="h-link" href="/solution/7-modules">Voir les fonctionnalités en détail</a>
+  </div>
+</section>
 
-<!-- ═══ 8 · ORGANISATIONS ═══ -->
-<section class="hp-section" id="organisations">
-  <div class="hp-wrap">
-    <div class="hp-head reveal">
-      <p class="hp-eyebrow">Organisations</p>
-      <h2 class="hp-h2">Gratuit pour tous, y compris les organisations.</h2>
-      <p class="hp-sub">DYLETH est gratuit pour tous : particuliers, entreprises, associations et administrations. Rien à payer. Pour toute question d'une organisation, écrivez-nous.</p>
-      <a class="hp-link" href="mailto:contact@dyleth.com">contact@dyleth.com &rarr;</a>
+<!-- ═══ COMMENT ÇA MARCHE ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-head">
+      <p class="h-kicker">Comment ça marche</p>
+      <h2 class="h-h2">Un seul réflexe avant d'agir.</h2>
+    </div>
+    <ol class="h-steps">
+      <li><h3>Un signal arrive</h3><p>Un appel, un SMS, un lien ou un réseau Wi-Fi.</p></li>
+      <li><h3>DYLETH analyse</h3><p>Les signaux sont évalués avant que vous ne répondiez ou n'ouvriez quoi que ce soit.</p></li>
+      <li><h3>Vous décidez</h3><p>Vert, orange ou rouge, avec la raison affichée. La décision vous appartient toujours.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══ LE CONSTAT ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-head">
+      <p class="h-kicker">Le constat</p>
+      <h2 class="h-h2">La fraude au téléphone ne recule pas.</h2>
+      <p class="h-lead">Bloctel a fermé le 11 août 2026 : il n'existe plus de liste officielle d'opposition au démarchage téléphonique.</p>
+    </div>
+    <div class="h-stats">
+      <div class="h-stat"><div class="v">453&nbsp;200</div><p class="l">délits numériques enregistrés en France, +14&nbsp;% sur un an</p><p class="s">Ministère de l'Intérieur, Interstats 2025</p></div>
+      <div class="h-stat"><div class="v">1 sur 6</div><p class="l">appels est une tentative d'arnaque</p><p class="s">Bitdefender, 2026</p></div>
+      <div class="h-stat"><div class="v">+159&nbsp;%</div><p class="l">de demandes d'assistance de particuliers liées au faux conseiller bancaire en 2025</p><p class="s">Cybermalveillance.gouv.fr, 2025</p></div>
+    </div>
+    <p class="h-small" style="margin-top:18px"><a href="/menace/chiffres-cles">Voir les chiffres de la fraude numérique</a> et l'analyse complète dans le <a href="/ressources/livre-blanc">livre blanc</a>.</p>
+  </div>
+</section>
+
+<!-- ═══ CONFIDENTIALITÉ ═══ -->
+<section class="h-sec" id="confidentialite">
+  <div class="h-wrap h-priv">
+    <div>
+      <p class="h-kicker">Confidentialité</p>
+      <p class="big">Vos contacts restent les vôtres.</p>
+      <p class="h-lead">Ils sont traités sur votre téléphone et ne sont jamais envoyés à nos serveurs. DYLETH est conçu pour traiter le minimum de données.</p>
+      <a class="h-link" href="/legal/confidentialite">Lire la politique de confidentialité</a>
+    </div>
+    <dl>
+      <div><dt>Traitement sur l'appareil</dt><dd>DYLETH privilégie le traitement sur le téléphone et limite les transmissions au strict nécessaire.</dd></div>
+      <div><dt>Données minimisées</dt><dd>Avec votre consentement : numéros des appels entrants et SMS, pour la détection.</dd></div>
+      <div><dt>Serveurs dans l'UE</dt><dd>Les serveurs de DYLETH sont hébergés dans l'Union européenne.</dd></div>
+      <div><dt>Aucune publicité</dt><dd>Aucune revente de données, pas de publicité comportementale.</dd></div>
+      <div><dt>Vos droits RGPD</dt><dd>Accès, rectification et suppression, à tout moment. <a class="pg-inline-link" href="/delete-my-account">Demander la suppression de mon compte</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═══ SECTEURS ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-head">
+      <p class="h-kicker">Par secteur</p>
+      <h2 class="h-h2">Chaque métier a ses arnaques.</h2>
+      <p class="h-lead">Faux conseiller, faux changement de RIB, faux fournisseur : une lecture des menaces propre à chaque contexte.</p>
+    </div>
+    <nav class="h-sectors" aria-label="Secteurs">
+      <a href="/secteurs/particuliers">Particuliers</a>
+      <a href="/secteurs/familles-seniors">Familles et seniors</a>
+      <a href="/secteurs/professions-liberales">Professions libérales</a>
+      <a href="/secteurs/tpe-pme">TPE et PME</a>
+      <a href="/secteurs/grandes-entreprises">Grandes entreprises</a>
+      <a href="/secteurs/administrations">Administrations</a>
+      <a href="/secteurs/mairies">Mairies</a>
+      <a href="/secteurs/sante">Santé</a>
+      <a href="/secteurs/enseignement">Enseignement</a>
+      <a href="/secteurs/banques-assurances">Banques et assurances</a>
+      <a href="/secteurs/associations">Associations et ONG</a>
+      <a href="/secteurs/droit-finance">Droit et finance</a>
+      <a href="/secteurs/immobilier">Immobilier</a>
+      <a href="/secteurs/commerce">Commerce</a>
+      <a href="/secteurs/hotellerie">Hôtellerie</a>
+      <a href="/secteurs/crypto">Crypto et Web3</a>
+      <a href="/secteurs/sport-culture">Sport et culture</a>
+      <a href="/secteurs/medias">Médias</a>
+    </nav>
+  </div>
+</section>
+
+<!-- ═══ ORGANISATIONS + À VENIR ═══ -->
+<section class="h-sec" id="organisations">
+  <div class="h-wrap h-duo">
+    <div>
+      <h2>Gratuit aussi pour les organisations.</h2>
+      <p>Entreprises, associations, administrations : DYLETH est gratuit pour tous, il n'y a rien à payer. Pour toute question, écrivez-nous.</p>
+      <a class="h-link" href="mailto:contact@dyleth.com">contact@dyleth.com</a>
+    </div>
+    <div id="innovations">
+      <h2>Les prochaines protections.</h2>
+      <p>QR codes : prochainement. Deepfakes vocaux et vidéo, faux comptes sur les réseaux sociaux : en développement. Ces fonctions ne sont pas encore disponibles.</p>
+      <a class="h-link" href="/roadmap/">Voir la feuille de route</a>
     </div>
   </div>
 </section>
 
-
-<section class="hp-section" id="innovations">
-  <div class="hp-wrap">
-    <div class="hp-head reveal">
-      <p class="hp-eyebrow">À venir · Prochainement et en développement</p>
-      <h2 class="hp-h2">Les prochaines protections.</h2>
-      <p class="hp-sub">QR codes (prochainement) : un scanner intégré à DYLETH analyse le lien avant ouverture et affiche le résultat en code couleur ; l'ouverture reste toujours votre décision.</p>
-      <p class="hp-sub">Deepfakes vocaux et vidéo, faux comptes et usurpation sur les réseaux sociaux (en développement) : ces fonctions ne sont pas encore disponibles.</p>
-      <a class="hp-link" href="/innovations/">Découvrir nos innovations &rarr;</a>
+<!-- ═══ TÉLÉCHARGER ═══ -->
+<section class="h-sec" id="stores">
+  <div class="h-wrap">
+    <div class="h-cta">
+      <div class="h-signals" aria-hidden="true"><i></i><i></i><i></i></div>
+      <h2>Installez DYLETH aujourd'hui.</h2>
+      <p>Application gratuite pour tous, sur Google Play et l'App Store. Proposée en 22 langues, développée en France.</p>
+      <div class="h-stores">
+        <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="h-badge" aria-label="Disponible sur Google Play">
+          <img src="/assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250" loading="lazy">
+        </a>
+        <a href="https://apps.apple.com/fr/app/dyleth/id6774315923" target="_blank" rel="noopener noreferrer" class="h-badge" aria-label="Télécharger dans l'App Store">
+          <img src="/assets/store/app-store-fr.svg" alt="Télécharger dans l'App Store" width="127" height="40" loading="lazy">
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 9 · TÉLÉCHARGER ═══ -->
-<section class="hp-section hp-dl" id="stores">
-  <div class="hp-wrap">
-    <p class="hp-eyebrow reveal">Télécharger</p>
-    <h2 class="reveal">Installez DYLETH aujourd'hui.</h2>
-    <p class="reveal">Application gratuite pour tous, disponible sur Google Play et sur l'App Store.</p>
-    <div class="hp-stores reveal">
-      <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="hp-badge" aria-label="Disponible sur Google Play">
-        <img src="assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250">
-      </a>
-      <a href="https://apps.apple.com/fr/app/dyleth/id6774315923" target="_blank" rel="noopener noreferrer" class="hp-badge" aria-label="Télécharger sur l'App Store">
-        <img src="assets/store/app-store-fr.svg" alt="Télécharger sur l'App Store" width="127" height="40">
-      </a>
-    </div>
-    <p class="hp-dl-note reveal">Gratuit pour tous · Application proposée en 22 langues · Développée en France.</p>
-  </div>
-</section>
+</main>
+
+<script>
+/* Écran d'appel de démonstration : trois exemples fictifs, défilement doux. */
+(function () {
+  var hero = document.getElementById('hero');
+  var screen = document.getElementById('h-screen');
+  if (!hero || !screen) return;
+  var data = {
+    safe: { icon: '#i-safe', lvl: 'Risque faible', num: '+33 4 65 71 23 08', who: 'Identité communautaire : cabinet médical',
+            why: 'Numéro connu de la communauté, aucun signalement, ligne fixe cohérente avec l’identité affichée.',
+            conf: 'Élevé', pays: 'France', ind: '+33', type: 'Fixe' },
+    warn: { icon: '#i-warn', lvl: 'Vigilance', num: '+44 20 7946 0958', who: 'Numéro international inconnu',
+            why: 'Numéro absent de vos contacts, peu d’informations disponibles. Prudence avant de communiquer des informations.',
+            conf: 'Moyen', pays: 'Royaume-Uni', ind: '+44', type: 'Fixe' },
+    risk: { icon: '#i-risk', lvl: 'Risque élevé', num: '+33 1 99 00 42 17', who: 'Identité communautaire : faux conseiller bancaire',
+            why: 'Plusieurs signalements récents de la communauté pour une usurpation de banque, sur une ligne de type VoIP.',
+            conf: 'Élevé', pays: 'France', ind: '+33', type: 'VoIP' }
+  };
+  var order = ['safe', 'warn', 'risk'];
+  var buttons = hero.querySelectorAll('.h-legend button');
+  var current = 'risk', timer = null;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function show(v) {
+    var d = data[v];
+    current = v;
+    screen.classList.add('fading');
+    setTimeout(function () {
+      hero.setAttribute('data-v', v);
+      screen.querySelectorAll('[data-k]').forEach(function (el) {
+        var k = el.getAttribute('data-k');
+        if (k === 'icon') el.setAttribute('href', d.icon); else el.textContent = d[k];
+      });
+      screen.setAttribute('aria-label', 'Exemple d’écran d’appel DYLETH sur Android : ' + d.lvl.toLowerCase());
+      screen.classList.remove('fading');
+    }, reduce ? 0 : 350);
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === v)); });
+  }
+  function next() { show(order[(order.indexOf(current) + 1) % order.length]); }
+  function start() { if (!reduce) timer = setInterval(next, 4200); }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { clearInterval(timer); show(b.dataset.v); });
+  });
+  show('safe');
+  start();
+})();
+</script>
 
 
 <!-- ═══ FOOTER ═══ -->
