@@ -13,9 +13,6 @@
 <meta property="og:locale" content="fr_FR">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-apple.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 <style id="nv">
 nav.main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;gap:8px;padding:0 40px;height:64px;background:rgba(5,6,10,0.82);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border-bottom:1px solid rgba(245,245,247,0.09)}
@@ -256,7 +253,8 @@ main{display:block}
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/premium.css">
 </head>
 <body>
@@ -519,7 +517,7 @@ main{display:block}
 <script id="nv-js">window.toggleLang=function(id){var dd=document.getElementById(id);if(!dd)return;var was=dd.classList.contains("open");document.querySelectorAll(".lang-dropdown").forEach(function(el){el.classList.remove("open");});if(!was)dd.classList.add("open");};document.addEventListener("click",function(e){if(!e.target.closest(".lang-wrap")&&!e.target.closest(".nav-item-lang"))document.querySelectorAll(".lang-dropdown").forEach(function(el){el.classList.remove("open");});});window.doTranslate=function(lang){document.querySelectorAll(".lang-dropdown").forEach(function(el){el.classList.remove("open");});if(lang==="fr"){document.cookie="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";document.cookie="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=."+location.hostname;location.reload();return;}document.cookie="googtrans=/fr/"+lang+"; path=/";document.cookie="googtrans=/fr/"+lang+"; path=/; domain=."+location.hostname;location.reload();};</script>
 <div id="google_translate_element" style="display:none"></div>
 <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"fr",autoDisplay:false},"google_translate_element");}</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>if(/googtrans=\/fr\/(?!fr)/.test(document.cookie)){var gt=document.createElement("script");gt.src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";document.body.appendChild(gt);}</script>
 <script>
 (function(){var els=document.querySelectorAll('.reveal'),i;
 var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;

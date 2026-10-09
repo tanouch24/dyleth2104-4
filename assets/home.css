@@ -29,7 +29,7 @@
 .h-hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
 .h-hero h1 {
   margin: 0; font-size: clamp(44px, 6.4vw, 88px); line-height: .98;
-  font-variation-settings: "SOFT" 30, "WONK" 0; text-wrap: balance;
+  text-wrap: balance;
 }
 .h-hero .h-lead { margin-top: 24px; font-size: clamp(17px, 1.45vw, 20px); }
 .h-stores { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 34px; }
