@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Newsletter DYLETH : les arnaques décryptées chaque semaine</title>
-<meta name="description" content="La newsletter DYLETH : une menace analysée, un conseil pratique et les chiffres clés, chaque semaine. Sans spam, désinscription en un clic.">
-<link rel="canonical" href="https://dyleth.com/ressources/newsletter">
+<title>Soutenir DYLETH : partager l'application gratuite</title>
+<meta name="description" content="Soutenez DYLETH, l'application anti-fraude gratuite : partagez-la avec vos proches, laissez un avis sur les stores ou devenez ambassadeur.">
+<link rel="canonical" href="https://dyleth.com/soutenir/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Newsletter — DYLETH">
-<meta property="og:description" content="La newsletter DYLETH : une menace analysée, un conseil pratique et les chiffres clés, chaque semaine. Sans spam, désinscription en un clic.">
-<meta property="og:url" content="https://dyleth.com/ressources/newsletter">
+<meta property="og:title" content="Soutenir DYLETH">
+<meta property="og:description" content="Partagez DYLETH avec vos proches, laissez un avis sur les stores ou devenez ambassadeur.">
+<meta property="og:url" content="https://dyleth.com/soutenir/">
 <meta property="og:locale" content="fr_FR">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-apple.png">
@@ -83,121 +83,79 @@ main{display:block}
 .pg-wrap{width:min(var(--d2-max), calc(100% - 56px)); margin:0 auto}
 .d2-section{width:min(var(--d2-max), calc(100% - 56px)); margin:0 auto; padding:64px 0}
 .d2-section + .d2-section{padding-top:0}
-.d2-section-head{max-width:760px}
+.d2-section-head{max-width:720px}
 .d2-section-head .d2-eyebrow{margin-bottom:14px}
-.d2-section-head h2{margin:0; color:#fff; font-size:clamp(26px,3.1vw,42px); line-height:1.07; font-weight:760; letter-spacing:-.015em; text-wrap:balance}
-.d2-section-head p{margin:14px 0 0; color:var(--d2-muted); font-size:16px; line-height:1.65}
+.d2-section-head h2{margin:0; color:#fff; font-size:clamp(28px,3.2vw,44px); line-height:1.06; font-weight:760; letter-spacing:-.015em; text-wrap:balance}
+.d2-section-head p{margin:14px 0 0; color:var(--d2-muted); font-size:17px; line-height:1.6}
 .d2-eyebrow{display:inline-flex; align-items:center; gap:10px; color:var(--d2-blue); font-size:11.5px; font-weight:600; letter-spacing:.05em; text-transform:uppercase}
 .d2-eyebrow::before{content:""; width:18px; height:1px; background:currentColor; opacity:.8}
 
-.pg-hero{padding:118px 0 40px}
+.pg-hero{padding:118px 0 44px}
 .pg-hero h1{margin:16px 0 0; font-size:clamp(34px,4.2vw,58px); line-height:1.05; font-weight:780; letter-spacing:-.02em; color:#fff; text-wrap:balance; max-width:20ch}
-.pg-lead{margin:20px 0 0; max-width:64ch; color:var(--d2-muted); font-size:clamp(16px,1.3vw,19px); line-height:1.6}
+.pg-lead{margin:20px 0 0; max-width:60ch; color:var(--d2-muted); font-size:clamp(16px,1.3vw,19px); line-height:1.6}
+.pg-inline-link{color:var(--d2-blue);text-decoration:none}
 .pg-lead strong{color:#fff; font-weight:600}
 
-.pg-prose{max-width:72ch}
-.pg-prose p{margin:0 0 16px; color:var(--d2-muted); font-size:15px; line-height:1.75}
-.pg-prose p:last-child{margin-bottom:0}
-.pg-prose strong{color:#fff; font-weight:600}
-.pg-prose h3{margin:30px 0 10px; color:#fff; font-size:18px; font-weight:680; letter-spacing:-.005em}
-.pg-prose ul{margin:0 0 16px; padding-left:0; list-style:none}
-.pg-prose ul li{position:relative; padding:8px 0 8px 22px; color:var(--d2-muted); font-size:15px; line-height:1.7}
-.pg-prose ul li::before{content:""; position:absolute; left:0; top:17px; width:10px; height:1px; background:var(--d2-blue)}
-.pg-prose ul li b,.pg-prose ul li strong{color:#fff; font-weight:600}
-.pg-prose a{color:var(--d2-blue); text-decoration:none}
-.pg-prose a:hover{text-decoration:underline}
+/* store badges (mêmes classes que la homepage) */
+.d2-store-row{display:flex; flex-wrap:wrap; align-items:flex-start; gap:16px; margin-top:28px}
+.d2-badge{display:inline-flex; align-items:center; text-decoration:none; transition:opacity .18s ease, transform .18s ease}
+.d2-badge img{display:block; height:52px; width:auto}
+.d2-badge.is-soon img{height:44px}
+.d2-badge:hover{opacity:.9; transform:translateY(-1px)}
+.d2-badge.is-soon{opacity:.5; filter:grayscale(1); cursor:default; pointer-events:none}
+.d2-badge:focus-visible{outline:2px solid var(--d2-blue); outline-offset:4px; border-radius:8px}
+.d2-badge-wrap{display:inline-flex; flex-direction:column; align-items:flex-start; gap:5px}
+.d2-badge-tag{font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--d2-faint)}
+.pg-store-note{margin-top:12px; color:var(--d2-faint); font-size:12.5px}
 
-.num-list{margin-top:8px; border-top:1px solid rgba(245,245,247,.1)}
-.num-item{display:grid; grid-template-columns:56px minmax(0,1fr); gap:22px; padding:26px 2px; border-bottom:1px solid rgba(245,245,247,.08)}
-.num-item .n{font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:13px; font-weight:600; letter-spacing:.06em; color:var(--d2-blue); padding-top:4px}
-.num-item h3{margin:0; color:#fff; font-size:17px; font-weight:680; letter-spacing:-.005em}
-.num-item p{margin:9px 0 0; color:var(--d2-muted); font-size:14px; line-height:1.65; max-width:78ch}
-.num-item p + p{margin-top:10px}
-.num-item a{color:var(--d2-blue); text-decoration:none}
-@media (max-width:640px){ .num-item{grid-template-columns:36px minmax(0,1fr); gap:14px; padding:22px 2px} }
-
-.pg-list{margin-top:8px; border-top:1px solid rgba(245,245,247,.1)}
-.pg-row{display:grid; grid-template-columns:220px minmax(0,1fr); gap:24px; padding:20px 2px; border-bottom:1px solid rgba(245,245,247,.08)}
-.pg-row .t{color:#fff; font-size:14.5px; font-weight:640}
-.pg-row .d{margin:0; color:var(--d2-muted); font-size:14px; line-height:1.65}
+/* listes éditoriales génériques */
+.pg-list{margin-top:28px; border-top:1px solid rgba(245,245,247,.08)}
+.pg-row{display:grid; grid-template-columns:180px minmax(0,1fr); gap:20px; padding:18px 2px; border-bottom:1px solid rgba(245,245,247,.08)}
+.pg-row .t{color:#fff; font-size:15px; font-weight:640}
+.pg-row .d{margin:0; color:var(--d2-muted); font-size:14px; line-height:1.6}
 .pg-row .d a{color:var(--d2-blue); text-decoration:none}
-@media (max-width:640px){ .pg-row{grid-template-columns:1fr; gap:4px} }
+.pg-row .d a:hover{text-decoration:underline}
+.pg-note{margin:16px 0 0; font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:11px; letter-spacing:.03em; color:var(--d2-faint)}
 
-.facts{margin-top:8px; border-top:1px solid rgba(245,245,247,.1); list-style:none; padding:0}
-.facts li{position:relative; padding:16px 0 16px 22px; border-bottom:1px solid rgba(245,245,247,.08); color:var(--d2-muted); font-size:14px; line-height:1.65}
-.facts li::before{content:""; position:absolute; left:0; top:25px; width:10px; height:1px; background:var(--d2-blue)}
-.facts li b{color:#fff; font-weight:640}
+/* feature list (— tiret bleu) */
+.pg-feat{margin:22px 0 0; padding:0; list-style:none}
+.pg-feat li{position:relative; padding:9px 0 9px 20px; border-top:1px solid rgba(245,245,247,.08); color:#fff; font-size:14px; line-height:1.5}
+.pg-feat li:first-child{border-top:0}
+.pg-feat li::before{content:""; position:absolute; left:0; top:16px; width:9px; height:1px; background:var(--d2-blue)}
 
-.mini-table{width:100%; border-collapse:collapse; margin:8px 0 0; font-size:13.5px}
-.mini-table th{text-align:left; font-weight:640; color:#fff; padding:12px 16px 12px 2px; border-bottom:1px solid rgba(245,245,247,.16)}
-.mini-table td{color:var(--d2-muted); padding:12px 16px 12px 2px; border-bottom:1px solid rgba(245,245,247,.08); line-height:1.55; vertical-align:top}
-.mini-table td:first-child{color:#fff}
-.mini-table .yes{color:var(--d2-blue); font-weight:640}
-.mini-table .no{color:var(--d2-faint)}
-
-.legal-dl{margin-top:8px; border-top:1px solid rgba(245,245,247,.1)}
-.legal-dl > div{display:grid; grid-template-columns:minmax(0,210px) minmax(0,1fr); gap:24px; padding:15px 2px; border-bottom:1px solid rgba(245,245,247,.08)}
-.legal-dl dt{margin:0; color:#fff; font-size:13.5px; font-weight:640}
-.legal-dl dd{margin:0; color:var(--d2-muted); font-size:13.5px; line-height:1.6}
-.legal-dl dd a{color:var(--d2-blue); text-decoration:none}
-@media (max-width:640px){ .legal-dl > div{grid-template-columns:1fr; gap:4px} }
-
-.pg-note{margin:20px 0 0; font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:11px; letter-spacing:.03em; color:var(--d2-faint); line-height:1.7}
+/* prix */
+.pg-price{display:flex; align-items:baseline; gap:12px; margin:14px 0 0}
+.pg-price .amt{font-size:clamp(34px,4vw,52px); font-weight:780; letter-spacing:-.02em; line-height:1; color:var(--d2-blue)}
+.pg-price .per{color:var(--d2-muted); font-size:13px}
+.pg-free{margin:14px 0 0; display:inline-flex; font-size:12.5px; color:#4ade80; border:1px solid rgba(48,209,88,.35); border-radius:8px; padding:7px 12px}
 .pg-cta{display:inline-flex; align-items:center; gap:8px; margin-top:20px; padding:11px 18px; border:1px solid var(--d2-blue); border-radius:8px; color:#fff; font-size:13px; font-weight:640; text-decoration:none; transition:background .15s ease}
 .pg-cta:hover{background:rgba(41,151,255,.1)}
-.pg-cta-row{display:flex; flex-wrap:wrap; gap:12px}
-.pg-cta.ghost{border-color:var(--d2-line); color:var(--d2-muted)}
-.pg-cta.ghost:hover{background:rgba(245,245,247,.04); color:#fff}
-.pg-inline-link{color:var(--d2-blue); text-decoration:none}
-.pg-inline-link:hover{text-decoration:underline}
+.pg-nis2{margin:22px 0 0; padding:20px 22px; border:1px solid var(--d2-line); border-radius:14px; background:rgba(255,255,255,.02); color:var(--d2-muted); font-size:13.5px; line-height:1.65}
+.pg-nis2 b{color:#fff; font-weight:640}
 
-.card-list{margin-top:8px; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1px; background:rgba(245,245,247,.09); border:1px solid rgba(245,245,247,.09)}
-.card-list a{display:block; background:#04060e; padding:24px; text-decoration:none; transition:background .15s ease}
-.card-list a:hover{background:rgba(41,151,255,.06)}
-.card-list .k{color:var(--d2-blue); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase}
-.card-list h3{margin:12px 0 0; color:#fff; font-size:16px; font-weight:680; line-height:1.3}
-.card-list p{margin:10px 0 0; color:var(--d2-muted); font-size:13.5px; line-height:1.6}
-.card-list .go{margin:14px 0 0; color:var(--d2-blue); font-size:12.5px; font-weight:640}
+/* "pour qui" — rail */
+.pg-audience{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px}
+.pg-audience span{font-size:13px; color:#fff; border:1px solid var(--d2-line); border-radius:999px; padding:9px 16px; background:rgba(255,255,255,.025)}
 
-.pg-form{margin-top:8px; max-width:520px; border-top:1px solid rgba(245,245,247,.1); padding-top:24px}
-.pg-form label{display:block; color:#fff; font-size:13px; font-weight:640; margin:0 0 8px}
-.pg-form input[type=email],.pg-form input[type=text],.pg-form input[type=url],.pg-form select,.pg-form textarea{width:100%; box-sizing:border-box; background:rgba(245,245,247,.04); border:1px solid rgba(245,245,247,.16); border-radius:8px; color:#fff; font-family:inherit; font-size:14px; padding:12px 14px; margin:0 0 16px; outline:none; transition:border-color .15s ease}
-.pg-form input:focus,.pg-form select:focus,.pg-form textarea:focus{border-color:var(--d2-blue)}
-.pg-form textarea{min-height:120px; resize:vertical}
-.pg-form .check{display:flex; gap:10px; align-items:flex-start; margin:0 0 16px}
-.pg-form .check input{margin-top:3px}
-.pg-form .check label{font-weight:400; color:var(--d2-muted); font-size:13px; line-height:1.55; margin:0}
-.pg-form button[type=submit]{appearance:none; border:1px solid var(--d2-blue); background:var(--d2-blue); color:#fff; font-family:inherit; font-size:13.5px; font-weight:700; padding:12px 22px; border-radius:8px; cursor:pointer; transition:filter .15s ease}
-.pg-form button[type=submit]:hover{filter:brightness(1.08)}
-.pg-alert{margin:0 0 16px; padding:14px 16px; border-radius:8px; font-size:13.5px; line-height:1.6; border:1px solid rgba(245,245,247,.16); color:var(--d2-muted)}
-.pg-alert.ok{border-color:rgba(41,151,255,.4); color:#fff}
-.pg-hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
-
+/* innovations — séquence numérotée */
+.pg-inno{margin-top:30px; border-top:1px solid rgba(245,245,247,.08)}
+.pg-inno-row{display:grid; grid-template-columns:56px minmax(0,1fr); gap:20px; padding:24px 2px; border-bottom:1px solid rgba(245,245,247,.08)}
+.pg-inno-row .n{font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:13px; font-weight:600; letter-spacing:.06em; color:var(--d2-blue); padding-top:3px}
+.pg-inno-row h3{margin:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:12px; color:#fff; font-size:18px; font-weight:680; letter-spacing:-.005em}
+.pg-inno-row h3 .badge{font-family:ui-monospace,SFMono-Regular,Menlo,"SF Mono",monospace; font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--d2-faint)}
+.pg-inno-row p{margin:10px 0 0; color:var(--d2-muted); font-size:14px; line-height:1.65; max-width:74ch}
 .pg-end{padding:56px 0 0}
 .pg-end .big{color:#fff; font-size:clamp(24px,2.8vw,36px); font-weight:740; letter-spacing:-.015em}
 .pg-end p{margin:16px 0 0; max-width:64ch; color:var(--d2-muted); font-size:15px; line-height:1.7}
-.pg-end p a{color:var(--d2-blue); text-decoration:none}
 .pg-end .pg-cta{margin-top:24px}
 
-.article-body{max-width:70ch}
-.article-body p{margin:0 0 18px; color:var(--d2-muted); font-size:15.5px; line-height:1.8}
-.article-body h2{margin:40px 0 14px; color:#fff; font-size:clamp(21px,2.4vw,27px); font-weight:720; letter-spacing:-.01em; line-height:1.2}
-.article-body h3{margin:28px 0 10px; color:#fff; font-size:17px; font-weight:680}
-.article-body strong{color:#fff; font-weight:600}
-.article-body a{color:var(--d2-blue); text-decoration:none}
-.article-body a:hover{text-decoration:underline}
-.article-body ul,.article-body ol{margin:0 0 18px; padding-left:0; list-style:none}
-.article-body ul li,.article-body ol li{position:relative; padding:7px 0 7px 24px; color:var(--d2-muted); font-size:15px; line-height:1.75}
-.article-body ul li::before{content:""; position:absolute; left:0; top:16px; width:12px; height:1px; background:var(--d2-blue)}
-.article-body ol{counter-reset:ab}
-.article-body ol li::before{content:counter(ab); counter-increment:ab; position:absolute; left:0; top:6px; width:auto; height:auto; background:none; color:var(--d2-blue); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; font-weight:640}
-.article-body blockquote{margin:24px 0; padding:4px 0 4px 20px; border-left:2px solid var(--d2-blue); color:#fff; font-size:16px; line-height:1.7}
-.article-meta{display:flex; flex-wrap:wrap; gap:10px 18px; margin:18px 0 0; color:var(--d2-faint); font-size:12.5px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-.article-sources{margin-top:40px; border-top:1px solid rgba(245,245,247,.1); padding-top:20px}
-.article-sources h2{margin:0 0 12px; font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#fff}
-.article-sources ol li{font-size:13px; padding-left:24px}
-.article-sources a{color:var(--d2-blue); text-decoration:none; word-break:break-word}
+.pg-faq{margin-top:26px}
+.pg-faq .q{border-top:1px solid rgba(245,245,247,.08); padding:18px 2px}
+.pg-faq .q:first-child{border-top:0}
+.pg-faq .q b{display:block; color:#fff; font-size:14.5px; font-weight:640}
+.pg-faq .q p{margin:6px 0 0; color:var(--d2-muted); font-size:13.5px; line-height:1.6}
 
+/* footer (langage d2) */
 .d5-footer{border-top:1px solid rgba(245,245,247,.09); background:#04060e; margin-top:clamp(72px,9vh,120px)}
 .d5-footer-in{width:min(var(--d2-max), calc(100% - 56px)); margin:0 auto; padding:56px 0 32px}
 .d5-foot-grid{display:grid; grid-template-columns:1.7fr 1fr 1fr 1fr 1fr; gap:clamp(22px,3vw,44px)}
@@ -221,13 +179,16 @@ main{display:block}
 @media (prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none} }
 
 @media (max-width:1100px){
-  .pg-hero{padding:104px 0 30px}
+  .pg-hero{padding:104px 0 32px}
+  .pg-row{grid-template-columns:1fr; gap:4px}
   .d5-foot-grid{grid-template-columns:1fr 1fr}
   .d5-brand{grid-column:1 / -1; max-width:none}
 }
 @media (max-width:640px){
   .pg-wrap,.d2-section{width:calc(100% - 32px)}
   .pg-hero h1{font-size:clamp(28px,8vw,38px)}
+  .pg-inno-row{grid-template-columns:34px minmax(0,1fr); gap:14px; padding:20px 2px}
+  .pg-store-row .d2-badge img{height:48px}
   .d5-foot-grid{grid-template-columns:1fr}
   .d5-foot-bottom{flex-direction:column; gap:6px}
 }
@@ -236,7 +197,7 @@ main{display:block}
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "@id": "https://dyleth.com/ressources/newsletter#breadcrumb",
+  "@id": "https://dyleth.com/soutenir/#breadcrumb",
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -247,12 +208,18 @@ main{display:block}
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Newsletter",
-      "item": "https://dyleth.com/ressources/newsletter"
+      "name": "Soutenir DYLETH",
+      "item": "https://dyleth.com/soutenir/"
     }
   ]
 }
 </script>
+<style id="product-offer-style">
+.product-offer{display:flex;flex-direction:column;align-items:flex-start;gap:10px;line-height:1.5}
+.product-offer .offer-label{font-size:14px;font-weight:600;color:#f5f5f7}
+.product-offer .offer-unit{font-size:16px;font-weight:500;letter-spacing:0}
+.product-offer .per{font-size:17px;color:#c5c6cd}
+</style>
 <meta property="og:image" content="https://dyleth.com/assets/seo/dyleth-og-home.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -261,6 +228,43 @@ main{display:block}
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/premium.css">
+<link rel="stylesheet" href="/assets/home.css">
+<style id="pm-page">
+/* Sous-pages premium : en-tête commun (s'appuie sur premium.css + home.css) */
+.p-hero { position: relative; isolation: isolate; padding: clamp(112px, 13vw, 148px) 0 0; overflow-x: clip; overflow-y: visible; }
+.p-hero::before {
+  content: ""; position: absolute; z-index: -1; width: 820px; height: 820px; right: -260px; top: -300px;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--pm-brand-d) 30%, transparent), transparent 72%);
+}
+.p-hero h1 { margin: 0; font-size: clamp(42px, 5.6vw, 76px); line-height: 1; text-wrap: balance; max-width: 16ch; }
+.p-hero .h-lead { margin-top: 22px; font-size: clamp(17px, 1.45vw, 20px); }
+.p-hero .h-lead strong { color: #fff; font-weight: 600; }
+.h-cta p a { color: #fff; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--pm-brand) 60%, transparent); text-underline-offset: 3px; }
+.h-cta h2 { text-wrap: balance; }
+.h-cta .pg-cta { margin-top: 30px; display: inline-flex; text-decoration: none; }
+@media (max-width: 960px) { .p-hero::before { right: -420px; top: -200px; } }
+/* Page */
+.s-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.s-actions .pg-cta { margin: 0; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; cursor: pointer; font-family: var(--pm-sans); line-height: 1.2; }
+.s-actions .pg-cta svg { width: 18px; height: 18px; flex: none; }
+.s-actions .pg-cta[hidden] { display: none; }
+.s-quote { margin: 22px 0 0; padding: 18px 20px; border-radius: var(--pm-radius-m); border: 1px solid var(--pm-line); background: var(--pm-surface); color: var(--pm-muted); font-size: 15px; line-height: 1.65; overflow-wrap: anywhere; }
+.s-status { min-height: 1.5em; margin: 14px 0 0; color: var(--pm-safe); font-size: 14px; font-weight: 600; }
+.h-duo h3 { margin: 0; font-family: var(--pm-serif); font-weight: 450; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; color: #fff; }
+.h-duo .h-stores { margin-top: 22px; }
+.h-cta .h-mail { margin-top: 14px; color: var(--pm-ink); font-size: 15px; }
+.h-cta .h-mail a { overflow-wrap: anywhere; }
+.pr-facts { margin: 26px 0 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--pm-line); }
+.pr-facts li { list-style: none; padding: 16px 0; border-bottom: 1px solid var(--pm-line); color: var(--pm-muted); font-size: 15.5px; line-height: 1.6; }
+.pr-facts li strong { color: var(--pm-ink); font-weight: 600; }
+.pr-assets { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
+.pr-asset { display: flex; align-items: center; gap: 14px; padding: 14px 18px 14px 14px; border-radius: var(--pm-radius-m); border: 1px solid var(--pm-line-2); color: var(--pm-ink); text-decoration: none; font-size: 14.5px; font-weight: 600; min-width: 0; }
+.pr-asset:hover { border-color: #fff; }
+.pr-asset img { width: 56px; height: 56px; object-fit: contain; padding: 8px; border-radius: var(--pm-radius-s); background: var(--pm-raised); flex: none; }
+.pr-asset span small { display: block; color: var(--pm-faint); font-weight: 400; font-size: 13px; margin-top: 2px; }
+.pr-soon { margin-top: 22px; padding: 26px 20px; border-radius: var(--pm-radius-m); border: 1px dashed var(--pm-line-2); color: var(--pm-muted); font-size: 15px; text-align: center; }
+@media (max-width: 560px) { .s-actions .pg-cta { width: 100%; justify-content: center; } .pr-asset { width: 100%; } }
+</style>
 </head>
 <body>
 
@@ -308,7 +312,6 @@ main{display:block}
       <button class="nav-sub-btn">Par Secteur <span class="caret">▼</span></button>
       <div class="nav-dropdown secteurs">
         <a href="/secteurs/particuliers">Particuliers</a>
-        <a href="/secteurs/familles-seniors">Familles / Seniors</a>
         <a href="/secteurs/professions-liberales">Professions libérales</a>
         <a href="/secteurs/tpe-pme">TPE / PME</a>
         <a href="/secteurs/grandes-entreprises">Grandes entreprises</a>
@@ -321,10 +324,11 @@ main{display:block}
         <a href="/secteurs/droit-finance">Droit &amp; Finance</a>
         <a href="/secteurs/immobilier">Immobilier</a>
         <a href="/secteurs/commerce">Commerce</a>
-        <a href="/secteurs/hotellerie">Hôtellerie</a>
         <a href="/secteurs/crypto">Crypto &amp; Web3</a>
         <a href="/secteurs/sport-culture">Sport &amp; Culture</a>
         <a href="/secteurs/medias">Médias</a>
+        <a href="/secteurs/hotellerie">Hôtellerie</a>
+        <a href="/secteurs/familles-seniors">Familles / Seniors</a>
       </div>
     </li>
     <li class="nav-item">
@@ -397,40 +401,103 @@ main{display:block}
   </div>
 </nav>
 
-<main>
-  <section class="pg-wrap pg-hero">
-    <p class="d2-eyebrow reveal">Ressources · Newsletter</p>
-    <h1 class="reveal">Newsletter</h1>
-    <p class="pg-lead reveal">Les nouvelles menaces, les conseils pratiques, les analyses. <strong>Chaque semaine, sans spam.</strong></p>
-  </section>
+<main id="contenu">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-safe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 19.5l1.3-3.9A8 8 0 1 1 8.6 19l-4.6.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sms" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 18l-2 3M8 10.5h8M8 13.5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V4M8 8l4-4 4 4M5 13v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
 
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">S'inscrire</p>
-      <h2>Deux champs, rien de plus.</h2>
+<!-- ═══ EN-TÊTE ═══ -->
+<section class="p-hero">
+  <div class="h-wrap">
+    <h1>Soutenir DYLETH</h1>
+    <p class="h-lead">DYLETH est gratuit pour tous. La meilleure façon de nous aider : <strong>en parler autour de vous</strong>, laisser un avis sur les stores, ou devenir ambassadeur.</p>
+    <div class="h-free">
+      <span><svg aria-hidden="true"><use href="#i-safe"/></svg>Gratuit pour tous</span>
+      <span><svg aria-hidden="true"><use href="#i-safe"/></svg>Aucun paiement demandé</span>
     </div>
-    <form class="pg-form reveal" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci/">
-      <input type="hidden" name="form-name" value="newsletter">
-      <p class="pg-hp"><label>Ne remplissez pas ce champ si vous êtes humain : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <label for="nl-email">Adresse e-mail</label>
-      <input type="email" id="nl-email" name="email" placeholder="vous@exemple.fr" required>
-      <label for="nl-prenom">Prénom <span style="color:var(--d2-faint);font-weight:400">(optionnel)</span></label>
-      <input type="text" id="nl-prenom" name="prenom" placeholder="Votre prénom">
-      <button type="submit">S'inscrire</button>
-      <p class="pg-note">Vos données ne sont pas revendues. Désinscription en un clic depuis chaque envoi.</p>
-    </form>
-  </section>
+  </div>
+</section>
 
-  <section class="d2-section">
-    <div class="pg-prose reveal">
-      <p>La newsletter reprend l'essentiel de nos analyses : un vecteur de fraude décrypté, un réflexe concret à adopter, et les chiffres publics qui permettent de mesurer le phénomène.</p>
+<!-- ═══ PARTAGER ═══ -->
+<section class="h-sec" id="partager">
+  <div class="h-wrap">
+    <div class="h-head">
+      <h2 class="h-h2">Partager DYLETH avec vos proches.</h2>
+      <p class="h-lead">Un parent, un ami, un collègue : envoyez-lui DYLETH en un geste. Le message est prêt, vous pouvez le modifier avant l'envoi.</p>
     </div>
-    <div class="pg-end reveal">
-      <div class="big">Déjà décidé à vous protéger ?</div>
-      <p>DYLETH est disponible gratuitement pour les particuliers.</p>
-      <div class="pg-cta-row"><a class="pg-cta" href="/telecharger/">Télécharger DYLETH</a><a class="pg-cta ghost" href="/ressources/blog">Lire le blog</a></div>
+    <p class="s-quote" id="share-text">Je te conseille DYLETH, une application gratuite qui aide à repérer les appels, SMS et liens frauduleux, avec un code vert, orange, rouge. https://dyleth.com</p>
+    <div class="s-actions">
+      <a class="pg-cta" href="https://wa.me/?text=Je%20te%20conseille%20DYLETH%2C%20une%20application%20gratuite%20qui%20aide%20%C3%A0%20rep%C3%A9rer%20les%20appels%2C%20SMS%20et%20liens%20frauduleux%2C%20avec%20un%20code%20vert%2C%20orange%2C%20rouge.%20https%3A%2F%2Fdyleth.com" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-chat"/></svg>Partager sur WhatsApp</a>
+      <a class="pg-cta ghost" href="sms:?&amp;body=Je%20te%20conseille%20DYLETH%2C%20une%20application%20gratuite%20qui%20aide%20%C3%A0%20rep%C3%A9rer%20les%20appels%2C%20SMS%20et%20liens%20frauduleux%2C%20avec%20un%20code%20vert%2C%20orange%2C%20rouge.%20https%3A%2F%2Fdyleth.com"><svg aria-hidden="true"><use href="#i-sms"/></svg>Envoyer par SMS</a>
+      <button type="button" class="pg-cta ghost" id="copy-link"><svg aria-hidden="true"><use href="#i-link"/></svg>Copier le lien</button>
+      <button type="button" class="pg-cta ghost" id="native-share" hidden><svg aria-hidden="true"><use href="#i-share"/></svg>Autres applications</button>
     </div>
-  </section>
+    <p class="s-status" id="share-status" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- ═══ AVIS + AMBASSADEURS ═══ -->
+<section class="h-sec">
+  <div class="h-wrap h-duo">
+    <div id="avis">
+      <h3>Laisser un avis sur les stores.</h3>
+      <p>Vous utilisez DYLETH&nbsp;? Un avis sincère sur Google Play ou l'App Store aide d'autres personnes à trouver l'application.</p>
+      <div class="h-stores">
+        <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="h-badge" aria-label="Laisser un avis sur Google Play">
+          <img src="/assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250" loading="lazy">
+        </a>
+        <a href="https://apps.apple.com/fr/app/dyleth/id6774315923" target="_blank" rel="noopener noreferrer" class="h-badge" aria-label="Laisser un avis sur l'App Store">
+          <img src="/assets/store/app-store-fr.svg" alt="Télécharger dans l'App Store" width="127" height="40" loading="lazy">
+        </a>
+      </div>
+    </div>
+    <div id="ambassadeurs">
+      <h3>Devenir ambassadeur.</h3>
+      <p>Vous voulez aller plus loin et faire connaître DYLETH dans votre entourage, votre association ou votre ville&nbsp;? Rejoignez les ambassadeurs.</p>
+      <a class="h-link" href="/rejoindre/ambassadeurs">Découvrir le programme ambassadeurs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-cta">
+      <div class="h-signals" aria-hidden="true"><i></i><i></i><i></i></div>
+      <h2>Pas encore installé&nbsp;?</h2>
+      <p class="h-mail">DYLETH est disponible sur Android et iPhone.</p>
+      <a class="pg-cta" href="/telecharger/">Télécharger DYLETH</a>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var url = "https://dyleth.com";
+  var text = document.getElementById("share-text").textContent;
+  var status = document.getElementById("share-status");
+  var t;
+  function say(msg){ status.textContent = ""; clearTimeout(t); setTimeout(function(){ status.textContent = msg; }, 30); t = setTimeout(function(){ status.textContent = ""; }, 4000); }
+  function fallbackCopy(){
+    var ta = document.createElement("textarea"); ta.value = url; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select(); var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta); return ok;
+  }
+  document.getElementById("copy-link").addEventListener("click", function(){
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(url).then(function(){ say("Lien copié"); }, function(){ say(fallbackCopy() ? "Lien copié" : "Copie impossible : " + url); });
+    } else { say(fallbackCopy() ? "Lien copié" : "Copie impossible : " + url); }
+  });
+  var nb = document.getElementById("native-share");
+  if (navigator.share) {
+    nb.hidden = false;
+    nb.addEventListener("click", function(){ navigator.share({ title: "DYLETH", text: text.replace(url, "").trim(), url: url }).catch(function(){}); });
+  }
+})();
+</script>
 </main>
 
 <footer class="d5-footer">
