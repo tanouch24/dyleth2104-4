@@ -264,6 +264,12 @@ main{display:block}
 .pr-asset span small { display: block; color: var(--pm-faint); font-weight: 400; font-size: 13px; margin-top: 2px; }
 .pr-soon { margin-top: 22px; padding: 26px 20px; border-radius: var(--pm-radius-m); border: 1px dashed var(--pm-line-2); color: var(--pm-muted); font-size: 15px; text-align: center; }
 @media (max-width: 560px) { .s-actions .pg-cta { width: 100%; justify-content: center; } .pr-asset { width: 100%; } }
+
+.pr-shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;margin-top:18px}
+.pr-shot{display:flex;flex-direction:column;align-items:center;gap:10px;padding:12px;border-radius:var(--pm-radius-m);background:var(--pm-surface);border:1px solid var(--pm-line);color:var(--pm-muted);font-size:12.5px;text-align:center;text-decoration:none}
+.pr-shot:hover{border-color:var(--pm-line-2);color:#fff}
+.pr-shot img{width:100%;height:150px;object-fit:contain;border-radius:12px}
+
 </style>
 </head>
 <body>
@@ -456,8 +462,17 @@ main{display:block}
     </div>
     <div id="captures">
       <h3>Captures de l'application.</h3>
-      <p>Des captures réelles, sur Android et sur iPhone, seront ajoutées ici.</p>
-      <div class="pr-soon">Bientôt disponibles</div>
+      <p>Écrans de l'application, issus du clip de présentation. Contacts et numéros fictifs. Cliquez sur une image pour la télécharger.</p>
+      <div class="pr-shots">
+        <a class="pr-shot" href="/assets/app/appel-vert.webp" download="dyleth-appel-vert.webp"><img src="/assets/app/appel-vert.webp" alt="DYLETH : Android : risque faible" loading="lazy"><span>Android : risque faible</span></a>
+        <a class="pr-shot" href="/assets/app/appel-orange.webp" download="dyleth-appel-orange.webp"><img src="/assets/app/appel-orange.webp" alt="DYLETH : Android : prudence" loading="lazy"><span>Android : prudence</span></a>
+        <a class="pr-shot" href="/assets/app/appel-rouge.webp" download="dyleth-appel-rouge.webp"><img src="/assets/app/appel-rouge.webp" alt="DYLETH : Android : danger" loading="lazy"><span>Android : danger</span></a>
+        <a class="pr-shot" href="/assets/app/iphone-pastille.webp" download="dyleth-iphone-pastille.webp"><img src="/assets/app/iphone-pastille.webp" alt="DYLETH : iPhone : pastille de risque" loading="lazy"><span>iPhone : pastille de risque</span></a>
+        <a class="pr-shot" href="/assets/app/fiche-appelant.webp" download="dyleth-fiche-appelant.webp"><img src="/assets/app/fiche-appelant.webp" alt="DYLETH : Fiche de l'appelant" loading="lazy"><span>Fiche de l'appelant</span></a>
+        <a class="pr-shot" href="/assets/app/protections.webp" download="dyleth-protections.webp"><img src="/assets/app/protections.webp" alt="DYLETH : Écran Protections" loading="lazy"><span>Écran Protections</span></a>
+        <a class="pr-shot" href="/assets/app/statistiques.webp" download="dyleth-statistiques.webp"><img src="/assets/app/statistiques.webp" alt="DYLETH : Tableau de bord" loading="lazy"><span>Tableau de bord</span></a>
+        <a class="pr-shot" href="/assets/app/messageries.webp" download="dyleth-messageries.webp"><img src="/assets/app/messageries.webp" alt="DYLETH : Appels classiques, WhatsApp, Telegram (Android)" loading="lazy"><span>Appels classiques, WhatsApp, Telegram (Android)</span></a>
+      </div>
     </div>
   </div>
 </section>

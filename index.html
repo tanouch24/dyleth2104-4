@@ -356,33 +356,17 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
     </div>
 
     <div class="h-device">
-      <div class="h-phone">
-        <div class="h-screen" id="h-screen" role="img" aria-live="polite" aria-label="Exemple d'écran d'appel DYLETH sur Android : risque élevé">
-          <div class="h-call">
-            <span class="app"><i></i>Analyse DYLETH</span>
-            <p class="lvl swap"><svg aria-hidden="true"><use data-k="icon" href="#i-risk"/></svg><span data-k="lvl">Risque élevé</span></p>
-            <p class="num swap" data-k="num">+33 1 99 00 42 17</p>
-            <p class="who swap" data-k="who">Identité communautaire : faux conseiller bancaire</p>
-          </div>
-          <div class="h-why swap">
-            <b>Pourquoi cette couleur ?</b>
-            <p data-k="why">Plusieurs signalements récents de la communauté pour une usurpation de banque, sur une ligne de type VoIP.</p>
-          </div>
-          <dl class="h-facts swap">
-            <div><dt>Niveau de confiance</dt><dd data-k="conf">Élevé</dd></div>
-            <div><dt>Pays / zone du numéro</dt><dd data-k="pays">France</dd></div>
-            <div><dt>Indicatif</dt><dd data-k="ind">+33</dd></div>
-            <div><dt>Type de ligne</dt><dd data-k="type">VoIP</dd></div>
-          </dl>
-          <div class="h-actions"><span>Ignorer</span><span>Détails</span></div>
-        </div>
+      <div class="h-shot" id="h-screen" role="img" aria-live="polite" aria-label="Écran d'appel DYLETH sur Android : risque faible">
+        <img class="h-shot-img is-on" data-v="safe" src="/assets/app/appel-vert.webp" alt="" width="440" height="860" fetchpriority="high">
+        <img class="h-shot-img" data-v="warn" src="/assets/app/appel-orange.webp" alt="" width="440" height="860">
+        <img class="h-shot-img" data-v="risk" src="/assets/app/appel-rouge.webp" alt="" width="440" height="860">
       </div>
       <div class="h-legend" role="group" aria-label="Voir un exemple par couleur">
         <button type="button" data-v="safe" aria-pressed="false"><svg aria-hidden="true"><use href="#i-safe"/></svg>Risque faible</button>
         <button type="button" data-v="warn" aria-pressed="false"><svg aria-hidden="true"><use href="#i-warn"/></svg>Vigilance</button>
         <button type="button" data-v="risk" aria-pressed="true"><svg aria-hidden="true"><use href="#i-risk"/></svg>Risque élevé</button>
       </div>
-      <p class="h-mock-note">Illustration de l'écran Android, numéros fictifs. Sur iPhone, l'affichage est différent (voir plus bas).</p>
+      <p class="h-mock-note">Écrans d'appel de l'application DYLETH sur Android, contacts et numéros fictifs. Sur iPhone, l'affichage est différent (voir plus bas).</p>
     </div>
   </div>
 
@@ -390,6 +374,7 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
     <div class="h-band-in">
       <p class="apps"><span>Appels classiques</span><span>WhatsApp</span><span>Telegram</span><span>Signal</span></p>
       <div>
+        <img class="h-band-img" src="/assets/app/messageries.webp" alt="Trois écrans d'appel DYLETH sur Android : appel classique en vert, WhatsApp en orange, Telegram en rouge" width="720" height="540" loading="lazy">
         <p>Appels classiques, WhatsApp, Telegram, Signal : DYLETH étend sa protection aux communications que vous utilisez déjà. Les appels WhatsApp, Telegram et Signal sont pris en charge sur Android.</p>
         <p class="h-small">Selon les capacités et autorisations propres à chaque plateforme et système, DYLETH applique ses mécanismes de protection aux communications prises en charge.</p>
       </div>
@@ -406,18 +391,14 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
     </div>
     <div class="h-os">
       <article class="h-os-card">
-        <div class="h-mini android" aria-hidden="true">
-          <div class="s"><span class="l">Analyse DYLETH</span><span class="n">Risque élevé</span><span class="l">+33 1 99 00 42 17</span><span class="btns"><i></i><i></i></span></div>
-        </div>
+        <img class="h-os-img" src="/assets/app/appel-rouge.webp" alt="Écran d'appel DYLETH sur Android, entièrement rouge : numéro associé à des signalements de fraude" width="440" height="860" loading="lazy">
         <div>
           <h3>Sur Android</h3>
           <p>L'écran d'appel change de couleur automatiquement : vert, orange ou rouge. Pour les appels classiques, WhatsApp, Telegram et Signal.</p>
         </div>
       </article>
       <article class="h-os-card">
-        <div class="h-mini ios" aria-hidden="true">
-          <div class="s"><span class="l">appel mobile</span><span class="n">+33 1 99 00 42 17</span><span class="row"><span class="dot">Risque élevé</span></span><span class="det">Détails</span><span class="btns"><i></i><i></i></span></div>
-        </div>
+        <img class="h-os-img" src="/assets/app/iphone-pastille.webp" alt="Écran d'appel natif de l'iPhone avec une pastille de risque rouge à côté du numéro" width="420" height="830" loading="lazy">
         <div>
           <h3>Sur iPhone</h3>
           <p>Une pastille de risque apparaît automatiquement à côté du nom, sur l'écran d'appel natif des appels classiques. Le détail coloré complet s'ouvre sur demande : bouton « Détails » ou double tapotement au dos de l'iPhone (Back Tap).</p>
@@ -445,6 +426,11 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
         <li><span class="t">QR codes</span><span class="d">Un scanner intégré à DYLETH analyse le lien avant ouverture. L'ouverture reste toujours votre décision.</span><span class="pm-status soon">Prochainement</span></li>
         <li><span class="t">Deepfakes et faux comptes</span><span class="d">Voix et vidéos truquées, usurpation sur les réseaux sociaux.</span><span class="pm-status dev">En développement</span></li>
       </ul>
+    </div>
+    <div class="h-screens">
+      <figure><img src="/assets/app/protections.webp" alt="Écran Protections de l'application DYLETH : activation des protections appels, SMS, e-mails et DNS" width="520" height="980" loading="lazy"><figcaption>Vos protections, activables une par une</figcaption></figure>
+      <figure><img src="/assets/app/statistiques.webp" alt="Écran Statistiques de l'application DYLETH : menaces surveillées et alertes de la semaine" width="520" height="740" loading="lazy"><figcaption>Le tableau de bord de la semaine</figcaption></figure>
+      <figure><img src="/assets/app/fiche-appelant.webp" alt="Fiche de l'appelant affichée par DYLETH : numéro inconnu, opérateur inconnu, signalements enregistrés" width="440" height="870" loading="lazy"><figcaption>Les informations disponibles sur l'appelant</figcaption></figure>
     </div>
     <a class="h-link" href="/solution/7-modules">Voir les fonctionnalités en détail</a>
   </div>
@@ -571,50 +557,30 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
 </main>
 
 <script>
-/* Écran d'appel de démonstration : trois exemples fictifs, défilement doux. */
+/* Écrans d'appel réels (vert, orange, rouge) : défilement doux, pilotable par la légende. */
 (function () {
   var hero = document.getElementById('hero');
   var screen = document.getElementById('h-screen');
   if (!hero || !screen) return;
-  var data = {
-    safe: { icon: '#i-safe', lvl: 'Risque faible', num: '+33 4 65 71 23 08', who: 'Identité communautaire : cabinet médical',
-            why: 'Numéro connu de la communauté, aucun signalement, ligne fixe cohérente avec l’identité affichée.',
-            conf: 'Élevé', pays: 'France', ind: '+33', type: 'Fixe' },
-    warn: { icon: '#i-warn', lvl: 'Vigilance', num: '+44 20 7946 0958', who: 'Numéro international inconnu',
-            why: 'Numéro absent de vos contacts, peu d’informations disponibles. Prudence avant de communiquer des informations.',
-            conf: 'Moyen', pays: 'Royaume-Uni', ind: '+44', type: 'Fixe' },
-    risk: { icon: '#i-risk', lvl: 'Risque élevé', num: '+33 1 99 00 42 17', who: 'Identité communautaire : faux conseiller bancaire',
-            why: 'Plusieurs signalements récents de la communauté pour une usurpation de banque, sur une ligne de type VoIP.',
-            conf: 'Élevé', pays: 'France', ind: '+33', type: 'VoIP' }
-  };
+  var labels = { safe: 'risque faible', warn: 'vigilance', risk: 'risque élevé' };
   var order = ['safe', 'warn', 'risk'];
+  var imgs = screen.querySelectorAll('.h-shot-img');
   var buttons = hero.querySelectorAll('.h-legend button');
-  var current = 'risk', timer = null;
+  var current = 'safe', timer = null;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   function show(v) {
-    var d = data[v];
     current = v;
-    screen.classList.add('fading');
-    setTimeout(function () {
-      hero.setAttribute('data-v', v);
-      screen.querySelectorAll('[data-k]').forEach(function (el) {
-        var k = el.getAttribute('data-k');
-        if (k === 'icon') el.setAttribute('href', d.icon); else el.textContent = d[k];
-      });
-      screen.setAttribute('aria-label', 'Exemple d’écran d’appel DYLETH sur Android : ' + d.lvl.toLowerCase());
-      screen.classList.remove('fading');
-    }, reduce ? 0 : 350);
+    hero.setAttribute('data-v', v);
+    imgs.forEach(function (i) { i.classList.toggle('is-on', i.dataset.v === v); });
+    screen.setAttribute('aria-label', 'Écran d\u2019appel DYLETH sur Android : ' + labels[v]);
     buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === v)); });
   }
   function next() { show(order[(order.indexOf(current) + 1) % order.length]); }
-  function start() { if (!reduce) timer = setInterval(next, 4200); }
-
   buttons.forEach(function (b) {
     b.addEventListener('click', function () { clearInterval(timer); show(b.dataset.v); });
   });
   show('safe');
-  start();
+  if (!reduce) timer = setInterval(next, 3800);
 })();
 </script>
 

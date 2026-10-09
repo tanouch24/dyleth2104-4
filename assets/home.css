@@ -204,3 +204,26 @@
 @media (prefers-reduced-motion: reduce) {
   .h-hero::before, .h-call, .h-phone, .h-screen .swap { transition: none !important; }
 }
+
+/* ── Vrais écrans de l'application ───────────────────────────── */
+.h-shot {
+  position: relative; width: min(300px, 74vw); aspect-ratio: 440 / 860; margin: 0 auto;
+  filter: drop-shadow(0 40px 60px rgba(0,0,0,.55)) drop-shadow(0 0 70px color-mix(in srgb, var(--verdict) 35%, transparent));
+  transition: filter 1.2s ease;
+}
+.h-shot-img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+  border-radius: 34px; opacity: 0; transition: opacity .6s ease;
+}
+.h-shot-img.is-on { opacity: 1; }
+.h-os-img { width: 132px; height: auto; border-radius: 20px; box-shadow: 0 20px 40px -18px rgba(0,0,0,.8); }
+.h-band-img { display: block; width: 100%; max-width: 440px; height: auto; border-radius: 20px; margin: 0 0 22px; }
+.h-screens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 40px 0 28px; align-items: start; }
+.h-screens figure { margin: 0; padding: 18px 18px 14px; border-radius: var(--pm-radius-l); background: var(--pm-surface); border: 1px solid var(--pm-line); }
+.h-screens img { display: block; width: 100%; max-width: 260px; height: auto; margin: 0 auto; border-radius: 22px; }
+.h-screens figcaption { margin-top: 14px; text-align: center; color: var(--pm-muted); font-size: 13.5px; }
+@media (max-width: 760px) {
+  .h-screens { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 74%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .h-screens figure { scroll-snap-align: start; }
+}
+@media (prefers-reduced-motion: reduce) { .h-shot, .h-shot-img { transition: none !important; } }
