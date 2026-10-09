@@ -64,7 +64,8 @@
 /a-propos/mission.html                       /a-propos/mission                        301!
 /rejoindre/ambassadeurs.html                 /rejoindre/ambassadeurs                  301!
 /legal/cgu.html                              /legal/cgu                               301!
-/legal/cgv.html                              /legal/cgv                               301!
+/legal/cgv.html                              /legal/cgu                               301!
+/legal/cgv                                   /legal/cgu                               301!
 /legal/confidentialite.html                  /legal/confidentialite                   301!
 /legal/cookies.html                          /legal/cookies                           301!
 /legal/mentions-legales.html                 /legal/mentions-legales                  301!
