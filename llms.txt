@@ -26,6 +26,7 @@ Nom de marque : DYLETH (en majuscules). Langue principale du site : français. L
 - [Glossaire](https://dyleth.com/comprendre/glossaire)
 - [Signaler une arnaque : qui contacter ?](https://dyleth.com/comprendre/signaler-une-arnaque)
 - [Appel frauduleux : que faire ?](https://dyleth.com/comprendre/appel-frauduleux-que-faire): réflexes pendant et après l'appel, opposition, où signaler
+- [Bloctel supprimé : les alternatives](https://dyleth.com/comprendre/alternative-bloctel): ce qui a changé le 11 août 2026 et les solutions disponibles
 - [Bloquer ou filtrer les appels indésirables](https://dyleth.com/comprendre/bloquer-appels-indesirables): réglages iPhone et Android, cadre légal depuis la fin de Bloctel
 
 ## La menace en chiffres
@@ -43,6 +44,8 @@ Nom de marque : DYLETH (en majuscules). Langue principale du site : français. L
 - [Feuille de route](https://dyleth.com/roadmap/)
 - [Organisations : gratuit aussi](https://dyleth.com/entreprises/)
 - [Comparatif](https://dyleth.com/solution/comparatif)
+- [Applications anti-arnaque : comparatif](https://dyleth.com/solution/application-anti-arnaque): Truecaller, Orange Téléphone, Saracroche, Téléphone de Google, réglages iPhone, DYLETH
+- [Saracroche ou DYLETH : quelle différence ?](https://dyleth.com/solution/saracroche-ou-dyleth)
 - [Télécharger](https://dyleth.com/telecharger/)
 
 ## Secteurs (usage par profil)
