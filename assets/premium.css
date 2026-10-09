@@ -1,0 +1,210 @@
+/* ════════════════════════════════════════════════════════════════
+   DYLETH — couche « premium » (chargée APRÈS les styles de chaque page)
+   Direction : nuit d'encre bleutée, titres Fraunces, code couleur
+   vert / orange / rouge comme seul accent fort.
+═════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Palette */
+  --pm-night:   #0A1124;   /* fond */
+  --pm-deep:    #070C1A;   /* pied de page, zones creuses */
+  --pm-surface: #111A33;   /* cartes */
+  --pm-raised:  #18233F;   /* survol, téléphone */
+  --pm-ink:     #EDF0F7;   /* texte principal */
+  --pm-muted:   #A3ACC2;   /* texte secondaire */
+  --pm-faint:   #8C96AE;   /* légendes (contraste AA sur --pm-night) */
+  --pm-line:    rgba(178, 192, 230, .13);
+  --pm-line-2:  rgba(178, 192, 230, .22);
+  --pm-brand:   #6F8BFF;   /* bleu Dyleth éclairci pour fond sombre */
+  --pm-brand-d: #2B3FD6;
+  --pm-safe:    #3FD18A;
+  --pm-warn:    #F2B33D;
+  --pm-risk:    #F0545C;
+
+  --pm-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --pm-sans:  "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --pm-radius-s: 10px;
+  --pm-radius-m: 18px;
+  --pm-radius-l: 28px;
+
+  /* On re-câble les variables existantes des pages */
+  --d2-ink: var(--pm-ink);
+  --d2-muted: var(--pm-muted);
+  --d2-faint: var(--pm-faint);
+  --d2-line: var(--pm-line);
+  --d2-blue: var(--pm-brand);
+  --d2-max: 1160px;
+  --hp-faint: var(--pm-faint);
+  --bg: var(--pm-night);
+  --bg2: var(--pm-deep);
+  --bg3: var(--pm-surface);
+  --blue: var(--pm-brand);
+  --white: var(--pm-ink);
+  --border: var(--pm-line);
+}
+
+html { background: var(--pm-night); }
+body {
+  background:
+    radial-gradient(1200px 520px at 78% -120px, rgba(43, 63, 214, .22), transparent 70%),
+    var(--pm-night) !important;
+  color: var(--pm-ink);
+  font-family: var(--pm-sans) !important;
+  font-feature-settings: "ss01", "cv11";
+}
+::selection { background: rgba(111, 139, 255, .35); color: #fff; }
+
+/* ── Titres : Fraunces ─────────────────────────────────────────── */
+h1, h2, .pg-end .big, .hp-h2 {
+  font-family: var(--pm-serif) !important;
+  font-optical-sizing: auto;
+  font-weight: 450 !important;
+  letter-spacing: -.012em !important;
+  color: #fff;
+}
+.pg-hero h1 { font-size: clamp(38px, 5vw, 66px) !important; line-height: 1.02 !important; max-width: 18ch; }
+.d2-section-head h2 { font-size: clamp(28px, 3.4vw, 46px) !important; line-height: 1.06 !important; }
+.article-body h2 { font-size: clamp(23px, 2.6vw, 30px) !important; line-height: 1.18 !important; }
+h3 { letter-spacing: -.005em; }
+
+/* Les surtitres : plus de capitales espacées, une étiquette discrète */
+.d2-eyebrow, .hp-eyebrow, .card-list .k {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: var(--pm-brand) !important;
+}
+.d2-eyebrow::before, .hp-eyebrow::before { display: none !important; }
+
+/* ── Navigation : verre fumé ───────────────────────────────────── */
+nav.main-nav {
+  background: rgba(10, 17, 36, .72) !important;
+  backdrop-filter: saturate(160%) blur(18px);
+  -webkit-backdrop-filter: saturate(160%) blur(18px);
+  border-bottom: 1px solid var(--pm-line) !important;
+}
+.nav-logo {
+  display: inline-flex !important; align-items: center; gap: 0 !important;
+  letter-spacing: .18em !important; font-weight: 750 !important; color: #fff !important;
+}
+.nav-logo::before {
+  content: ""; width: 22px; height: 26px; flex: none; margin-right: 10px;
+  background: url("/favicon.svg") center / contain no-repeat;
+}
+.nav-logo span { color: var(--pm-brand) !important; }
+.nav-dropdown, .lang-dropdown {
+  background: rgba(17, 26, 51, .97) !important;
+  border: 1px solid var(--pm-line-2) !important;
+  border-radius: var(--pm-radius-m) !important;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .7) !important;
+}
+.nav-dropdown a:hover, .lang-dropdown a:hover { background: rgba(111, 139, 255, .14) !important; color: #fff !important; }
+.nav-cta, .nav-item-cta > .nav-cta {
+  background: #fff !important; color: var(--pm-night) !important;
+  border-radius: 999px !important; font-weight: 650 !important; border: 0 !important;
+}
+
+/* ── Corps de texte ─────────────────────────────────────────────── */
+.pg-lead { color: var(--pm-muted) !important; font-size: clamp(17px, 1.35vw, 20px) !important; }
+.pg-prose p, .article-body p, .num-item p, .pg-row .d, .facts li { color: var(--pm-muted) !important; }
+.pg-prose a, .article-body a, .pg-inline-link, .num-item a, .pg-row .d a, .pg-end p a, .legal-dl dd a {
+  color: #fff !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(111, 139, 255, .6) !important;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.pg-prose a:hover, .article-body a:hover, .pg-inline-link:hover { text-decoration-color: #fff !important; }
+
+/* Numéros de liste en serif (et non plus en mono) */
+.num-item .n, .article-body ol li::before {
+  font-family: var(--pm-serif) !important;
+  font-size: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important;
+  color: var(--pm-brand) !important; padding-top: 0 !important;
+}
+.pg-note, .article-meta { font-family: var(--pm-sans) !important; letter-spacing: 0 !important; font-size: 12.5px !important; }
+.article-sources h2 { font-family: var(--pm-sans) !important; text-transform: none !important; letter-spacing: 0 !important; font-size: 15px !important; font-weight: 600 !important; }
+
+/* Filets */
+.num-list, .pg-list, .facts, .legal-dl, .article-sources, .pg-form { border-top-color: var(--pm-line) !important; }
+.num-item, .pg-row, .facts li, .legal-dl > div, .mini-table td { border-bottom-color: var(--pm-line) !important; }
+
+/* ── Boutons ────────────────────────────────────────────────────── */
+.pg-cta, .pg-form button[type=submit] {
+  background: #fff !important; color: var(--pm-night) !important;
+  border: 1px solid #fff !important; border-radius: 999px !important;
+  padding: 13px 22px !important; font-size: 14px !important; font-weight: 650 !important;
+  transition: transform .18s ease, box-shadow .18s ease !important;
+}
+.pg-cta:hover, .pg-form button[type=submit]:hover {
+  transform: translateY(-1px); box-shadow: 0 10px 30px -10px rgba(111, 139, 255, .7);
+  background: #fff !important; filter: none !important;
+}
+.pg-cta.ghost {
+  background: transparent !important; color: var(--pm-ink) !important;
+  border-color: var(--pm-line-2) !important;
+}
+.pg-cta.ghost:hover { border-color: #fff !important; box-shadow: none; }
+
+/* ── Cartes ─────────────────────────────────────────────────────── */
+.card-list {
+  gap: 14px !important; background: none !important; border: 0 !important;
+}
+.card-list a {
+  background: var(--pm-surface) !important;
+  border: 1px solid var(--pm-line) !important;
+  border-radius: var(--pm-radius-m) !important;
+  transition: border-color .18s ease, background .18s ease !important;
+}
+.card-list a:hover { background: var(--pm-raised) !important; border-color: var(--pm-line-2) !important; }
+.card-list h3 { font-family: var(--pm-serif); font-weight: 500 !important; font-size: 19px !important; }
+
+/* Tableaux */
+.mini-table th { border-bottom-color: var(--pm-line-2) !important; }
+.mini-table .yes { color: var(--pm-safe) !important; }
+
+/* Formulaires */
+.pg-form input[type=email], .pg-form input[type=text], .pg-form input[type=url],
+.pg-form select, .pg-form textarea {
+  background: var(--pm-surface) !important; border-color: var(--pm-line-2) !important;
+  border-radius: var(--pm-radius-s) !important;
+}
+.pg-form input:focus, .pg-form select:focus, .pg-form textarea:focus { border-color: var(--pm-brand) !important; }
+
+/* Bloc final de page */
+.pg-end {
+  margin-top: 40px; padding: clamp(32px, 5vw, 56px) !important;
+  background: linear-gradient(160deg, rgba(43, 63, 214, .18), rgba(17, 26, 51, .6) 60%);
+  border: 1px solid var(--pm-line);
+  border-radius: var(--pm-radius-l);
+}
+
+/* ── Pied de page ──────────────────────────────────────────────── */
+.d5-footer { background: var(--pm-deep) !important; border-top-color: var(--pm-line) !important; }
+.d5-brand .wm { letter-spacing: .18em !important; }
+.d5-brand .wm span { color: var(--pm-brand) !important; }
+.d5-foot-col h4 {
+  text-transform: none !important; letter-spacing: 0 !important;
+  font-size: 13.5px !important; font-weight: 600 !important;
+}
+.d5-foot-col a:hover { color: #fff !important; }
+.d5-brand .tags span { border-radius: 999px !important; border-color: var(--pm-line-2) !important; }
+
+/* ── Pastilles de statut réutilisables ─────────────────────────── */
+.pm-status { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.pm-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.pm-status.on   { color: var(--pm-safe); }
+.pm-status.soon { color: var(--pm-warn); }
+.pm-status.dev  { color: var(--pm-faint); }
+
+/* Focus visible partout */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--pm-brand) !important; outline-offset: 3px !important; border-radius: 6px;
+}
+
+/* Animations d'apparition : une seule entrée douce, désactivable */
+.reveal { transition-duration: .7s !important; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
