@@ -209,6 +209,71 @@ main{display:block}
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/premium.css">
+<link rel="stylesheet" href="/assets/home.css">
+<style id="pm-page">
+/* Sous-pages premium : en-tête commun (s'appuie sur premium.css + home.css) */
+.p-hero { position: relative; isolation: isolate; padding: clamp(112px, 13vw, 148px) 0 0; overflow-x: clip; overflow-y: visible; }
+.p-hero::before {
+  content: ""; position: absolute; z-index: -1; width: 820px; height: 820px; right: -260px; top: -300px;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--pm-brand-d) 30%, transparent), transparent 72%);
+}
+.p-hero h1 { margin: 0; font-size: clamp(42px, 5.6vw, 76px); line-height: 1; text-wrap: balance; max-width: 16ch; }
+.p-hero .h-lead { margin-top: 22px; font-size: clamp(17px, 1.45vw, 20px); }
+.p-hero .h-lead strong { color: #fff; font-weight: 600; }
+.h-cta p a { color: #fff; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--pm-brand) 60%, transparent); text-underline-offset: 3px; }
+.h-cta h2 { text-wrap: balance; }
+.h-cta .pg-cta { margin-top: 30px; display: inline-flex; text-decoration: none; }
+@media (max-width: 960px) { .p-hero::before { right: -420px; top: -200px; } }
+/* Fonctionnalités */
+.f-call {
+  margin-top: 44px; padding: clamp(26px, 4vw, 48px); border-radius: var(--pm-radius-l);
+  border: 1px solid var(--pm-line-2);
+  background:
+    radial-gradient(700px 360px at 85% 0%, color-mix(in srgb, var(--pm-brand-d) 28%, transparent), transparent 70%),
+    var(--pm-surface);
+}
+.f-call-top { display: grid; grid-template-columns: minmax(0, 1.25fr) auto; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.f-call h2 { margin: 12px 0 0; font-size: clamp(32px, 3.8vw, 50px); line-height: 1.02; }
+.f-call .intro { margin: 16px 0 0; color: var(--pm-muted); font-size: 16px; line-height: 1.65; max-width: 60ch; }
+.f-call .intro b { color: #fff; font-weight: 600; }
+.f-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; }
+.f-chips li { list-style: none; padding: 7px 13px; border-radius: 999px; border: 1px solid var(--pm-line-2); color: var(--pm-ink); font-size: 13px; }
+.f-sig { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 20px; color: var(--pm-muted); font-size: 14px; }
+.f-sig span { display: inline-flex; align-items: center; gap: 8px; }
+.f-sig svg { width: 17px; height: 17px; }
+.f-sig .g { color: var(--pm-safe); } .f-sig .o { color: var(--pm-warn); } .f-sig .r { color: var(--pm-risk); }
+.f-phones { display: flex; gap: 16px; }
+.f-phones figure { margin: 0; display: grid; justify-items: center; gap: 10px; }
+.f-phones figcaption { color: var(--pm-faint); font-size: 12.5px; }
+.f-os { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: clamp(28px, 4vw, 44px); border-top: 1px solid var(--pm-line); }
+.f-os > div { padding: 24px 0 0; }
+.f-os > div + div { padding-left: clamp(24px, 4vw, 48px); margin-left: clamp(24px, 4vw, 48px); border-left: 1px solid var(--pm-line); }
+.f-os h3 { margin: 0; font-family: var(--pm-serif); font-weight: 450; font-size: 23px; color: #fff; }
+.f-os p { margin: 10px 0 0; color: var(--pm-muted); font-size: 14.5px; line-height: 1.65; }
+.f-vo { margin: 28px 0 0; padding: 14px 18px; border-radius: var(--pm-radius-s); background: color-mix(in srgb, var(--pm-ink) 5%, transparent); color: var(--pm-muted); font-size: 14px; line-height: 1.55; }
+.f-vo b { color: #fff; font-weight: 600; }
+.f-call .h-small { margin: 16px 0 0; }
+
+.f-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 44px; }
+.f-card { display: flex; flex-direction: column; padding: 28px; border-radius: var(--pm-radius-m); background: var(--pm-surface); border: 1px solid var(--pm-line); }
+.f-card h3 { margin: 16px 0 0; font-family: var(--pm-serif); font-weight: 450; font-size: 24px; line-height: 1.12; color: #fff; }
+.f-card p { margin: 10px 0 0; color: var(--pm-muted); font-size: 14.5px; line-height: 1.65; }
+.f-card.is-soon { background: transparent; border-style: dashed; border-color: var(--pm-line-2); }
+.f-card .pm-status { align-self: flex-start; }
+.h-status .d a.pg-inline-link { white-space: nowrap; }
+
+@media (max-width: 960px) {
+  .f-call-top { grid-template-columns: 1fr; }
+  .f-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .f-os { grid-template-columns: 1fr; }
+  .f-os > div + div { padding-left: 0; margin-left: 0; border-left: 0; margin-top: 24px; border-top: 1px solid var(--pm-line); }
+  .f-grid { grid-template-columns: 1fr; }
+  .f-phones { gap: 12px; }
+  .f-phones .h-mini { width: 116px; height: 220px; }
+}
+</style>
 </head>
 <body>
 
@@ -344,138 +409,140 @@ main{display:block}
   </div>
 </nav>
 
-<main>
-  <section class="pg-wrap pg-hero">
-    <p class="d2-eyebrow reveal">La solution · Modules</p>
-    <h1 class="reveal">Les fonctionnalités de protection</h1>
-    <p class="pg-lead reveal">Une seule application, gratuite pour tous : <strong>appels, SMS, liens, Wi-Fi mobile, Wi-Fi maison et tableau de bord</strong> sont disponibles ; la protection des <strong>emails</strong> est en cours d'activation.</p>
-    <div class="pg-audience reveal">
-      <span>Gratuit pour tous</span><span>Analyse en temps réel</span><span>Aucune donnée revendue</span>
+<main id="contenu">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-safe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3.5L2.5 20h19L12 3.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4.5M12 17.2v.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-risk" viewBox="0 0 24 24"><path d="M8.2 2.8h7.6l5.4 5.4v7.6l-5.4 5.4H8.2l-5.4-5.4V8.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ═══ EN-TÊTE ═══ -->
+<section class="p-hero">
+  <div class="h-wrap">
+    <h1>Les fonctionnalités de protection</h1>
+    <p class="h-lead">Une seule application, gratuite pour tous : <strong>appels, SMS, liens, Wi-Fi mobile, Wi-Fi maison et tableau de bord</strong> sont disponibles ; la protection des <strong>emails</strong> est en cours d'activation.</p>
+    <div class="h-free">
+      <span><svg aria-hidden="true"><use href="#i-safe"/></svg>Gratuit pour tous</span>
+      <span><svg aria-hidden="true"><use href="#i-safe"/></svg>Analyse en temps réel</span>
+      <span><svg aria-hidden="true"><use href="#i-safe"/></svg>Aucune donnée revendue</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Modules</p>
-      <h2>Chaque module, avec son statut réel.</h2>
-    </div>
-
-    <div class="mod-list reveal">
-
-      <div class="mod">
-        <div class="num">01</div>
+<!-- ═══ APPELS (module principal) ═══ -->
+<section class="h-sec" style="padding-top:clamp(40px,6vw,64px)">
+  <div class="h-wrap">
+    <article class="f-call">
+      <div class="f-call-top">
         <div>
-          <h3>Anti-fraude Appels <span class="tag">Disponible</span></h3>
-          <p>Analyse le numéro de chaque appel entrant — sur les appels classiques et, sur Android, sur <b>WhatsApp, Telegram et Signal</b> — et affiche un signal clair avant que vous ne décrochiez, pour vous aider à identifier les <a class="pg-inline-link" href="/comprendre/vishing">appels frauduleux</a>. Base de signatures enrichie en continu.</p>
-          <p><strong>Sur Android</strong> : l'écran d'appel change de couleur automatiquement (vert, orange, rouge), sur les appels classiques comme sur WhatsApp, Telegram et Signal. L'affichage enrichi de l'appelant (pays / zone associés au numéro, opérateur, type de ligne, niveau de confiance) est disponible sur Android.</p>
-          <p><strong>Sur iPhone</strong> : DYLETH s'adapte aux possibilités du système. Une pastille de risque apparaît automatiquement à côté du nom sur l'écran d'appel natif ; le détail coloré complet s'ouvre sur demande, avec le bouton « Détails » ou un double tapotement au dos de l'iPhone (Back Tap).</p>
-          <p class="product-ios">Selon les capacités et autorisations propres à chaque plateforme et système, DYLETH applique ses mécanismes de protection aux communications prises en charge. Sur iPhone, la protection concerne les appels classiques.</p>
-          <div class="chan">
-            <span>Appels GSM</span>
-            <span>WhatsApp · Android</span>
-            <span>Telegram · Android</span>
-            <span>Signal · Android</span>
+          <span class="pm-status on">Disponible</span>
+          <h2>Anti-fraude Appels</h2>
+          <p class="intro">Analyse le numéro de chaque appel entrant — sur les appels classiques et, sur Android, sur <b>WhatsApp, Telegram et Signal</b> — et affiche un signal clair avant que vous ne décrochiez, pour vous aider à identifier les <a class="pg-inline-link" href="/comprendre/vishing">appels frauduleux</a>. Base de signatures enrichie en continu.</p>
+          <ul class="f-chips" aria-label="Communications prises en charge">
+            <li>Appels GSM</li><li>WhatsApp · Android</li><li>Telegram · Android</li><li>Signal · Android</li>
+          </ul>
+          <div class="f-sig">
+            <span><svg class="g" aria-hidden="true"><use href="#i-safe"/></svg>Vert : risque faible</span>
+            <span><svg class="o" aria-hidden="true"><use href="#i-warn"/></svg>Orange : vigilance</span>
+            <span><svg class="r" aria-hidden="true"><use href="#i-risk"/></svg>Rouge : risque élevé</span>
           </div>
-          <div class="sig">
-            <span><i class="g"></i> Vert — risque faible</span>
-            <span><i class="o"></i> Orange — vigilance</span>
-            <span><i class="r"></i> Rouge — risque élevé</span>
-          </div>
-          <p class="vo"><b>Annonce vocale de l'appelant intégrée</b> <span>— activable ou désactivable depuis le tableau de bord.</span></p>
+        </div>
+        <div class="f-phones" aria-hidden="true">
+          <figure>
+            <div class="h-mini android"><div class="s"><span class="l">Analyse DYLETH</span><span class="n">Risque élevé</span><span class="l">+33 1 99 00 42 17</span><span class="btns"><i></i><i></i></span></div></div>
+            <figcaption>Android</figcaption>
+          </figure>
+          <figure>
+            <div class="h-mini ios"><div class="s"><span class="l">appel mobile</span><span class="n">+33 1 99 00 42 17</span><span class="row"><span class="dot">Risque élevé</span></span><span class="det">Détails</span><span class="btns"><i></i><i></i></span></div></div>
+            <figcaption>iPhone</figcaption>
+          </figure>
         </div>
       </div>
 
-      <div class="mod">
-        <div class="num">02</div>
+      <div class="f-os">
         <div>
-          <h3>Anti-fraude SMS <span class="tag">Disponible</span></h3>
-          <p>Analyse le contenu du SMS et émet une alerte lorsqu'un lien ou un message présente des caractéristiques connues de fraude (smishing).</p>
+          <h3>Sur Android</h3>
+          <p>L'écran d'appel change de couleur automatiquement (vert, orange, rouge), sur les appels classiques comme sur WhatsApp, Telegram et Signal. L'affichage enrichi de l'appelant (pays / zone associés au numéro, opérateur, type de ligne, niveau de confiance) est disponible sur Android.</p>
         </div>
-      </div>
-
-      <div class="mod">
-        <div class="num">03</div>
         <div>
-          <h3>Anti-fraude Emails <span class="tag pro">En cours d'activation</span></h3>
-          <p>Pas encore disponible : en attente de l'approbation de Google. Ce module analysera les métadonnées de vos emails (expéditeur, objet) pour vous aider à repérer le <a class="pg-inline-link" href="/comprendre/phishing">phishing</a> et la fraude au président. Il nécessitera une connexion Gmail via Google OAuth, entièrement facultative et révocable.</p>
+          <h3>Sur iPhone</h3>
+          <p>DYLETH s'adapte aux possibilités du système. Une pastille de risque apparaît automatiquement à côté du nom sur l'écran d'appel natif ; le détail coloré complet s'ouvre sur demande, avec le bouton « Détails » ou un double tapotement au dos de l'iPhone (Back Tap).</p>
         </div>
       </div>
 
-      <div class="mod">
-        <div class="num">04</div>
-        <div>
-          <h3>Vérification des URLs et DNS <span class="tag">Disponible</span></h3>
-          <p>Les liens sont analysés avant ouverture. Une alerte est émise si l'URL présente des caractéristiques connues de sites frauduleux : phishing, malware, ransomware, typosquatting.</p>
-        </div>
-      </div>
+      <p class="f-vo"><b>Annonce vocale de l'appelant intégrée</b>, activable ou désactivable depuis le tableau de bord.</p>
+      <p class="h-small">Selon les capacités et autorisations propres à chaque plateforme et système, DYLETH applique ses mécanismes de protection aux communications prises en charge. Sur iPhone, la protection concerne les appels classiques. Illustrations simplifiées, numéros fictifs.</p>
+    </article>
+  </div>
+</section>
 
-      <div class="mod">
-        <div class="num">05</div>
-        <div>
-          <h3>Sécurité Wi-Fi mobile <span class="tag">Disponible</span></h3>
-          <p>Un DNS sécurisé filtre les domaines frauduleux et de phishing avant ouverture, sur tous vos réseaux mobiles — cafés, hôtels, aéroports. Aucun contenu de navigation n'est lu.</p>
-        </div>
-      </div>
-
-      <div class="mod">
-        <div class="num">06</div>
-        <div>
-          <h3>Sécurité Wi-Fi maison <span class="tag">Disponible</span></h3>
-          <p>DNS sécurisé actif sur votre réseau domestique. Filtre les domaines dangereux pour tous les appareils connectés — téléphones, tablettes, TV connectées, consoles, objets connectés — sans intercepter votre navigation.</p>
-        </div>
-      </div>
-
+<!-- ═══ AUTRES MODULES ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-head">
+      <h2 class="h-h2">Chaque module, avec son statut réel.</h2>
     </div>
-  </section>
-
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Module 07</p>
-      <h2>Tableau de bord personnel.</h2>
+    <div class="f-grid">
+      <article class="f-card">
+        <span class="pm-status on">Disponible</span>
+        <h3>Anti-fraude SMS</h3>
+        <p>Analyse le contenu du SMS et émet une alerte lorsqu'un lien ou un message présente des caractéristiques connues de fraude (smishing).</p>
+      </article>
+      <article class="f-card">
+        <span class="pm-status on">Disponible</span>
+        <h3>Vérification des URLs et DNS</h3>
+        <p>Les liens sont analysés avant ouverture. Une alerte est émise si l'URL présente des caractéristiques connues de sites frauduleux : phishing, malware, ransomware, typosquatting.</p>
+      </article>
+      <article class="f-card">
+        <span class="pm-status on">Disponible</span>
+        <h3>Sécurité Wi-Fi mobile</h3>
+        <p>Un DNS sécurisé filtre les domaines frauduleux et de phishing avant ouverture, y compris sur les Wi-Fi publics — cafés, hôtels, aéroports. Aucun contenu de navigation n'est lu.</p>
+      </article>
+      <article class="f-card">
+        <span class="pm-status on">Disponible</span>
+        <h3>Sécurité Wi-Fi maison</h3>
+        <p>DNS sécurisé actif sur votre réseau domestique. Filtre les domaines dangereux pour tous les appareils connectés — téléphones, tablettes, TV connectées, consoles, objets connectés — sans intercepter votre navigation.</p>
+      </article>
+      <article class="f-card">
+        <span class="pm-status on">Disponible</span>
+        <h3>Tableau de bord en temps réel</h3>
+        <p>Vos alertes et l'état de vos protections, avec uniquement vos données réelles. Depuis le tableau de bord, vous activez ou désactivez chaque module et l'annonce vocale.</p>
+      </article>
+      <article class="f-card is-soon">
+        <span class="pm-status soon">En cours d'activation</span>
+        <h3>Anti-fraude Emails</h3>
+        <p>Pas encore disponible : en attente de l'approbation de Google. Ce module analysera les métadonnées de vos emails (expéditeur, objet) pour vous aider à repérer le <a class="pg-inline-link" href="/comprendre/phishing">phishing</a> et la fraude au président. Il nécessitera une connexion Gmail via Google OAuth, entièrement facultative et révocable.</p>
+      </article>
     </div>
+  </div>
+</section>
 
-    <div class="mod-list reveal">
-      <div class="mod">
-        <div class="num">07</div>
-        <div>
-          <h3>Tableau de bord en temps réel <span class="tag">Disponible</span></h3>
-          <p>Vos alertes et l'état de vos protections, avec uniquement vos données réelles. Depuis le tableau de bord, vous activez ou désactivez chaque module et l'annonce vocale.</p>
-        </div>
-      </div>
+<!-- ═══ À VENIR ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-head">
+      <h2 class="h-h2">Les prochaines protections.</h2>
     </div>
-  </section>
-
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">À venir</p>
-      <h2>Les prochaines protections.</h2>
+    <div class="h-status">
+      <ul>
+        <li><span class="t">QR codes</span><span class="d">Un scanner intégré à DYLETH analysera le lien avant ouverture et affichera le résultat en code couleur. L'ouverture restera toujours votre décision.</span><span class="pm-status soon">Prochainement</span></li>
+        <li><span class="t">Deepfake vocal et vidéo, faux comptes</span><span class="d">Détection des deepfakes vocaux et vidéo, et des faux comptes sur les réseaux sociaux. Pas encore disponible. <a class="pg-inline-link" href="/innovations/">Voir les innovations</a></span><span class="pm-status dev">En développement</span></li>
+      </ul>
     </div>
+  </div>
+</section>
 
-    <div class="mod-list reveal">
-      <div class="mod">
-        <div class="num">+</div>
-        <div>
-          <h3>QR codes <span class="tag pro">Prochainement</span></h3>
-          <p>Un scanner intégré à DYLETH analysera le lien avant ouverture et affichera le résultat en code couleur. L'ouverture restera toujours votre décision.</p>
-        </div>
-      </div>
-      <div class="mod">
-        <div class="num">+</div>
-        <div>
-          <h3>Deepfake vocal et vidéo, faux comptes <span class="tag pro">En développement</span></h3>
-          <p>Détection des deepfakes vocaux et vidéo, et des faux comptes sur les réseaux sociaux. Pas encore disponible. <a class="pg-inline-link" href="/innovations/">Voir les innovations</a>.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="d2-section">
-    <div class="pg-end reveal">
-      <div class="big">Sept modules. Un seul téléchargement.</div>
-      <p>Gratuit pour tous, particuliers comme organisations — sans carte bancaire, sans engagement. L'application est conçue selon le <a class="pg-inline-link" href="/solution/privacy-by-design">privacy by design</a> : vos contacts sont traités sur votre téléphone et ne sont jamais envoyés à nos serveurs. Elle se compare aux <a class="pg-inline-link" href="/solution/comparatif">autres solutions</a> de protection.</p>
+<!-- ═══ FIN ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-cta">
+      <div class="h-signals" aria-hidden="true"><i></i><i></i><i></i></div>
+      <h2>Une seule application. Gratuite pour tous.</h2>
+      <p>Gratuit pour tous, particuliers comme organisations — sans carte bancaire, sans engagement. L'application est conçue selon le <a href="/solution/privacy-by-design">privacy by design</a> : vos contacts sont traités sur votre téléphone et ne sont jamais envoyés à nos serveurs. Elle se compare aux <a href="/solution/comparatif">autres solutions</a> de protection.</p>
       <a class="pg-cta" href="/telecharger/">Télécharger DYLETH</a>
     </div>
-  </section>
+  </div>
+</section>
 </main>
 
 <footer class="d5-footer">

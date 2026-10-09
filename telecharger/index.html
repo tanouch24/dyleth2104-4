@@ -262,6 +262,62 @@ main{display:block}
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/premium.css">
+<link rel="stylesheet" href="/assets/home.css">
+<style id="pm-page">
+/* Sous-pages premium : en-tête commun (s'appuie sur premium.css + home.css) */
+.p-hero { position: relative; isolation: isolate; padding: clamp(112px, 13vw, 148px) 0 0; overflow-x: clip; overflow-y: visible; }
+.p-hero::before {
+  content: ""; position: absolute; z-index: -1; width: 820px; height: 820px; right: -260px; top: -300px;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--pm-brand-d) 30%, transparent), transparent 72%);
+}
+.p-hero h1 { margin: 0; font-size: clamp(42px, 5.6vw, 76px); line-height: 1; text-wrap: balance; max-width: 16ch; }
+.p-hero .h-lead { margin-top: 22px; font-size: clamp(17px, 1.45vw, 20px); }
+.p-hero .h-lead strong { color: #fff; font-weight: 600; }
+.h-cta p a { color: #fff; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--pm-brand) 60%, transparent); text-underline-offset: 3px; }
+.h-cta h2 { text-wrap: balance; }
+.h-cta .pg-cta { margin-top: 30px; display: inline-flex; text-decoration: none; }
+@media (max-width: 960px) { .p-hero::before { right: -420px; top: -200px; } }
+/* Télécharger */
+.t-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(32px, 6vw, 88px); align-items: center; }
+.t-note { margin: 16px 0 0; display: inline-flex; align-items: center; gap: 8px; color: var(--pm-muted); font-size: 14px; }
+.t-note svg { width: 16px; height: 16px; color: var(--pm-safe); flex: none; }
+.t-qr {
+  margin: 0; display: grid; justify-items: center; gap: 16px; padding: 26px 26px 22px;
+  border-radius: var(--pm-radius-l); border: 1px solid var(--pm-line-2);
+  background: linear-gradient(180deg, var(--pm-raised), var(--pm-surface));
+  box-shadow: 0 40px 90px -40px color-mix(in srgb, var(--pm-brand-d) 70%, transparent);
+}
+.t-qr img { display: block; width: 188px; height: 188px; border-radius: var(--pm-radius-s); }
+.t-qr figcaption { text-align: center; }
+.t-qr .q1 { display: block; color: #fff; font-size: 14px; font-weight: 600; }
+.t-qr .q2 { display: block; margin-top: 4px; color: var(--pm-faint); font-size: 12.5px; }
+
+.t-os { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 44px; }
+.t-card {
+  display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 28px; align-items: start;
+  padding: clamp(24px, 3vw, 34px); border-radius: var(--pm-radius-l); background: var(--pm-surface); border: 1px solid var(--pm-line);
+}
+.t-card h3 { margin: 0; font-family: var(--pm-serif); font-weight: 450; font-size: 28px; color: #fff; }
+.t-card .req { margin: 8px 0 0; color: var(--pm-ink); font-size: 14.5px; font-weight: 600; }
+.t-card p { margin: 12px 0 0; color: var(--pm-muted); font-size: 14.5px; line-height: 1.65; }
+.t-card .h-badge { margin-top: 20px; }
+.t-card .h-badge img { height: 44px; }
+
+.t-faq dl { margin: 0; border-top: 1px solid var(--pm-line); }
+.t-faq dl div { display: block; padding: 20px 0; border-bottom: 1px solid var(--pm-line); }
+.t-faq dt { color: #fff; font-weight: 600; font-size: 16px; }
+.t-faq dd { margin: 6px 0 0; color: var(--pm-muted); font-size: 14.5px; line-height: 1.6; }
+
+@media (max-width: 960px) {
+  .t-hero-grid { grid-template-columns: 1fr; }
+  .t-qr { justify-self: start; }
+  .t-os { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .t-card { grid-template-columns: 1fr; }
+  .t-qr { display: none; }
+}
+</style>
 </head>
 <body>
 
@@ -397,55 +453,88 @@ main{display:block}
   </div>
 </nav>
 
-<main>
-  <section class="pg-wrap pg-hero">
-    <div class="pg-hero-grid">
-      <div class="pg-hero-main">
-        <p class="d2-eyebrow reveal">Télécharger</p>
-        <h1 class="reveal">Télécharger DYLETH</h1>
-        <p class="pg-lead reveal">DYLETH est disponible sur <strong>Google Play</strong> et sur l'<strong>App Store</strong>. Gratuit pour tous.</p>
-        <div class="d2-store-row">
-          <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="d2-badge" aria-label="Disponible sur Google Play">
-            <img src="../assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250">
-          </a>
-          <a href="https://apps.apple.com/fr/app/dyleth/id6774315923" target="_blank" rel="noopener noreferrer" class="d2-badge" aria-label="Télécharger sur l'App Store">
-            <img src="../assets/store/app-store-fr.svg" alt="Télécharger sur l'App Store" width="127" height="40">
+<main id="contenu">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-safe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<!-- ═══ EN-TÊTE ═══ -->
+<section class="p-hero">
+  <div class="h-wrap t-hero-grid">
+    <div>
+      <h1>Télécharger DYLETH</h1>
+      <p class="h-lead">DYLETH est disponible sur <strong>Google Play</strong> et sur l'<strong>App Store</strong>. Gratuit pour tous.</p>
+      <div class="h-stores">
+        <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="h-badge" aria-label="Disponible sur Google Play">
+          <img src="/assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250">
+        </a>
+        <a href="https://apps.apple.com/fr/app/dyleth/id6774315923" target="_blank" rel="noopener noreferrer" class="h-badge" aria-label="Télécharger sur l'App Store">
+          <img src="/assets/store/app-store-fr.svg" alt="Télécharger sur l'App Store" width="127" height="40">
+        </a>
+      </div>
+      <p class="t-note"><svg aria-hidden="true"><use href="#i-safe"/></svg>Téléchargez uniquement depuis les stores officiels.</p>
+    </div>
+    <figure class="t-qr">
+      <img src="/assets/store/google-play-qr.svg" alt="QR code vers la fiche Google Play de l'application DYLETH" width="196" height="196">
+      <figcaption>
+        <span class="q1">Scanner pour ouvrir Google Play</span>
+        <span class="q2">play.google.com</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ═══ COMPATIBILITÉ ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-head">
+      <h2 class="h-h2">Appareils pris en charge.</h2>
+    </div>
+    <div class="t-os">
+      <article class="t-card">
+        <div class="h-mini android" aria-hidden="true">
+          <div class="s"><span class="l">Analyse DYLETH</span><span class="n">Risque élevé</span><span class="l">+33 1 99 00 42 17</span><span class="btns"><i></i><i></i></span></div>
+        </div>
+        <div>
+          <h3>Android</h3>
+          <p class="req">Android 10 ou version ultérieure</p>
+          <p>L'écran d'appel change de couleur automatiquement (vert, orange, rouge), sur les appels classiques comme sur WhatsApp, Telegram et Signal.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.dyleth.antifraud" target="_blank" rel="noopener noreferrer" class="h-badge" aria-label="Disponible sur Google Play">
+            <img src="/assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250" loading="lazy">
           </a>
         </div>
-        <p class="pg-store-note reveal">Téléchargez uniquement depuis les stores officiels.</p>
-      </div>
-      <figure class="pg-qr reveal">
-        <img src="../assets/store/google-play-qr.svg" alt="QR code vers la fiche Google Play de l'application DYLETH" width="196" height="196">
-        <figcaption>
-          <span class="q1">Scanner pour ouvrir Google Play</span>
-          <span class="q2">play.google.com</span>
-        </figcaption>
-      </figure>
+      </article>
+      <article class="t-card">
+        <div class="h-mini ios" aria-hidden="true">
+          <div class="s"><span class="l">appel mobile</span><span class="n">+33 1 99 00 42 17</span><span class="row"><span class="dot">Risque élevé</span></span><span class="det">Détails</span><span class="btns"><i></i><i></i></span></div>
+        </div>
+        <div>
+          <h3>iPhone</h3>
+          <p class="req">iOS 15 ou version ultérieure</p>
+          <p>DYLETH s'adapte aux possibilités du système : une pastille de risque apparaît automatiquement sur l'écran d'appel natif, puis le détail coloré complet s'ouvre sur demande (bouton « Détails » ou double tapotement au dos de l'iPhone, Back Tap).</p>
+          <a href="https://apps.apple.com/fr/app/dyleth/id6774315923" target="_blank" rel="noopener noreferrer" class="h-badge" aria-label="Télécharger sur l'App Store">
+            <img src="/assets/store/app-store-fr.svg" alt="Télécharger sur l'App Store" width="127" height="40" loading="lazy">
+          </a>
+        </div>
+      </article>
     </div>
-  </section>
+    <p class="h-small" style="margin-top:16px">Illustrations simplifiées, numéros fictifs.</p>
+  </div>
+</section>
 
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Compatibilité</p>
-      <h2>Appareils pris en charge.</h2>
+<!-- ═══ QUESTIONS ═══ -->
+<section class="h-sec">
+  <div class="h-wrap h-priv t-faq">
+    <div>
+      <h2 class="big">Avant de télécharger.</h2>
     </div>
-    <div class="pg-list reveal">
-      <div class="pg-row"><span class="t">Android</span><p class="d">Android 10 ou version ultérieure. L'écran d'appel change de couleur automatiquement (vert, orange, rouge), sur les appels classiques comme sur WhatsApp, Telegram et Signal.</p></div>
-      <div class="pg-row"><span class="t">iOS</span><p class="d">iOS 15 ou version ultérieure. Disponible sur l'App Store. DYLETH s'adapte aux possibilités du système : une pastille de risque apparaît automatiquement sur l'écran d'appel natif, puis le détail coloré complet s'ouvre sur demande (bouton « Détails » ou double tapotement au dos de l'iPhone, Back Tap).</p></div>
-    </div>
-  </section>
-
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Questions fréquentes</p>
-      <h2>Avant de télécharger.</h2>
-    </div>
-    <div class="pg-faq reveal">
-      <div class="q"><b>L'application est-elle gratuite ?</b><p>Oui, gratuite pour tous, particuliers comme organisations — sans carte bancaire ni engagement de durée.</p></div>
-      <div class="q"><b>Où télécharger en toute sécurité ?</b><p>Uniquement depuis les stores officiels : Google Play et l'App Store.</p></div>
-      <div class="q"><b>DYLETH est-il disponible sur iPhone ?</b><p>Oui. DYLETH est disponible sur l'App Store pour iOS 15 ou version ultérieure.</p></div>
-    </div>
-  </section>
+    <dl>
+      <div><dt>L'application est-elle gratuite ?</dt><dd>Oui, gratuite pour tous, particuliers comme organisations — sans carte bancaire ni engagement de durée.</dd></div>
+      <div><dt>Où télécharger en toute sécurité ?</dt><dd>Uniquement depuis les stores officiels : Google Play et l'App Store.</dd></div>
+      <div><dt>DYLETH est-il disponible sur iPhone ?</dt><dd>Oui. DYLETH est disponible sur l'App Store pour iOS 15 ou version ultérieure.</dd></div>
+    </dl>
+  </div>
+</section>
 </main>
 
 <footer class="d5-footer">

@@ -223,6 +223,28 @@ main{display:block}
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/premium.css">
+<link rel="stylesheet" href="/assets/home.css">
+<style id="pm-page">
+/* Sous-pages premium : en-tête commun (s'appuie sur premium.css + home.css) */
+.p-hero { position: relative; isolation: isolate; padding: clamp(112px, 13vw, 148px) 0 0; overflow-x: clip; overflow-y: visible; }
+.p-hero::before {
+  content: ""; position: absolute; z-index: -1; width: 820px; height: 820px; right: -260px; top: -300px;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--pm-brand-d) 30%, transparent), transparent 72%);
+}
+.p-hero h1 { margin: 0; font-size: clamp(42px, 5.6vw, 76px); line-height: 1; text-wrap: balance; max-width: 16ch; }
+.p-hero .h-lead { margin-top: 22px; font-size: clamp(17px, 1.45vw, 20px); }
+.p-hero .h-lead strong { color: #fff; font-weight: 600; }
+.h-cta p a { color: #fff; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--pm-brand) 60%, transparent); text-underline-offset: 3px; }
+.h-cta h2 { text-wrap: balance; }
+.h-cta .pg-cta { margin-top: 30px; display: inline-flex; text-decoration: none; }
+@media (max-width: 960px) { .p-hero::before { right: -420px; top: -200px; } }
+/* Entreprises */
+.e-who { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 0; padding: 0; }
+.e-who li { list-style: none; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--pm-line-2); color: var(--pm-ink); font-size: 14px; }
+.e-who li a { color: inherit; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--pm-brand) 60%, transparent); text-underline-offset: 3px; }
+.h-duo h3 { margin: 0; font-family: var(--pm-serif); font-weight: 450; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; color: #fff; }
+.h-cta .h-mail { margin-top: 14px; color: var(--pm-ink); font-size: 15px; }
+</style>
 </head>
 <body>
 
@@ -358,44 +380,71 @@ main{display:block}
   </div>
 </nav>
 
-<main>
-  <section class="pg-wrap pg-hero">
-    <p class="d2-eyebrow reveal">Entreprises</p>
-    <h1 class="reveal">DYLETH pour les organisations</h1>
-    <p class="pg-lead reveal">DYLETH est gratuit pour tous, y compris les organisations. Vos équipes utilisent la même application que les particuliers, <a class="pg-inline-link" href="/solution/7-modules">avec les mêmes protections</a>.</p>
-  </section>
+<main id="contenu">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-safe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
 
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Gratuit pour tous</p>
-      <h2>Les mêmes protections, rien à payer.</h2>
+<!-- ═══ EN-TÊTE ═══ -->
+<section class="p-hero">
+  <div class="h-wrap">
+    <h1>DYLETH pour les organisations</h1>
+    <p class="h-lead">DYLETH est gratuit pour tous, y compris les organisations. Vos équipes utilisent la même application que les particuliers, <a href="/solution/7-modules">avec les mêmes protections</a>.</p>
+    <div class="h-free">
+      <span><svg aria-hidden="true"><use href="#i-safe"/></svg>Gratuit pour tous, particuliers comme organisations</span>
     </div>
-    <div class="reveal">
-      <p class="pg-free">Gratuit pour tous, particuliers comme organisations</p>
-      <ul class="pg-feat">
-        <li>Appels : code couleur vert / orange / rouge. Android : écran d'appel coloré, aussi sur WhatsApp, Telegram et Signal. iPhone : pastille automatique sur l'écran natif, détail à la demande. Disponible.</li>
-        <li>SMS : messages et liens suspects. Disponible.</li>
-        <li>Liens (URL) et DNS : analyse avant ouverture. Disponible.</li>
-        <li>Wi-Fi : analyse des réseaux et DNS. Disponible.</li>
-        <li>Tableau de bord personnel en temps réel. Disponible.</li>
-        <li>Emails : en cours d'activation.</li>
-        <li>QR codes : prochainement.</li>
+  </div>
+</section>
+
+<!-- ═══ PROTECTIONS ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-head">
+      <h2 class="h-h2">Les mêmes protections, rien à payer.</h2>
+    </div>
+    <div class="h-status">
+      <ul>
+        <li><span class="t">Appels</span><span class="d">Code couleur vert / orange / rouge. Android : écran d'appel coloré, aussi sur WhatsApp, Telegram et Signal. iPhone : pastille automatique sur l'écran natif, détail à la demande.</span><span class="pm-status on">Disponible</span></li>
+        <li><span class="t">SMS</span><span class="d">Messages et liens suspects.</span><span class="pm-status on">Disponible</span></li>
+        <li><span class="t">Liens (URL) et DNS</span><span class="d">Analyse avant ouverture.</span><span class="pm-status on">Disponible</span></li>
+        <li><span class="t">Wi-Fi</span><span class="d">Analyse des réseaux et DNS.</span><span class="pm-status on">Disponible</span></li>
+        <li><span class="t">Tableau de bord</span><span class="d">Tableau de bord personnel en temps réel.</span><span class="pm-status on">Disponible</span></li>
+        <li><span class="t">Emails</span><span class="d">Pas encore disponible.</span><span class="pm-status soon">En cours d'activation</span></li>
+        <li><span class="t">QR codes</span><span class="d">Pas encore disponible.</span><span class="pm-status soon">Prochainement</span></li>
       </ul>
-      <p class="pg-nis2"><b>Confidentialité.</b> Les contacts sont traités sur le téléphone et ne sont jamais envoyés à nos serveurs. Serveurs hébergés dans l'Union européenne, dans le respect du RGPD.</p>
-      <p class="pg-note">Une question pour votre organisation ? Écrivez-nous à contact@dyleth.com.</p>
+    </div>
+    <a class="h-link" href="/solution/7-modules">Voir les fonctionnalités en détail</a>
+  </div>
+</section>
+
+<!-- ═══ CONFIDENTIALITÉ + POUR QUI ═══ -->
+<section class="h-sec">
+  <div class="h-wrap h-duo">
+    <div>
+      <h3>Confidentialité.</h3>
+      <p>Les contacts sont traités sur le téléphone et ne sont jamais envoyés à nos serveurs. Serveurs hébergés dans l'Union européenne, dans le respect du RGPD.</p>
+      <a class="h-link" href="/legal/confidentialite">Lire la politique de confidentialité</a>
+    </div>
+    <div>
+      <h3>Pour toutes les organisations.</h3>
+      <ul class="e-who">
+        <li>TPE / PME</li><li>Professions libérales</li><li>Entreprises</li><li>Collectivités</li><li>Administrations</li><li><a href="/secteurs/hotellerie">Établissements accueillant du public</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-cta">
+      <div class="h-signals" aria-hidden="true"><i></i><i></i><i></i></div>
+      <h2>Une question pour votre organisation&nbsp;?</h2>
+      <p class="h-mail">Écrivez-nous à contact@dyleth.com.</p>
       <a class="pg-cta" href="mailto:contact@dyleth.com">Nous écrire</a>
     </div>
-  </section>
-
-  <section class="d2-section">
-    <div class="d2-section-head reveal">
-      <p class="d2-eyebrow">Pour qui ?</p>
-      <h2>Pour toutes les organisations.</h2>
-    </div>
-    <div class="pg-audience reveal">
-      <span>TPE / PME</span><span>Professions libérales</span><span>Entreprises</span><span>Collectivités</span><span>Administrations</span><span><a class="pg-inline-link" href="/secteurs/hotellerie">Établissements accueillant du public</a></span>
-    </div>
-  </section>
+  </div>
+</section>
 </main>
 
 <footer class="d5-footer">
