@@ -227,3 +227,30 @@
   .h-screens figure { scroll-snap-align: start; }
 }
 @media (prefers-reduced-motion: reduce) { .h-shot, .h-shot-img { transition: none !important; } }
+
+/* ── Cadre de téléphone pour les vraies captures et vidéos ───── */
+.pm-phone {
+  position: relative; padding: 9px; border-radius: 44px;
+  background: linear-gradient(160deg, #2A3557, #121a31 45%, #0b1122);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 40px 90px -30px rgba(0,0,0,.85);
+}
+.pm-phone > img, .pm-phone > video { display: block; width: 100%; height: auto; border-radius: 35px; background: #0C1328; }
+.h-shot.pm-phone { aspect-ratio: auto; width: min(320px, 76vw); filter: none;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 50px 110px -30px rgba(0,0,0,.85), 0 0 90px -20px color-mix(in srgb, var(--verdict) 50%, transparent);
+  transition: box-shadow 1.2s ease; }
+.h-shot.pm-phone .h-shot-img { position: absolute; inset: 9px; width: calc(100% - 18px); height: calc(100% - 18px); border-radius: 35px; object-fit: cover; }
+.h-shot.pm-phone .h-shot-img:first-child { position: relative; inset: auto; width: 100%; height: auto; }
+.h-shot.pm-phone .h-shot-img:not(.is-on) { opacity: 0; }
+
+.h-demos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); margin: 44px 0 18px; }
+.h-demo { margin: 0; }
+.h-demo .pm-phone { max-width: 300px; margin: 0 auto; }
+.h-demo figcaption { max-width: 300px; margin: 18px auto 0; }
+.h-demo figcaption b { display: block; color: #fff; font-family: var(--pm-serif); font-weight: 450; font-size: 22px; }
+.h-demo figcaption span { display: block; margin-top: 6px; color: var(--pm-muted); font-size: 14.5px; line-height: 1.55; }
+.h-os-img { width: 150px; border-radius: 22px; }
+.h-screens img { border-radius: 26px; box-shadow: 0 0 0 1px rgba(255,255,255,.06); }
+@media (max-width: 860px) {
+  .h-demos { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; }
+  .h-demo { scroll-snap-align: center; }
+}

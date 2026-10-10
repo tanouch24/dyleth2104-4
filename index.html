@@ -356,17 +356,17 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
     </div>
 
     <div class="h-device">
-      <div class="h-shot" id="h-screen" role="img" aria-live="polite" aria-label="Écran d'appel DYLETH sur Android : risque faible">
-        <img class="h-shot-img is-on" data-v="safe" src="/assets/app/appel-vert.webp" alt="" width="440" height="860" fetchpriority="high">
-        <img class="h-shot-img" data-v="warn" src="/assets/app/appel-orange.webp" alt="" width="440" height="860">
-        <img class="h-shot-img" data-v="risk" src="/assets/app/appel-rouge.webp" alt="" width="440" height="860">
+      <div class="h-shot pm-phone" id="h-screen" role="img" aria-live="polite" aria-label="Écran Détails de l'appel de DYLETH sur Android : risque faible">
+        <img class="h-shot-img is-on" data-v="safe" src="/assets/app/real/appel-vert-details.webp" alt="" width="720" height="1603" fetchpriority="high">
+        <img class="h-shot-img" data-v="warn" src="/assets/app/real/appel-orange-demarchage-details.webp" alt="" width="720" height="1603">
+        <img class="h-shot-img" data-v="risk" src="/assets/app/real/appel-rouge-details.webp" alt="" width="720" height="1603">
       </div>
       <div class="h-legend" role="group" aria-label="Voir un exemple par couleur">
         <button type="button" data-v="safe" aria-pressed="false"><svg aria-hidden="true"><use href="#i-safe"/></svg>Risque faible</button>
         <button type="button" data-v="warn" aria-pressed="false"><svg aria-hidden="true"><use href="#i-warn"/></svg>Vigilance</button>
         <button type="button" data-v="risk" aria-pressed="true"><svg aria-hidden="true"><use href="#i-risk"/></svg>Risque élevé</button>
       </div>
-      <p class="h-mock-note">Écrans d'appel de l'application DYLETH sur Android, contacts et numéros fictifs. Sur iPhone, l'affichage est différent (voir plus bas).</p>
+      <p class="h-mock-note">Vraies captures de l'application sur Android, avec des données de démonstration. Sur iPhone, l'affichage est différent (voir plus bas).</p>
     </div>
   </div>
 
@@ -382,6 +382,35 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
   </div>
 </section>
 
+<!-- ═══ EN ACTION ═══ -->
+<section class="h-sec" id="en-action">
+  <div class="h-wrap">
+    <div class="h-head">
+      <p class="h-kicker">En vidéo</p>
+      <h2 class="h-h2">DYLETH en action, sur un vrai téléphone.</h2>
+      <p class="h-lead">Trois situations du quotidien, filmées dans l'application.</p>
+    </div>
+    <div class="h-demos">
+      <figure class="h-demo">
+        <div class="pm-phone"><video class="h-vid" muted loop playsinline preload="none" poster="/assets/video/01-appel-arnaque.webp" aria-label="Vidéo : Un appel d'arnaque, dans l'application DYLETH">
+          <source src="/assets/video/01-appel-arnaque.webm" type="video/webm"><source src="/assets/video/01-appel-arnaque.mp4" type="video/mp4"></video></div>
+        <figcaption><b>Un appel d'arnaque</b><span>L'écran devient rouge et explique pourquoi, avant même de décrocher.</span></figcaption>
+      </figure>
+      <figure class="h-demo">
+        <div class="pm-phone"><video class="h-vid" muted loop playsinline preload="none" poster="/assets/video/02-tableau-de-bord.webp" aria-label="Vidéo : Votre tableau de bord, dans l'application DYLETH">
+          <source src="/assets/video/02-tableau-de-bord.webm" type="video/webm"><source src="/assets/video/02-tableau-de-bord.mp4" type="video/mp4"></video></div>
+        <figcaption><b>Votre tableau de bord</b><span>Vos protections actives et les menaces récentes, en un coup d'œil.</span></figcaption>
+      </figure>
+      <figure class="h-demo">
+        <div class="pm-phone"><video class="h-vid" muted loop playsinline preload="none" poster="/assets/video/03-verifier-un-message.webp" aria-label="Vidéo : Vérifier un message, dans l'application DYLETH">
+          <source src="/assets/video/03-verifier-un-message.webm" type="video/webm"><source src="/assets/video/03-verifier-un-message.mp4" type="video/mp4"></video></div>
+        <figcaption><b>Vérifier un message</b><span>Un SMS vous semble louche ? Collez-le : DYLETH vous dit ce qui cloche et quoi faire.</span></figcaption>
+      </figure>
+    </div>
+    <p class="h-mock-note" style="text-align:left">Enregistrements de l'application sur Android, avec des données de démonstration. Le nombre de signalements est masqué.</p>
+  </div>
+</section>
+
 <!-- ═══ ANDROID / IPHONE ═══ -->
 <section class="h-sec">
   <div class="h-wrap">
@@ -391,7 +420,7 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
     </div>
     <div class="h-os">
       <article class="h-os-card">
-        <img class="h-os-img" src="/assets/app/appel-rouge.webp" alt="Écran d'appel DYLETH sur Android, entièrement rouge : numéro associé à des signalements de fraude" width="440" height="860" loading="lazy">
+        <img class="h-os-img" src="/assets/app/real/appel-rouge.webp" alt="Vraie capture : écran d'appel DYLETH sur Android, entièrement rouge, catégorie Arnaque" width="720" height="1603" loading="lazy">
         <div>
           <h3>Sur Android</h3>
           <p>L'écran d'appel change de couleur automatiquement : vert, orange ou rouge. Pour les appels classiques, WhatsApp, Telegram et Signal.</p>
@@ -428,9 +457,9 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
       </ul>
     </div>
     <div class="h-screens">
-      <figure><img src="/assets/app/protections.webp" alt="Écran Protections de l'application DYLETH : activation des protections appels, SMS, e-mails et DNS" width="520" height="980" loading="lazy"><figcaption>Vos protections, activables une par une</figcaption></figure>
-      <figure><img src="/assets/app/statistiques.webp" alt="Écran Statistiques de l'application DYLETH : menaces surveillées et alertes de la semaine" width="520" height="740" loading="lazy"><figcaption>Le tableau de bord de la semaine</figcaption></figure>
-      <figure><img src="/assets/app/fiche-appelant.webp" alt="Fiche de l'appelant affichée par DYLETH : numéro inconnu, opérateur inconnu, signalements enregistrés" width="440" height="870" loading="lazy"><figcaption>Les informations disponibles sur l'appelant</figcaption></figure>
+      <figure><img src="/assets/app/real/accueil.webp" alt="Vraie capture : accueil de l'application DYLETH, protections Appels, SMS et Navigation actives, détections et menaces récentes" width="720" height="1603" loading="lazy"><figcaption>L'accueil : vos protections et les menaces récentes</figcaption></figure>
+      <figure><img src="/assets/app/real/protections.webp" alt="Vraie capture : écran Protections de DYLETH, protection des appels, des SMS et DNS, annonce vocale de l'appelant" width="720" height="1603" loading="lazy"><figcaption>Vos protections, réglables une par une</figcaption></figure>
+      <figure><img src="/assets/app/real/verifier-resultat.webp" alt="Vraie capture : résultat de Vérifier un message, arnaque probable, avec les raisons et les conseils" width="720" height="1603" loading="lazy"><figcaption>Vérifier un message : le verdict et quoi faire</figcaption></figure>
     </div>
     <a class="h-link" href="/solution/7-modules">Voir les fonctionnalités en détail</a>
   </div>
@@ -555,6 +584,23 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
 </section>
 
 </main>
+<script>
+/* Vidéos de démonstration : lecture automatique (muette) uniquement quand elles sont visibles. */
+(function () {
+  var vids = document.querySelectorAll('.h-vid');
+  if (!vids.length) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) { vids.forEach(function (v) { v.controls = true; }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) { v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+      else v.pause();
+    });
+  }, { threshold: 0.35 });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
 
 <script>
 /* Écrans d'appel réels (vert, orange, rouge) : défilement doux, pilotable par la légende. */
@@ -572,7 +618,7 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
     current = v;
     hero.setAttribute('data-v', v);
     imgs.forEach(function (i) { i.classList.toggle('is-on', i.dataset.v === v); });
-    screen.setAttribute('aria-label', 'Écran d\u2019appel DYLETH sur Android : ' + labels[v]);
+    screen.setAttribute('aria-label', 'Écran Détails de l\u2019appel de DYLETH sur Android : ' + labels[v]);
     buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === v)); });
   }
   function next() { show(order[(order.indexOf(current) + 1) % order.length]); }
