@@ -254,3 +254,21 @@
   .h-demos { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; }
   .h-demo { scroll-snap-align: center; }
 }
+
+/* ── Hero : écran d'appel + détails, côte à côte ─────────────── */
+.h-pair { position: relative; width: min(470px, 94vw); margin: 0 auto; padding-top: 4%; }
+.h-pair .pm-phone { position: relative; }
+.h-pair .h-shot-img { display: block; width: 100%; height: auto; border-radius: 35px; transition: opacity .6s ease; }
+.h-pair .h-shot-img:not(:first-child) { position: absolute; top: 9px; left: 9px; width: calc(100% - 18px); }
+.h-pair .h-shot-img:not(.is-on) { opacity: 0; }
+.h-pair-front { width: 60%; z-index: 2;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 50px 110px -30px rgba(0,0,0,.9), 0 0 90px -20px color-mix(in srgb, var(--verdict) 55%, transparent) !important;
+  transition: box-shadow 1.2s ease; }
+.h-pair-back { position: absolute !important; right: 0; top: 0; width: 52%; z-index: 1; transform: rotate(4deg); opacity: .95; }
+.h-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 420px; margin: 0 0 22px; }
+.h-trio img { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 0 0 4px #18233F; }
+@media (max-width: 960px) { .h-pair { margin-top: 12px; } }
+@media (prefers-reduced-motion: reduce) { .h-pair .h-shot-img, .h-pair-front { transition: none !important; } }
+.h-pair .h-shot-img:first-child { position: relative; inset: auto; top: auto; left: auto; }
+.h-pair .h-shot-img { object-fit: cover; inset: auto; }
+.h-pair .h-shot-img:not(:first-child) { inset: auto; top: 9px; left: 9px; height: auto; }

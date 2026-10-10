@@ -356,15 +356,22 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
     </div>
 
     <div class="h-device">
-      <div class="h-shot pm-phone" id="h-screen" role="img" aria-live="polite" aria-label="Écran Détails de l'appel de DYLETH sur Android : risque faible">
-        <img class="h-shot-img is-on" data-v="safe" src="/assets/app/real/appel-vert-details.webp" alt="" width="720" height="1603" fetchpriority="high">
-        <img class="h-shot-img" data-v="warn" src="/assets/app/real/appel-orange-demarchage-details.webp" alt="" width="720" height="1603">
-        <img class="h-shot-img" data-v="risk" src="/assets/app/real/appel-rouge-details.webp" alt="" width="720" height="1603">
+      <div class="h-pair" id="h-screen" role="img" aria-live="polite" aria-label="Vraies captures DYLETH sur Android : écran d'appel et détails, risque élevé">
+        <div class="pm-phone h-pair-back">
+          <img class="h-shot-img is-on" data-v="risk" src="/assets/app/real/appel-rouge-details.webp" alt="" width="720" height="1603">
+          <img class="h-shot-img" data-v="warn" src="/assets/app/real/appel-orange-demarchage-details.webp" alt="" width="720" height="1603">
+          <img class="h-shot-img" data-v="safe" src="/assets/app/real/appel-vert-details.webp" alt="" width="720" height="1603">
+        </div>
+        <div class="pm-phone h-pair-front">
+          <img class="h-shot-img is-on" data-v="risk" src="/assets/app/real/appel-rouge.webp" alt="" width="720" height="1603" fetchpriority="high">
+          <img class="h-shot-img" data-v="warn" src="/assets/app/real/appel-orange-demarchage.webp" alt="" width="720" height="1603">
+          <img class="h-shot-img" data-v="safe" src="/assets/app/real/appel-vert.webp" alt="" width="720" height="1603">
+        </div>
       </div>
       <div class="h-legend" role="group" aria-label="Voir un exemple par couleur">
-        <button type="button" data-v="safe" aria-pressed="false"><svg aria-hidden="true"><use href="#i-safe"/></svg>Risque faible</button>
-        <button type="button" data-v="warn" aria-pressed="false"><svg aria-hidden="true"><use href="#i-warn"/></svg>Vigilance</button>
         <button type="button" data-v="risk" aria-pressed="true"><svg aria-hidden="true"><use href="#i-risk"/></svg>Risque élevé</button>
+        <button type="button" data-v="warn" aria-pressed="false"><svg aria-hidden="true"><use href="#i-warn"/></svg>Vigilance</button>
+        <button type="button" data-v="safe" aria-pressed="false"><svg aria-hidden="true"><use href="#i-safe"/></svg>Risque faible</button>
       </div>
       <p class="h-mock-note">Vraies captures de l'application sur Android, avec des données de démonstration. Sur iPhone, l'affichage est différent (voir plus bas).</p>
     </div>
@@ -374,7 +381,11 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
     <div class="h-band-in">
       <p class="apps"><span>Appels classiques</span><span>WhatsApp</span><span>Telegram</span><span>Signal</span></p>
       <div>
-        <img class="h-band-img" src="/assets/app/messageries.webp" alt="Trois écrans d'appel DYLETH sur Android : appel classique en vert, WhatsApp en orange, Telegram en rouge" width="720" height="540" loading="lazy">
+        <div class="h-trio" aria-label="Vraies captures DYLETH : écrans d'appel vert, orange et rouge">
+          <img src="/assets/app/real/appel-vert.webp" alt="Écran vert : entreprise référencée" width="720" height="1603" loading="lazy">
+          <img src="/assets/app/real/appel-orange-demarchage.webp" alt="Écran orange : plage de démarchage" width="720" height="1603" loading="lazy">
+          <img src="/assets/app/real/appel-rouge.webp" alt="Écran rouge : arnaque" width="720" height="1603" loading="lazy">
+        </div>
         <p>Appels classiques, WhatsApp, Telegram, Signal : DYLETH étend sa protection aux communications que vous utilisez déjà. Les appels WhatsApp, Telegram et Signal sont pris en charge sur Android.</p>
         <p class="h-small">Selon les capacités et autorisations propres à chaque plateforme et système, DYLETH applique ses mécanismes de protection aux communications prises en charge.</p>
       </div>
@@ -609,23 +620,23 @@ nav.main-nav{padding:0 16px;justify-content:space-between}
   var screen = document.getElementById('h-screen');
   if (!hero || !screen) return;
   var labels = { safe: 'risque faible', warn: 'vigilance', risk: 'risque élevé' };
-  var order = ['safe', 'warn', 'risk'];
+  var order = ['risk', 'warn', 'safe'];
   var imgs = screen.querySelectorAll('.h-shot-img');
   var buttons = hero.querySelectorAll('.h-legend button');
-  var current = 'safe', timer = null;
+  var current = 'risk', timer = null;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function show(v) {
     current = v;
     hero.setAttribute('data-v', v);
     imgs.forEach(function (i) { i.classList.toggle('is-on', i.dataset.v === v); });
-    screen.setAttribute('aria-label', 'Écran Détails de l\u2019appel de DYLETH sur Android : ' + labels[v]);
+    screen.setAttribute('aria-label', 'Vraies captures DYLETH sur Android : écran d\u2019appel et détails, ' + labels[v]);
     buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === v)); });
   }
   function next() { show(order[(order.indexOf(current) + 1) % order.length]); }
   buttons.forEach(function (b) {
     b.addEventListener('click', function () { clearInterval(timer); show(b.dataset.v); });
   });
-  show('safe');
+  show('risk');
   if (!reduce) timer = setInterval(next, 3800);
 })();
 </script>
