@@ -115,3 +115,20 @@
     }
   });
 })();
+
+/* Vidéos de démonstration : lecture muette uniquement quand elles sont visibles. */
+(function () {
+  'use strict';
+  const vids = document.querySelectorAll('video.pm-vid');
+  if (!vids.length) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    vids.forEach(v => { v.controls = true; });
+    return;
+  }
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { v.preload = 'auto'; const p = v.play(); if (p && p.catch) p.catch(() => { v.controls = true; }); }
+    else v.pause();
+  }), { threshold: 0.35 });
+  vids.forEach(v => io.observe(v));
+})();

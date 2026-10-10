@@ -226,3 +226,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 .pm-nav-dl:hover { box-shadow: 0 8px 24px -8px rgba(111, 139, 255, .8); }
 @media (max-width: 380px) { .pm-nav-dl { padding: 7px 12px; font-size: 12.5px; } }
+
+/* ── Encadré « Dans l'application » (vraies captures / vidéos) ── */
+.pm-app-wrap.solo { width: min(var(--d2-max), calc(100% - 56px)); margin: 0 auto; padding-top: clamp(48px, 7vw, 80px); }
+.pm-app {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(24px, 4vw, 56px); align-items: center;
+  margin: 48px 0 40px; padding: clamp(24px, 4vw, 44px); border-radius: var(--pm-radius-l);
+  background: radial-gradient(500px 260px at 100% 0%, rgba(43,63,214,.20), transparent 70%), var(--pm-surface);
+  border: 1px solid var(--pm-line);
+}
+.pm-app-kicker { margin: 0 0 10px; color: var(--pm-brand); font-size: 14px; font-weight: 500; }
+.pm-app h2 { margin: 0; font-size: clamp(24px, 2.8vw, 34px) !important; line-height: 1.1 !important; }
+.pm-app p { margin: 14px 0 0; color: var(--pm-muted); font-size: 15.5px; line-height: 1.65; max-width: 52ch; }
+.pm-app .pm-app-link { display: inline-block; margin-top: 18px; color: #fff; font-weight: 600; font-size: 14.5px; text-decoration: underline; text-decoration-color: rgba(111,139,255,.6); text-underline-offset: 4px; }
+.pm-app-note { margin-top: 12px !important; font-size: 12.5px !important; color: var(--pm-faint) !important; }
+.pm-app-shots { display: flex; gap: 14px; align-items: flex-start; }
+.pm-app-ph { width: 180px; padding: 6px; border-radius: 30px; background: linear-gradient(160deg, #2A3557, #121a31 45%, #0b1122); box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 30px 60px -24px rgba(0,0,0,.85); }
+.pm-app-ph img, .pm-app-ph video { display: block; width: 100%; height: auto; border-radius: 24px; background: #0C1328; }
+.pm-app-ph + .pm-app-ph { margin-top: 28px; }
+@media (max-width: 760px) {
+  .pm-app { grid-template-columns: 1fr; }
+  .pm-app-shots { justify-content: center; }
+  .pm-app-ph { width: min(180px, 42vw); }
+}
