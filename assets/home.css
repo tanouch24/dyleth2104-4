@@ -272,3 +272,14 @@
 .h-pair .h-shot-img:first-child { position: relative; inset: auto; top: auto; left: auto; }
 .h-pair .h-shot-img { object-fit: cover; inset: auto; }
 .h-pair .h-shot-img:not(:first-child) { inset: auto; top: 9px; left: 9px; height: auto; }
+
+/* Hero : la paire de téléphones tient dans sa colonne et dans la hauteur d'écran */
+.h-hero .h-device { width: min(440px, 100%); }
+.h-pair { width: min(440px, 100%, 56vh); padding-top: 3%; }
+.h-pair-front { width: 62%; }
+.h-pair-back { width: 54%; transform: rotate(3deg); }
+@media (max-width: 960px) {
+  .h-hero .h-device { width: min(400px, 100%); justify-self: center; }
+  .h-pair { width: min(400px, 100%); }
+}
+@media (min-width: 961px) and (max-width: 1180px) { .h-pair { width: min(380px, 100%, 56vh); } }
